@@ -35,13 +35,8 @@
   box-sizing: border-box;
 }
 
-body,
-input,
-textarea {
-  font-family: "Poppins", sans-serif;
-}
 
-.container {
+.contact.container {
   position: relative;
   width: 100%;
    
@@ -66,7 +61,7 @@ textarea {
 }
 
 .contact-form {
-  background-color: #fcf409;
+  background-color: #fcf409 !important;
   position: relative;
 }
 
@@ -430,12 +425,4 @@ textarea.input {
 
 .molk {
   padding-top: 65%;
-}
-
-.car-name{
-  text-align: center;
-}
-.service-heading{
-  text-align: center;
-  padding-top:2em;
 }

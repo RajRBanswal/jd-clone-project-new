@@ -188,104 +188,107 @@ const Home = () => {
       </section>
 
       <section>
-        <div class="container py-5">
+        <div>
+          <h2 class="service-heading">Our Services</h2>
+        </div>
+        <div class="container py-5 ">
           <div class="row">
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-milk.png" width={"100%"} />
-                <p>milk</p>
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
+                <img src="./assets/images/swift.jpg" width={"100%"} />
+                <p class="car-name pt-3"><b>Swift dezire</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
                 <img
-                  src="./assets/images/icon-wine-glass-bottle.png"
+                  src="./assets/images/ertiga.jpg"
                   width={"100%"}
                 />
-                <p>wine</p>
+                <p class="car-name pt-3"><b>Ertiga</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/product-thumb-2.png" width={"100%"} />
-                <p>pro.2</p>
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
+                <img src="./assets/images/scorpio.jpg" />
+                <p class="car-name"><b>scorpio</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-cucumber.png" width={"100%"} />
-                <p>cucumber</p>
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
+                <img src="./assets/images/cretaimg.jpg" width={"100%"} />
+                <p class="car-name pt-4"><b>Creta</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
                 <img
-                  src="./assets/images/thumb-orange-juice.png"
+                  src="./assets/images/crysta.jpg"
                   width={"100%"}
                 />
-                <p>juice</p>
+                <p class="car-name pt-2"><b>Crysta</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
+            <div class="col-lg-2 col-6 mt-3">
+              <div class="card h-100">
                 <img
-                  src="./assets/images/thumb-raspberries.png"
+                  src="./assets/images/verna.jpg"
                   width={"100%"}
                 />
-                <p>raspberries</p>
+                <p class="car-name pt-4"><b>Verna</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-tomatoes.png" width={"100%"} />
-                <p>tomatoes</p>
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100">
+                <img src="./assets/images/aura.jpg"  />
+                <p class="car-name pt-3"><b>Hyundai Aura</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100">
                 <img
-                  src="./assets/images/thumb-tomatoketchup.png"
+                  src="./assets/images/vitara.webp"
                   width={"100%"}
                 />
-                <p>Ketchup</p>
+                <p class="car-name"><b>Vitara brezza</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100">
                 <img
-                  src="./assets/images/icon-animal-products-drumsticks.png"
+                  src="./assets/images/force.webp"
                   width={"100%"}
                 />
-                <p>drumsticks</p>
+                <p class="car-name pt-3"><b>Cruiser</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-cucumber.png" width={"100%"} />
-                <p>cucumber</p>
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100" >
+                <img src="./assets/images/traveler.png"  />
+                <p class="car-name pt-3"><b>Tempo Traveller</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-biscuits.png" width={"100%"} />
-                <p>biscuits</p>
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100">
+                <img src="./assets/images/alto.jpg" />
+                <p class="car-name pt-3"><b>Alto</b></p>
               </div>
             </div>
 
-            <div class="col-lg-2 col-sm-4">
-              <div class="card">
-                <img src="./assets/images/thumb-bananas.png" width={"100%"} />
-                <p>bananas</p>
+            <div class="col-lg-2 col-6 pt-4">
+              <div class="card h-100">
+                <img src="./assets/images/i20.webp" />
+                <p class="car-name"><b>I20</b></p>
               </div>
             </div>
           </div>

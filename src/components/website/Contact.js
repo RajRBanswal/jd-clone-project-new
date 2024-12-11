@@ -1,96 +1,109 @@
 import React from 'react'
 
 const Contact = () => {
+
+  const inputs = document.querySelectorAll(".input");
+
+  function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+  }
+
+  function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+      parent.classList.remove("focus");
+    }
+  }
+
+  inputs.forEach((input) => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+  });
+
+
   return (
-    <section id="contact" class="contact section light-background py-5">
+     
+        
+       
+        <div class="container pt-10">
+          <span class="big-circle"></span>
+          <img src="img/shape.png" class="square" alt="" />
+          <div class="form">
+            <div class="contact-info">
+              <h3 class="title">Let's get in touch</h3>
+              <p class="text">
+                 Book your Cab With full Safety And Enjoy 
+              </p>
 
-      <div class="container section-title text-center" >
-        <h2 class="contacttext">Contact</h2>
-      </div>
+              <div class="info">
+                <div class="information">
+                  <i class="fas fa-map-marker-alt"></i> Our location :
 
-      <div class="container mt-5" >
-
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box py-lg-5 py-5 text-center" >
-              <h3 >Contact Info</h3>
-
-              <div class="info-item mt-5" >
-                <div class="icon-box">
-                <i class="fa-solid fa-location-dot"></i>
+                  <p>Chhatrapati Sambhajinagar (Aurangabad), Maharashtra 431003</p>
                 </div>
-                <div class="content">
-                  <h4 >Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                <div class="information">
+                  <i class="fas fa-envelope"></i> Email Adress :
+                  <p>info@ewebdigital.com</p>
                 </div>
-              </div>
-
-              <div class="info-item" >
-                <div class="icon-box">
-                <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                <div class="information">
+                  <i class="fas fa-phone"></i> Phone Number :
+                  <p>+91 8983848591</p>
                 </div>
               </div>
 
-              <div class="info-item" >
-                <div class="icon-box">
-                <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+              <div class="social-media">
+                <p>Connect with us :</p>
+                <div class="social-icons">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-7">
-            <div class="contact-form" >
-              <h3>Get In Touch</h3>
+            <div class="contact-form">
+              <span class="circle one"></span>
+              <span class="circle two"></span>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" >
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required=""/>
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required=""/>
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required=""/>
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center pb-3">
-                  
-                    
-
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-
+              <form action="index.html" autocomplete="off">
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                  <input type="text" name="name" class="input" />
+                  <label for="">Username</label>
+                  <span>Username</span>
                 </div>
+                <div class="input-container">
+                  <input type="email" name="email" class="input" />
+                  <label for="">Email</label>
+                  <span>Email</span>
+                </div>
+                <div class="input-container">
+                  <input type="tel" name="phone" class="input" />
+                  <label for="">Phone</label>
+                  <span>Phone</span>
+                </div>
+                <div class="input-container textarea">
+                  <textarea name="message" class="input"></textarea>
+                  <label for="">Message</label>
+                  <span>Message</span>
+                </div>
+                <input type="submit" value="Send" class="btn" />
               </form>
-
             </div>
           </div>
-
         </div>
 
-      </div>
-
-    </section>
+         
   )
 }
 

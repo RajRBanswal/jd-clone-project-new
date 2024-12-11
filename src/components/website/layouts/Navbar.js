@@ -160,9 +160,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" class=" p-2 mx-1">
+                  <Link to="/login" class=" p-2 mx-1">
                     Login
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

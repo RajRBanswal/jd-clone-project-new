@@ -1,0 +1,90 @@
+.contact__banner{
+	background-image: url(//akam.cdn.jdmagicbox.com/images/icontent/cms/contactusbanner@2x.jpg);
+}
+.contact__inner ul{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+}
+.address{
+	background-color:#f2f6f8;
+	padding:20px;
+	padding-bottom:65px;
+	flex:0 0 100%;
+	margin:10px 0px;
+	position:relative;
+	border-radius:10px;
+	width:100%;
+}
+.address b{
+	font-size:16px;
+	text-transform:capitalize;
+}
+.contact__inner .address p{
+	font-size:14px;
+	color:#666666;
+	line-height:26px;
+	margin:10px 0;
+}
+.contactustext{
+	color:#0076d7;
+	font-size:15px;
+	position:absolute;
+	left:20px;
+	bottom:20px;
+	border:1px solid #0076d7;
+	border-radius:5px;
+	min-height: 40px;
+    line-height: 40px;
+    width: 88.5%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactrighticon{
+	background-image:url(//akam.cdn.jdmagicbox.com/images/icontent/cms/chatbluearrow.svg);
+	width:15px;
+	height:14px;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	margin-left:10px;
+}
+.address:hover{
+	box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+@media screen and (min-width: 768px) {
+	.address{
+		max-width:45.9%;
+		margin:15px;
+		padding:30px;
+		padding-bottom:40px;
+	}
+	.contact__inner .address p{
+		font-size:16px;
+		margin:20px 0 30px;
+	}
+	.address b{
+		font-size:20px;
+	}
+	.contactustext{
+		text-align:left;
+		border:0;
+		left:30px;
+		width:auto;
+	}
+}
+@media screen and (min-width: 900px) {
+	.address{
+		max-width:30%;
+	}
+	.contactustext{
+		left:30px;
+		bottom:30px;
+		font-size:18px;
+	}
+}
+@media screen and (max-width:767px){
+	.bannerbox.contact__banner{
+		background-position:-95px;
+	}
+}

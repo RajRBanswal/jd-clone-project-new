@@ -1,0 +1,3817 @@
+var aMessages = new Array();
+
+aMessages["login"] = new Array();
+aMessages["login"]["blank"] = "Please type a Login ID";
+
+aMessages["password"] = new Array();
+aMessages["password"]["blank"] = "Please type a Password";
+aMessages["password"]["\s"] = "Incorrect Password format";
+aMessages["password"]["length < 4"] = "Your Password is too short";
+aMessages["password"]["length > 20"] = "Your Password is too long";
+aMessages["password"]["login password same"] = "Your Login ID & Password cannot be identical for security reasons";
+
+aMessages['application']= new Array();
+aMessages['application']['blank'] = "Please enter application title";
+
+aMessages['department']= new Array();
+aMessages['department']['blank'] = "Please select category";
+
+aMessages['designation']= new Array();
+aMessages['designation']['blank'] = "Please enter designation";
+
+aMessages['keyskills']= new Array();
+aMessages['keyskills']['blank'] = "Please enter keyskills";
+
+aMessages["gender"] = new Array();
+aMessages["gender"]["blank"] = "Please select gender";
+
+aMessages["vacancy"] = new Array();
+aMessages["vacancy"]["blank"] = "Select vacancies";
+
+aMessages["salary"] = new Array();
+aMessages["salary"]["blank"] = "Please select salary";
+
+aMessages["minexp"] = new Array();
+aMessages["minexp"]["blank"] = "Select min exp.";
+aMessages["minexp"]["less"] = "Min exp should be less than Max exp";
+
+aMessages["maxexp"] = new Array();
+aMessages["maxexp"]["blank"] = "Select max exp";
+aMessages["maxexp"]["less"] = "Max exp should be greater than Min exp";
+
+aMessages["education"] = new Array();
+aMessages["education"]["blank"] = "Please select education";
+
+aMessages["jobtype"] = new Array();
+aMessages["jobtype"]["blank"] = "Please select job type";
+
+aMessages["jobstatus"] = new Array();
+aMessages["jobstatus"]["blank"] = "Please select job status";
+
+aMessages["posfilled"] = new Array();
+aMessages["posfilled"]["blank"] = "Please enter vacancy filled";
+aMessages["posfilled"]["invalid"] = "Please enter numberics only";
+aMessages["posfilled"]["greater"] = "Vacancy filled greater than No of vacancy";
+
+aMessages["jobdesc"] = new Array();
+aMessages["jobdesc"]["blank"] = "Please enter job description";
+
+aMessages["city"] = new Array();
+aMessages["city"]["blank"] = "Please select city";
+
+aMessages["tomail"] = new Array();
+aMessages["tomail"]["blank"] = "Please enter email id";
+
+aMessages["submail"] = new Array();
+aMessages["submail"]["blank"] = "Please enter subject";
+
+aMessages["msgmail"] = new Array();
+aMessages["msgmail"]["blank"] = "Please enter message";
+
+aMessages["fname"] = new Array();
+aMessages["fname"]["blank"] = "Please enter your First Name";
+
+aMessages["lname"] = new Array();
+aMessages["lname"]["blank"] = "Please enter your Last Name";
+
+aMessages["names"] = new Array();
+aMessages["names"]["blank"] = "Please enter your name";
+aMessages["names"]["invalid"] = "Please enter valid name";
+aMessages["frname"] = new Array();
+aMessages["frname"]["blank"] = "Please enter your friend name";
+aMessages["frname"]["invalid"] = "Please enter your valid friend name";
+
+aMessages["email"] = new Array();
+aMessages["email"]["blank"] = "Please enter email id";
+aMessages["email"]["invalid"] = "Please enter valid email id";
+aMessages["email"]["justdial"] = "Please do not use your justdial email id";
+
+aMessages["phone"] = new Array();
+aMessages["phone"]["blank"] = "Please enter Phone number";
+aMessages["phone"]["invalid"] = "Please enter valid Phone Number";
+
+aMessages["mobile"] = new Array();
+aMessages["mobile"]["blank"] = "Please enter mobile number";
+aMessages["mobile"]["invalid"] = "Please enter valid mobile number";
+aMessages["mobile"]["length < 10"]= "Please enter valid mobile number";
+aMessages["mobile"]["length > 10"]= "Please enter valid mobile number";
+
+aMessages["location"] = new Array();
+aMessages["location"]["blank"] = "Please enter your Location";
+
+aMessages["currentctc"] = new Array();
+aMessages["currentctc"]["blank"]= "Please select current ctc";
+
+aMessages["expectedctc"] = new Array();
+aMessages["expectedctc"]["blank"]= "Please select expected ctc";
+
+aMessages["resume"] = new Array();
+aMessages["resume"]["blank"]= "Please Attach Resume";
+aMessages["resume"]["invalid"]= "Please upload MS Word file(.doc,.docx,.txt,.rtf) only";
+
+aMessages["company"] = new Array();
+aMessages["company"]["blank"] = "Please enter company";
+
+aMessages["client"] = new Array();
+aMessages["client"]["blank"] = "Please enter client";
+
+aMessages["video"] = new Array();
+aMessages["video"]["blank"] = "Please select video";
+aMessages["video"]["invalid"] = "Please select valid flv format video";
+aMessages["video"]["notvalid"] = "Please select video or youtube only";
+
+aMessages["thumbnail"] = new Array();
+aMessages["thumbnail"]["blank"] = "Please select thumbnail video";
+
+aMessages["name"] = new Array();
+aMessages["name"]["blank"] = "Please enter client name";
+
+aMessages["profession"] = new Array();
+aMessages["profession"]["blank"] = "Please enter profession";
+
+aMessages["business"] = new Array();
+aMessages["business"]["blank"] = "Please enter nature of business";
+
+aMessages["duration"] = new Array();
+aMessages["duration"]["blank"] = "Please enter duration";
+
+aMessages["intinvestment"] = new Array();
+aMessages["intinvestment"]["blank"] = "Please enter initial investment";
+aMessages["intinvestment"]["invalid"] = "Please enter valid investment";
+
+
+aMessages["curinvestment"] = new Array();
+aMessages["curinvestment"]["blank"] = "Please enter current investment";
+aMessages["curinvestment"]["invalid"] = "Please enter valid  investment";
+
+aMessages["testimonial"] = new Array();
+aMessages["testimonial"]["blank"] = "Please enter testimonial";
+
+aMessages["uploadimage"] = new Array();
+aMessages["uploadimage"]["blank"] = "Please select image to upload";
+
+aMessages["StartDate"] = new Array();
+aMessages["StartDate"]["blank"] = "Select from date";
+aMessages["StartDate"]["less"] = "From date should be less than To date";
+
+aMessages["EndDate"] = new Array();
+aMessages["EndDate"]["blank"] = "Select To date.";
+aMessages["EndDate"]["less"] = "To date should be greater than From date";
+
+aMessages["publisher"] = new Array();
+aMessages["publisher"]["blank"] = "Please select publisher";
+
+aMessages["title"] = new Array();
+aMessages["title"]["blank"] = "Please enter title";
+
+aMessages["adsimage"] = new Array();
+aMessages["adsimage"]["blank"] = "Please select image to upload";
+
+aMessages["publanguage"] = new Array();
+aMessages["publanguage"]["blank"] = "Please select publisher language";
+
+aMessages["newpublish"] = new Array();
+aMessages["newpublish"]["blank"] = "Please enter new publisher";
+
+aMessages["logo"] = new Array();
+aMessages["logo"]["blank"] = "Please select logo to upload";
+aMessages["logo"]["invalid"]= "Please upload file(.jpg,.gif,.png) only";
+
+aMessages["language"] = new Array();
+aMessages["language"]["blank"] = "Please select language";
+
+aMessages["jingle"] = new Array();
+aMessages["jingle"]["blank"] = "Please select jingle to upload";
+aMessages["jingle"]["invalid"]= "Please upload file(.mp3,.mp4) only";
+
+aMessages["file"] = new Array();
+aMessages["file"]["blank"] = "Please select file to upload";
+aMessages["file"]["invalid"]= "Please upload file(.pdf) only";
+
+aMessages["date"] = new Array();
+aMessages["date"]["blank"] = "Please select date";
+
+aMessages["aname"] = new Array();
+aMessages["aname"]["blank"] = "Please enter article name";
+
+aMessages["section"] = new Array();
+aMessages["section"]["blank"] = "Please select section";
+
+aMessages["year"] = new Array();
+aMessages["year"]["blank"] = "Experience in years";
+
+aMessages["month"] = new Array();
+aMessages["month"]["blank"] = "Experience in months";
+
+var web_lang = getCookie('web_lang');
+var web_langs = getCookie('web_langs');
+var mediaElementPlayers = [];
+$(window).on("load", function (e) {
+	if(ETRBO==0){
+			var web_lang = getCookie('web_lang');
+			var web_langs = getCookie('web_langs');
+			if(typeof web_lang != 'undefined' && web_lang!='' &&  web_lang) {
+				var unlang = {hi:"हिन्दी", eng:"English"};
+				//var unlang = {hi:"हिन्दी", eng:"English", mr:"मराठी",gu:"ગુજરાતી",pa:"ਪੰਜਾਬੀ",bn:"বাঙালি",ta:"தமிழ்",ne:"नेपाली"};
+				if(web_langs=='undefined' || typeof web_langs == 'undefined' || web_langs == '' ){
+					web_langs = unlang[web_lang];
+				}
+				document.getElementById("tgl_lang").innerHTML = web_langs;
+				cmslanguage.init(web_lang,web_langs);
+			}
+		}
+});
+
+$(document).ready(function() {
+	if(showMobileMenu == 1)
+	{
+		setTimeout(function(){
+			$(".lsec").trigger( "click" );
+		},10);
+		/*$('.mbdiv').addClass('active');
+		$('body').addClass('mhead-body');*/
+	}
+
+	var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
+	var ua = window.navigator.userAgent;
+    if(navigator.userAgent.match(/android|iphone/i)) {
+		$(".lft_big_tab li").bind(clickHandler, function(e) {
+			e.stopPropagation();
+			$(this).css({'background':'#747474', 'color':'#FFF'});
+			$(this).children().css({'color':'#FFF'})
+			$(this).prevAll().css({'background':'#f2f2f2', 'color':'#747474'});
+			$(this).prevAll().children().css({'color':'#747474'});
+			$(this).nextAll().css({'background':'#f2f2f2', 'color':'#747474'});
+			$(this).nextAll().children().css({'color':'#747474'});
+		});
+	}
+
+	if(curPageName == "Radio Ads" || curPageName == 'Financial Results'|| curPageName == "Earnings Call Recordings"){
+		$('audio,video').mediaelementplayer();
+	}
+	if(curPageName == "Others"){
+		/*bxslider for video gallery on ads page*/
+		/*window.ytslider ='';
+		ytslider=$('.vid-gallery').bxSlider({
+			minSlides: 3,
+			maxSlides: 5,
+			slideWidth: 120,
+			slideMargin: 5,
+			autoControls: true,
+			pager : false,
+	        infiniteLoop: false
+		});	*/
+	}
+	 $('#shareviaemailpopup').on('hide.bs.modal', function (e) {
+		if ($(window).width() > 768) {
+			$("body").css("padding-right","0px");
+		}
+	});
+	$(".dropdown-toggle,.csfr").on("click",function(){
+		if(!$().mCustomScrollbar) {
+			$.ajax({
+				type: "GET",
+			    url: JS_DOMAIN+"jquery.mCustomScrollbar.concat"+MINEXT+".js?v="+VERSION,
+			    dataType: "script",
+			    cache: true
+			})
+			.done(function( response ) {
+				    $(".cutome_tab").mCustomScrollbar();
+				    $(".othrvtclmnu").mCustomScrollbar({
+						theme:"white"
+					});
+					$(".customeScrollBar").mCustomScrollbar({
+						theme:"dark"
+					});
+			  });
+		}
+	});
+	 if(curPageName == 'Earnings Call Transcripts' || curPageName == 'Financial Results'  || curPageName == "Earnings Call Recordings"){
+
+			// $('video,audio').each(function(){
+			// mediaElementPlayers.push(new MediaElementPlayer(this));
+			// });
+			// for (var i=0; i<mediaElementPlayers.length; i++){
+			// mediaElementPlayers[i].pause(); // pause
+			// 	if (mediaElementPlayers[i].getCurrentTime()){
+			// 		mediaElementPlayers[i].setCurrentTime(0); // rewind
+			// 	}
+			// }
+			audioclose();
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) { audioclose(); }   // esc key event
+		});
+	 }
+
+	success();
+
+	$('.carouselex').carousel({
+		interval: false
+	});
+
+	if(curPageName == "Press" && $("#publication").length){
+		var ajaxInProgress = false;
+	    $(document).scroll(function(e){
+			if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
+				var currentPubPage = $("#currentPubPage").val();
+				var totalPubCnt = $("#totalPubCnt").val();
+				if(parseInt(currentPubPage) < parseInt(totalPubCnt) && !ajaxInProgress){
+					$('#pgloader').show();
+					var hname = $("#hname").val();
+					var sby = $("#sby").val();
+					var src = $("#src").val();
+					var srcid = $("#srcid").val();
+					var articlepg = $("#articlepg").val();
+					var currentPubPage = $("#currentPubPage").val();
+					ajaxInProgress = true;
+					var randNum=parseInt(Math.random()*1000);
+					$.ajax({
+						url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+						type: 'POST',
+						data: {
+							action: 'publication',
+							hname: hname,
+							sby: sby,
+							src: src,
+							srcid: srcid,
+							articlepg: articlepg,
+							currentPubPage: currentPubPage
+						},
+						dataType : "json",
+						success: function(rmsg){
+							$("#publicationData").append(rmsg['html']);
+							$("#currentPubPage").val(rmsg['curpage']);
+							$('#pgloader').hide();
+							ajaxInProgress = false;
+
+						},
+						complete : function(){
+							var web_lang = getCookie('web_lang');
+							var web_langs = getCookie('web_langs');
+							if(ETRBO==0){
+								cmslanguage.init(web_lang,web_langs);
+							}
+						}
+					});
+				}
+			}
+		});
+	}
+
+	if(curPageName == "Testimonials"){
+		$(document).click(function(e){
+			var id = e.target.id;
+			if(id != 'shstate' &&  id != 'stId') {
+				$("#drulId1").css("display","none");
+			}
+			if(id != 'shcity'){
+				$("#drulId").css("display","none");
+			}
+		});
+	}
+
+	$(document).on('click','.custom-dp .dropdown-menu li a',function(){
+		$(this).parents(".dropdown").find('.btn').html('<span class="cdr cdrcolor">'+$(this).text()+'</span><span class="caretd cms_sprt2"></span>');
+		if(typeof $(this).attr("data-stdcode") != "undefined" && $.trim($(this).attr("data-stdcode")) != ""){
+			var stdcode = $(this).attr("data-stdcode");
+			$("#basic-addon2").text(stdcode);
+			if(stdcode.length == 3){
+				$("#txtland").attr("maxlength","8")
+			}
+			else if(stdcode.length == 4){
+				$("#txtland").attr("maxlength","7")
+			}
+			else if(stdcode.length == 5){
+				$("#txtland").attr("maxlength","6")
+			}
+		}
+	});
+
+	if($('.slcted').hasClass('cpId')){
+		$('.neId').removeClass('slcted');
+	}
+
+	$("#mparaid p").addClass("mpara");
+
+	var cur_url = window.location.href;
+	if(cur_url.indexOf("#rate-review-tab") >=0){
+		openTabRateReview();
+	}else if(curPageName == 'Press Video' || curPageName == 'Market Press Video'){
+		scrollToDiv('fvidId');
+	}
+
+	$('.wht_dn_arw').click(function(){
+		$('.auto_ppr').toggle();
+	});
+
+$(".fyearId").click(function(){
+	var year_val = $(this).data("value");
+	if(year_val == "Show All"){
+		year_val = "";
+	}
+	var hname = $("#headName").val();
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+        url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+        type: 'POST',
+        data: {
+            action: 'FinancialReport',
+            year: year_val,
+            hname: hname,
+            asynce: false,
+        },
+        dataType : "json",
+        success: function (response) {
+        	if(year_val == ""){ year_val = "Show All" }
+        	if(hname == "Earnings Call Transcripts"){
+				var shortText = "Earnings Call";
+			}else{
+				var shortText = "Quarterly Financials";
+			}
+			var yearText = '<span class="cdr tcon" id="cdr_year_Id">'+year_val+'</span>';
+            var findata_text = "<div id='finDtaId'>";
+			$.each(response, function (index, entry) {
+				if(index == "2012-13"){
+					findata_text += '<div class="qu-report">'+
+										'<ul class="af12">'+
+											'<li class="col-sm-3 af_fr">'+
+												'<span class="qf tcon">Annual Financials <br>(FY '+index+')</span>'+
+											'</li>'+
+											'<li class="col-sm-2 af_sec">';
+											if(entry[1] != undefined){
+								findata_text +=	'<span class="pdfP">'+
+													'<a class="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												if(entry[1].audio_flag == 1){
+									findata_text += '<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+												}
+								findata_text += '</span>';
+											}else{
+								findata_text += '<span class="pdfP">----</span>';
+											}
+							findata_text += '</li>'+
+											'<li class="col-sm-2 af_thr">';
+											if(entry[2] != undefined){
+								findata_text +='<span class="pdfP">'+
+													'<a class="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												if(entry[2].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+												}
+								findata_text +='</span>';
+											}else{
+								findata_text +='<span class="pdfP">----</span>';
+											}
+							findata_text +='</li>'+
+											'<li class="col-sm-2 af_four">';
+											if(entry[3] != undefined){
+								findata_text +='<span class="pdfP">'+
+													'<a class="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												if(entry[3].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+												}
+								findata_text +='</span>';
+											}else{
+								findata_text += '<span class="pdfP">----</span>';
+											}
+							findata_text +='</li>'+
+											'<li class="col-sm-3 qu12">';
+											if(entry[4] != undefined){
+								findata_text +='<span class="pdfP">'+
+													'<a class="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												if(entry[4].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+												}
+								findata_text +='</span>';
+											}else{
+								findata_text += '<span class="pdfP">----</span>';
+											}
+							findata_text +='</li>'+
+									'</ul>'+
+								'</div>';
+				}else{
+					findata_text += '<div class="qu-report">'+
+										'<ul>'+
+											'<li class="col-sm-3">'+
+												'<span class="qf tcon">'+shortText+' <br>(FY '+index+')</span>'+
+											'</li>'+
+											'<li class="col-sm-2">';
+											if(entry[1] != undefined){
+								findata_text +=	'<span class="q1">Q1</span>'+
+												'<span class="pdfP">';
+												if(entry[1].reportfiling_pdf != '') {
+													findata_text +=	'<a class="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												}
+												if(entry[1].audio_flag==1){
+									findata_text += '<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip1'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+													'<!--Audioclip Modal -->'+
+													'<div class="modal fade" id="audioclip1'+entry[1].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div class="modal-dialog" role="document">'+
+														'<div class="modal-content dtable">'+
+															'<div class="modal-header">'+
+																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+																	'<span aria-hidden="true">&times;</span>'+
+																'</button>'+
+															'</div>'+
+															'<div class="modal-body">'+
+																'<div class="earningcallT">'+
+																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[1].mp3quarter+' FY '+entry[1].mp3finyear+'</span></p>'+
+																	'<div class="eartsec" id="audioplayer">'+
+																		'<audio id="player2" src="'+entry[1].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
+																	'</div>'+
+																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																'</div>'+
+															'</div>'+
+														'</div>'+
+													  '</div>'+
+													'</div><!--End Audioclip-->';
+												}
+								findata_text += '</span>';
+											}else{
+								findata_text +=	'<span class="q1 q1_gray">Q1</span>';
+											}
+							findata_text += '</li>'+
+											'<li class="col-sm-2">';
+											if(entry[2] != undefined){
+								findata_text +='<span class="q1">Q2</span>'+
+												'<span class="pdfP">';
+												if(entry[2].reportfiling_pdf != '') {
+													findata_text +='<a class="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												}
+												if(entry[2].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip2'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+													'<!--Audioclip Modal -->'+
+													'<div class="modal fade" id="audioclip2'+entry[2].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div class="modal-dialog" role="document">'+
+														'<div class="modal-content dtable">'+
+															'<div class="modal-header">'+
+																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+																	'<span aria-hidden="true">&times;</span>'+
+																'</button>'+
+															'</div>'+
+															'<div class="modal-body">'+
+																'<div class="earningcallT">'+
+																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[2].mp3quarter+' FY '+entry[2].mp3finyear+'</span></p>'+
+																	'<div class="eartsec" id="audioplayer">'+
+																		'<audio id="player2" src="'+entry[2].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
+																	'</div>'+
+																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																'</div>'+
+															'</div>'+
+														'</div>'+
+													  '</div>'+
+													'</div><!--End Audioclip-->';
+												}
+								findata_text +='</span>';
+											}else{
+								findata_text +='<span class="q1 q1_gray">Q2</span>';
+											}
+							findata_text +='</li>'+
+											'<li class="col-sm-2">';
+										if(entry[3] != undefined){
+								findata_text +='<span class="q1">Q3</span>'+
+												'<span class="pdfP">';
+												if(entry[3].reportfiling_pdf != '') {
+													findata_text +='<a class="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												}
+											if(entry[3].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip3'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+													'<!--Audioclip Modal -->'+
+													'<div class="modal fade" id="audioclip3'+entry[3].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div class="modal-dialog" role="document">'+
+														'<div class="modal-content dtable">'+
+															'<div class="modal-header">'+
+																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+																	'<span aria-hidden="true">&times;</span>'+
+																'</button>'+
+															'</div>'+
+															'<div class="modal-body">'+
+																'<div class="earningcallT">'+
+																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[3].mp3quarter+' FY '+entry[3].mp3finyear+'</span></p>'+
+																	'<div class="eartsec" id="audioplayer">'+
+																		'<audio id="player2" src="'+entry[3].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
+																	'</div>'+
+																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																'</div>'+
+															'</div>'+
+														'</div>'+
+													  '</div>'+
+													'</div><!--End Audioclip-->';
+											}
+								findata_text +='</span>';
+										}else{
+								findata_text +='<span class="q1 q1_gray">Q3</span>';
+										}
+							findata_text +='</li>'+
+											'<li class="col-sm-3">';
+										if(entry[4] != undefined){
+								findata_text +='<span class="q1">Q4 & <span class="tcon">Annual</span></span>'+
+												'<span class="pdfP">';
+												if(entry[4].reportfiling_pdf != '') {
+													findata_text +='<a class="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+												}
+											if(entry[4].audio_flag==1){
+									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip4'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+													'<!--Audioclip Modal -->'+
+													'<div class="modal fade" id="audioclip4'+entry[4].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div class="modal-dialog" role="document">'+
+														'<div class="modal-content dtable">'+
+															'<div class="modal-header">'+
+																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+																	'<span aria-hidden="true">&times;</span>'+
+																'</button>'+
+															'</div>'+
+															'<div class="modal-body">'+
+																'<div class="earningcallT">'+
+																	'<p class="text-center frp tcon">Earnings Call Transcript For <span class="orange">Q'+entry[4].mp3quarter+' FY '+entry[4].mp3finyear+'</span></p>'+
+																	'<div class="eartsec" id="audioplayer">'+
+																		'<audio id="player2" src="'+entry[4].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
+																	'</div>'+
+																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																'</div>'+
+															'</div>'+
+														'</div>'+
+													  '</div>'+
+													'</div><!--End Audioclip-->';
+											}
+								findata_text +='</span>';
+										}else{
+								findata_text +='<span class="q1 q1_gray">Q4 &<span class="tcon"> Annual</span></span>';
+										}
+							findata_text +='</li>'+
+									'</ul>'+
+								'</div>';
+				}
+			});
+			findata_text += "</div>";
+			$('#finDtaId').html("");
+			$('#cdr_year_Id').text(yearText);
+			$('#finDtaId').html(findata_text);
+			if(ETRBO==0){
+				cmslanguage.init(web_lang,web_langs);
+			}
+			$('video,audio').mediaelementplayer();
+
+        }
+    });
+
+
+});
+
+$('#wrmob').keyup(function(){
+	$('#wrmobErr').html('');
+});
+
+
+if(curPageName == "Others"){
+	var firstvid = $("#loadfirstvID").val();
+	viewOtherAds(firstvid);
+}
+if(curPageName == 'Upload your resume'){
+
+	$( "#txtdob" ).datepicker({
+		changeMonth: true,
+		changeYear: true,
+		yearRange: '1960:-10',
+		defaultDate:"-56y-m-d",
+		beforeShow:function(textbox, instance){
+		     $('#ui-datepicker-div').css({
+		         // position: 'absolute',
+		         // top:"0px !important" ,
+		         // left:"0px !important"
+		     });
+		    $('#dobBox').append($('#ui-datepicker-div'));
+		    $('#ui-datepicker-div').hide();
+		}
+	});
+ 	$(".formcareers input[type=text],.formcareers textarea").keypress(function(){
+ 		$(".almsg").hide();
+ 		$(this).removeClass("err_msg");
+ 	});
+ 	$("#txtdob").on("change",function(){
+ 		$(".almsg").hide();
+ 		$(this).removeClass("err_msg");
+ 	});
+ 	$(".formcareers button").on("click",function(){
+ 		$(".almsg").hide();
+ 		$(this).removeClass("err_msg");
+ 	});
+ 	$(".txtnumber").keypress(function (e) {
+	//if the letter is not digit then display error and don't type anything
+	if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+		return false;
+	}
+	});
+	$(".fourdigit").keypress(function (e) {
+		var charCode = (e.which) ? e.which : e.keyCode;
+		if(parseInt($(this).val().length) > 3 && charCode != 8 && charCode != 36 && charCode != 46 && charCode != 116){
+			return false;
+		}
+	});
+	$(".twodigit").keypress(function (e) {
+		var charCode = (e.which) ? e.which : e.keyCode;
+		if(parseInt($(this).val().length) > 1 && charCode != 8 && charCode != 36 && charCode != 46 && charCode != 116 && charCode != 9){
+			return false;
+		}
+	});
+	$('body').on('click', '.rdo', function(){
+		var id = $(this).attr('id').split(
+			"||");
+		if(id[1] == "1"){
+			$('.gender.rdo').removeClass('rdoact');
+			$(this).addClass('rdoact');
+			$("#sex").val(id[0]);
+		}
+		else{
+			$('.cusrst.rdo').removeClass('rdoact');
+			$(this).addClass('rdoact');
+			$("#currstatus").val(id[0]);
+			if(id[0] == "F"){
+				$(".empDet").hide();
+			}
+			else{
+				if(id[0] == "NCE"){
+					$("#currEmpTxt").text("Fill in your Previous Employment details");
+				}
+				else if(id[0] == "CE"){
+					$("#currEmpTxt").text("Fill this portion only if you are currently employed");
+				}
+				if(ETRBO==0){
+					cmslanguage.init(web_lang,web_langs);
+				}
+				$(".empDet").show();
+			}
+		}
+	});
+ }
+
+ if(curPageName == 'Fun at work'){
+ 	$(".left").click(function(){
+ 		var id = $(this).attr("data-id");
+ 		var active = parseInt($("#"+id+"_count").text());
+ 		var total = parseInt($(this).attr("data-total"));
+ 		if(active == 1){
+ 			active = total;
+ 		}
+ 		else{
+ 			active = active - 1;
+ 		}
+ 		$("#"+id+"_count").text(active);
+ 	});
+ 	$(".right").click(function(){
+ 		var id = $(this).attr("data-id");
+ 		var active = parseInt($("#"+id+"_count").text());
+ 		var total = parseInt($(this).attr("data-total"));
+ 		if(active == total){
+ 			active = 1;
+ 		}
+ 		else{
+ 			active = active + 1;
+ 		}
+ 		$("#"+id+"_count").text(active);
+ 	});
+ }
+// });
+
+$(".f_year").click(function(){
+	var yid = this.id;
+	var year = $("#"+yid).data('value');
+	if(year == undefined){ year = ""; }
+	var hname = $("#headName").val();
+
+	hname = hname.replace(/-/g, ' ');
+	hname = hname.replace('And', '&');
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			//month: month,
+			hname: hname,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					var display_date = '';
+					if(hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details') {
+						display_date = entry['display_date'];
+					}
+					fill_text +='<div class="copRw">'+
+									'<div class="col-sm-12 padding0">'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span class="copdate tcon">'+display_date;
+										if(entry['city'] != null && hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details'){
+								fill_text +=' | '+entry['city'];
+										}
+								fill_text +='</span>'+
+											'<span class="co-info tcon">'+entry['title']+'</span>'+
+										'</div>'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'</div>'+
+									'</div>'+
+								'</div>';
+				});
+			}
+
+			$('#fillDta').html(fill_text);
+			var monthText = "";
+			monthText += '<li><a href="javascript:void(0);" class="f_month tcon" id="f_month_all" data-value="" onclick="getDataMonth(this.id);">Show All</a></li>';
+			if(!$.isEmptyObject(response['results']['months'][0])){
+				$.each(response['results']['months'], function (key, val) {
+					monthText += '<li><a href="javascript:void(0);" class="f_month tcon" id="f_month_'+val['month']+'" data-value="'+val['month']+'" onclick="getDataMonth(this.id);">'+val['month']+'</a></li>';
+				});
+			}
+			$('#finmonthId').html(monthText);
+			if(ETRBO==0){
+				cmslanguage.init(web_lang,web_langs);
+			}
+		},
+		error: function(){
+			alert("Communication with Server Failed.. Try Again.");
+		}
+	});
+});
+
+$(".anlyearId").click(function(){
+	var year = $(this).data("value");
+	if(year == "Show All"){
+		year = "";
+	}
+	var hname = $("#headName").val();
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+        url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+        type: 'POST',
+        data: {
+            action: 'FinancialReport',
+            year: year,
+            hname: hname,
+            asynce: false,
+        },
+        success: function (response) {
+			if(year == ""){ year = "Show All" }
+			response = JSON.parse(response);
+			var anlText = '<ul class="anulr">';
+			$.each(response['results']['data'], function (index, entry) {
+				var fdate			= entry['display_date'];
+				fdate				= fdate.split(' ');
+				var edate			= fdate['0'];
+				var spltDate		= edate.split('-');
+				var dt = new Date(spltDate[0], spltDate[1], spltDate[2]);
+				Date.prototype.monthNames = ["January", "February", "March","April", "May", "June","July", "August", "September","October", "November", "December"];
+				Date.prototype.getMonthName = function() { return dt.monthNames[dt.getMonth()];};
+				var display_date	= dt.monthNames[dt.getMonth()]+' '+dt.getDate()+', '+dt.getFullYear();
+
+				anlText	+= '<li class="anrp col-sm-4">'+
+								'<span class="anfr">'+
+									'<span class="imgb">'+
+										'<img src="'+entry['thumbnail_path']+'" title="'+entry['pdf_name']+'-'+edate+'"/>'+
+									'</span>'+
+									'<span class="anpara">'+
+										'<span class="fr tcon">'+entry['title']+'</span>'+
+										'<span class="sec tcon">'+display_date+'</span>'+
+										'<span class="thr">'+entry['pdf_file_size']+'</span>'+
+									'</span>'+
+									'<span class="last">'+
+										'<a class="fr tcon" href="'+entry['reportfiling_pdf']+'" title="'+entry['pdf_name']+'" alt="'+entry['pdf_name']+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+									'</span>'+
+								'</span>'+
+							'</li>';
+
+			});
+			anlText += '</ul>';
+			$('.anulr').replaceWith(anlText);
+			$('#cdr_year_Id').replaceWith('<span class="cdr tcon" id="cdr_year_Id">'+year+'</span>');
+			if(ETRBO==0){
+				cmslanguage.init(web_lang,web_langs);
+			}
+
+		},
+        error: function () {
+            alert("Communication with Server Failed.. Try Again.");
+        }
+    });
+});
+	//Mobile-header
+	$('.lsec').click(function(e){
+			$('.mbdiv').addClass('active');
+			$('body').addClass('mhead-body');
+	});
+	$('.crs-icon').click(function(){
+		$('.mbdiv').removeClass('active');
+		$('body').removeClass('mhead-body');
+	});
+
+	//Mobile-header
+	$('.Rsec').click(function(){
+		$('.mbdiv_r').addClass('active');
+		$('body').addClass('mhead-body');
+	});
+	$('.crs-icon-r').click(function(){
+		$('.mbdiv_r').removeClass('active');
+		$('body').removeClass('mhead-body');
+	});
+
+	$("#aprodserv, #amore").click(function(){
+		$(this).toggleClass("slcted");
+	});
+
+	//Custom select dropdown
+	$('.csfr').click(function(){
+		$(this).next('.drul').slideToggle();
+	});
+
+	$('.cms_hamburger_icon').click(function(){
+		$('body').addClass('bdyfx');
+		$('.navbar_section').addClass('mobileview');
+	});
+	$('.cms_closesidemenu').click(function(){
+		$('body').removeClass('bdyfx');
+		$('.navbar_section').removeClass('mobileview');
+	});
+
+	if(myjio == 1) {
+		setMyJioHeader('0');
+	}
+});
+
+
+/* Scroll to top JS */
+$(window).scroll(function() { if ($(this).scrollTop() > 200) { $('.go-top').fadeIn(200); } else { $('.go-top').fadeOut(200); } });
+// Animate the scroll to top
+$('.go-top').click(function(event) { event.preventDefault(); $('html, body').animate({scrollTop: 0}, 470); });
+/* Scroll to top JS ends */
+
+
+$("body").click(function(e){
+	$(".mbdiv, .mbdiv_r").click(function(event) {
+		event.stopPropagation();
+	});
+	if(e.target.className !== "mbdiv" && e.target.className !== "lsec"){
+		 $(".mbdiv").removeClass('active');
+		 $("body").removeClass('mhead-body');
+    }
+    if(e.target.className !== "mbdiv_r" && e.target.className !== "Rsec"){
+		 $(".mbdiv_r").removeClass('active');
+    }
+    //rmenuId
+ });
+
+function audioclose(){
+	// $('video,audio').each(function(){
+	// 	mediaElementPlayers.push(new MediaElementPlayer(this));
+	// });
+	// for (var i=0; i<mediaElementPlayers.length; i++){
+	// mediaElementPlayers[i].pause(); // pause
+	// 	if (mediaElementPlayers[i].getCurrentTime()){
+	// 		mediaElementPlayers[i].setCurrentTime(0); // rewind
+	// 	}
+	// }
+	$('video,audio').trigger('load');
+	$('video,audio').trigger('pause');
+}
+
+function getDataMonth(month_id){
+	var month = $('#'+month_id).data('value');
+	var year = $('.sel_year .cdr').text();
+
+	var hname = $("#headName").val();
+	hname = hname.replace(/-/g, ' ');
+	hname = hname.replace('And', '&');
+	if(month == ""){
+		$('.sel_month .cdr').html("Show All");
+	}else{
+		$('.sel_month .cdr').html(month);
+	}
+	var matches = year.match(/\d+/g);
+	if (matches == null) {
+		year = "Show All";
+	}
+
+	if(year == "Show All"){ year = "";}
+	//if(month == "Show All"){ month = "";}
+var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: hname,
+			asynce: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					var display_date = '';
+					if(hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details') {
+						display_date = entry['display_date'];
+					}
+					fill_text +='<div class="copRw">'+
+									'<div class="col-sm-12 padding0">'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span class="copdate tcon">'+display_date;
+										if(entry['city'] != null && hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details'){
+								fill_text +=' | '+entry['city'];
+										}
+								fill_text +='</span>'+
+											'<span class="co-info tcon">'+entry['title']+'</span>'+
+										'</div>'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'</div>'+
+									'</div>'+
+								'</div>';
+				});
+			}
+			$('#fillDta').html(fill_text);
+			if(ETRBO==0){
+				cmslanguage.init(web_lang,web_langs);
+			}
+		}
+	});
+
+}
+
+function selTestState(state){
+	$("#shstate").replaceWith('<a href="javascript:void(0);" id="shstate" value="'+state+'">'+state+'</a>');
+	$('#drulId1').slideToggle();
+	$("#shselstate").val(state);
+}
+
+function selTestCity(city){
+	$("#shcity").replaceWith('<a href="javascript:void(0);" id="shcity" value="'+city+'" onclick="opendata();">'+city+'</a>');
+	$('#drulId').slideToggle();
+	$("#shselcity").val(city);
+}
+
+function getUrl(){
+	var url = window.location.href;
+	document.cookie="back_url="+url;
+}
+
+function filterDoc(){
+	$('.hedersearch').css('display','block');
+}
+
+function openTabRateReview(){
+	$("li.leftab").removeClass('active');
+	$("#li-rate-review-tab").addClass('active');
+	$(".tab-pane").removeClass('active in');
+	$("#rate-review").addClass('active in');
+}
+
+function success(){
+	var successval = $("#success").val();
+
+	if (successval == 1){
+		$('#wrrateErr').html('');
+		$('#wrnameErr').html('');
+		$('#wrmobErr').html('');
+		$('#wremailErr').html('');
+		$('#photoErr').html('');
+		$('#wrereviewErr').html('');
+		$('#testauth').modal('show');
+	}else if(successval == 2){
+		$('#writeReviewForAll').modal('show');
+	}
+}
+
+
+function closePopUp(divname) {
+	// var id = '#'+divname;
+	// $(id).bPopup().close();
+	// if($(id).is(':visible'))
+	// {
+	// 	$(id).hide();
+	// }
+	jQuery(".b-modal").modal('hide');
+    var id = '#'+divname;
+    jQuery(id).modal('hide');
+
+    if($(id).is(':visible'))
+    {
+            $(id).hide();
+    }
+}
+
+function getTestimonial(){
+	return false;
+	var name = 'pgtestimonials';
+	var c_value = '';
+	document.cookie = escape(name) + "=" + escape(c_value) + ";  path=/";
+	window.location.href = CMSDOMAIN+"webcms_new/cms/testimonials?jdlite="+JDLITEQUERY;
+}
+
+function submitYourView(){
+	$('#wrnameErr').html("");
+	$('#wrmobErr').html("");
+	$('#wremailErr').html("");
+	$('#shstateErr').html("");
+	$('#shcityErr').html("");
+	$('#wrereviewErr').html("");
+	$('#photoErr').html("");
+	var photo = document.frmview.elements["photo"];
+
+	if(validateForm("wrname","Please enter your name")==true) {
+		if($('#wrname').val() == '') {
+			$('#wrnameErr').html("Please enter your name");
+			return false;
+		}
+		var wrnamelength = $("#wrname").val().length;
+		if(wrnamelength > 50){
+			ed("wrnameErr").innerHTML =  "Please enter your valid name";
+			ed("wrname").focus();
+			return false;
+		}
+		if(!isValid($.trim($("#wrname").val()), 'name')){
+			$('#wrnameErr').html("Please enter your valid name");
+
+			return false;
+		}
+		//if(validateMobile_review("wrmob","Please enter your mobile number")==true) {
+			/*if($('#wrmob').val() == '9867045061' || $('#wrmob').val() == 'e.g 9867045061') {
+				$('#wrmobErr').html("Please enter your mobile number");
+				return false;
+			}*/
+
+		if($('#wrmob').val() == '' || $('#wrmob').val().length != 10 || $('#wrmob').val() == '0000000000') {
+			$('#wrmobErr').html("Please enter 10 digit mobile number");
+			$("#wrmob").val('');
+			ed("wrmob").focus();
+			return false;
+		}
+		if(review_validate_email("wremail")==true) {
+			//if($('#wremail').val() == '') {
+			//	$('#wremailErr').html("Please enter valid email id");
+			//	return false;
+			//}
+
+			if($("#shstate").attr('value') == '') {
+				$('#shstateErr').html("Please select state");
+				return false;
+			}
+
+			if($("#shcity").attr('value') == '') {
+				$('#shcityErr').html("Please select city");
+				return false;
+			}
+			if(photo != ""  && photo != undefined && photo.value != undefined && photo.value != "" ){
+				file_name = photo.value;
+				last_dot_pos = photo.value.lastIndexOf(".");
+				string_length = photo.value.length;
+				file_extension = file_name.slice(last_dot_pos,string_length);
+				if(	file_extension.toLowerCase() != ".jpg" && file_extension.toLowerCase() != ".jpeg" && file_extension.toLowerCase() != ".gif" && file_extension.toLowerCase() != ".png"){
+					$('#photoErr').html("Please select jpg/png/gif image file only");
+					return false;
+				}
+				var iSize = validphotosize();
+				if(iSize > 2097152){
+					$('#photoErr').html("Please select image file less than 2MB only");
+					isValids = false;
+					return isValids;
+				}
+			}
+			if($.trim($("#wrereview").val()) == '' || $.trim($("#wrereview").val()) == "Views *"){
+				$('#wrereviewErr').html("Please enter your view");
+				ed("wrereview").focus();
+				return false;
+			}
+			var wrereviewlength = $("#wrereview").val().length;
+			if(wrereviewlength > 500){
+				$('#wrereviewErr').html("Review should not be more than 500 characters");
+				ed("wrereview").focus();
+				return false;
+			}
+			return true;
+		}
+		//}
+	}
+	return false;
+}
+
+function review_validate_email(id)
+{
+	var x = $.trim(ed(id).value);
+	if(x == "Email id (Optional)"){
+		x = "";
+	}
+	if(x != '')
+	{
+		var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+		if(!pattern.test(x)){
+			$('#wremailErr').html("Please enter a valid e-mail address");
+			return false;
+		}
+	}
+	return true;
+}
+
+function validphotosize()
+{
+	var iSize = 0;
+	if($.browser.msie)
+	{
+		var objFSO = new ActiveXObject("Scripting.FileSystemObject");
+		var sPath = $("#photo")[0].value;
+		var objFile = objFSO.getFile(sPath);
+		var iSize = objFile.size;
+		return	iSize;
+	}
+	else
+	{
+		iSize = ($("#photo")[0].files[0].size);
+		return	iSize;
+	}
+}
+
+function getShareCity(statename){
+var randNum=parseInt(Math.random()*1000);
+   $.ajax({
+        url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+        type: 'POST',
+        data: {
+            action: 'shareCity',
+            url: url,
+            state_name:statename,
+            async: false,
+        },
+        success: function (response) {
+			response = JSON.parse(response);
+            var spanStr = '';
+
+			spanStr += '<div id="ctGrpId" class="custom_select form-group">'+
+							'<div class="csfr" id="csfrId">'+
+								'<span class="dpspn" id="dpspnId">'+
+									'<a href="javascript:void(0);" id="shcity" value="" class="tcon" onclick="opendata();">Select City *</a>'+
+								'</span>'+
+								'<span class="downArrow cms_sprt2"></span>'+
+								'<span id="shcityErr" class="error"></span>'+
+							'</div>'+
+							'<ul class="drul" id="drulId">';
+					$.each(response['results'], function (index, entry) {
+			spanStr += 			"<li><a href=\"javascript:void(0);\" onclick=\"selTestCity('"+entry['ct_name']+"');\" class=\"tcon\">"+entry['ct_name']+"</a></li>";
+					});
+			spanStr += 	'</ul></div>';
+			$('#ctGrpId').replaceWith(spanStr);
+			 if(ETRBO==0){
+							cmslanguage.init(web_lang,web_langs);
+						  }
+        },
+        error: function () {
+            alert("Communication with Server Failed.. Try Again.");
+        }
+    });
+}
+
+function validate_share(){
+		var isValid = true;
+
+        oRegX = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+        var emailExpJD = /^[a-zA-Z0-9._-]+@justdial.com$/i;
+
+		if($("#shname").val() == "" || $("#shname").val() == null)
+		{
+			document.getElementById("err").innerHTML = aMessages["names"]["blank"];
+			$("#err").css("display","block");
+			isValid = false;
+		}
+      	else if(/^[a-zA-Z]+([.]{0,1}[']{0,1}[ ]{0,1}[a-zA-Z]+)*$/.test($("#shname").val()) == false || /^[\.]+$/.test($("#shname").val()) == true || ($("#shname").val().length > 50))
+		{
+			document.getElementById("err").innerHTML = aMessages["names"]["invalid"];
+			$("#err").css("display","block");
+			isValid = false;
+		}
+		else if($("#shemail").val() == "")
+		{
+			document.getElementById("err").innerHTML = aMessages["email"]["blank"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+		else if($("#shemail").val() == "")
+		{
+			document.getElementById("err").innerHTML = aMessages["email"]["blank"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+        else if(!oRegX.test($("#shemail").val()))
+		{
+			document.getElementById("err").innerHTML = aMessages["email"]["invalid"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+        else if($("#shmobile").val() == "")
+		{
+			document.getElementById("err").innerHTML = aMessages["mobile"]["blank"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+		else if($("#shmobile").val() == "")
+		{
+			document.getElementById("err").innerHTML = aMessages["mobile"]["blank"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+		else if(isNaN($("#shmobile").val()))
+		{
+			document.getElementById("err").innerHTML = aMessages["mobile"]["invalid"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+        else if($("#shmobile").val().length > 10)
+		{
+			document.getElementById("err").innerHTML = aMessages["mobile"]["length > 10"];
+			isValid = false;
+			$("#err").css("display","block");
+		}
+		else if($("#shmobile").val().length < 10)
+		{
+			document.getElementById("err").innerHTML = aMessages["mobile"]["length < 10"];
+			isValid = false;
+			$("#err").css("display","block");
+  		}
+		else if($("#shmobile").val() != '')
+	    {
+	        var first_digit = $("#shmobile").val().charAt(0);
+			if(first_digit != 9 && first_digit != 8 && first_digit != 7)
+		    {
+				document.getElementById("err").innerHTML = aMessages["mobile"]["invalid"];
+				isValid = false;
+				$("#err").css("display","block");
+		    }
+	    }
+       	else
+       	{
+			document.getElementById("err").innerHTML = "";
+			$("#err").css("display","none");
+       	}
+        return isValid;
+}
+
+
+function validate_sharefrm(){
+	 var isValid  = validate_share();
+	 if(!isValid){
+		return false;
+	}
+	else{
+		addShare();
+	}
+}
+
+
+function addShare(){
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+				action: 'submitSuccStory',
+				cname:	$("#shname").val(),
+				email:	$("#shemail").val(),
+				mobile:	$("#shmobile").val(),
+				section:$("#shsection").val(),
+			  },
+		success: function(result) {
+			//jQuery('#testauth').modal('show');
+			$('#testauth').modal('show');
+			$("#shname").val('');
+			$("#shemail").val('');
+			$("#shmobile").val('');
+			$("#err").text('');
+		}
+    });
+}
+
+function success_videos(video_id,city,cname,compname){
+	var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    if(navigator.userAgent.match(/iPad|android|iphone/i) || msie > 0) {
+		var vidName = video_id.replace(/\s/g, "-");
+		var fmp4 = vidName.replace('.flv', "_m.mp4");
+		var fogg = vidName.replace('.flv', "_m.ogg");
+		var f3gp = vidName.replace('.flv', "_m.3gp");
+		var fwmv = vidName.replace('.flv', "_m.wmv");
+		var fflv = vidName.replace('.flv', "_m.flv");
+
+		var strVideoFile1 = PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fmp4;
+		var strVideoFile2 = PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fogg;
+		var strVideoFile3 = PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + f3gp;
+		var strVideoFile4 = PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fwmv;
+		var strVideoFile5 = PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fflv;
+		if($("#mbview").val() == 1){
+			var vWidth = $(window).width() - 30;
+		}else{
+			var vWidth = 400;
+		}
+		var video_details = '<video class="successVideo" autoplay="autoplay" controls="controls" width="'+vWidth+'" height="285"><source src="'+strVideoFile1+'" type="video/mp4"/><source src="'+strVideoFile2+'" type="video/ogg"/><source src="'+strVideoFile3+'" type="video/3gp"/><source src="'+strVideoFile4+'" type="video/wmv"/><source src="'+strVideoFile5+'" type="video/flv"/></video>';
+		$('#imagespaces').hide();
+		$("#mediaspaces").html(video_details);
+	}
+	else
+	{
+		var fflv = video_id.replace('.flv', ".flv");
+		strVideoFile=PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fflv;
+		$('#imagespaces').hide();
+		if($("#mbview").val() == 1){
+			var vWidth = $(window).width() - 30;
+		}else{
+			var vWidth = 400;
+		}
+		jwplayer("mediaspaces").setup({
+			flashplayer:JDDOMAIN+"player.swf",
+			autostart: true,
+			fullscreen: true,
+			file: strVideoFile,
+			height: 283,
+			width: vWidth,
+			androidhls: true
+			/*width: 320
+			width: $(window).width() - 30,*/
+	  });
+	}
+}
+
+function source_press_video(page_source,sby){
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+				action: 'pressVideopgn',
+				page: page_source,
+				sby: sby,
+			  },
+		success: function(result){
+			response = JSON.parse(result);
+			var cmntText = '<div role="tabpanel" class="tab-pane fade active in" id="comment" aria-labelledby="comment-tab">';
+			$.each(response['results'], function (index, entry) {
+				cmntText += '<div class="ratuserdiv">'+
+								'<div class="allratL">'+
+									'<div class="fr">'+
+										'<img width="50px" height="50px" src="'+entry['img']+'" alt="" id="rwimg0">'+
+									'</div>'+
+								'</div>'+
+								'<div class="allratR">'+
+									'<span class="fr">'+
+										'<span class="rName trat" id="rwname0">'+entry['name']+'</span>'+
+										'<span id="rwstars0" class="star_m">';
+											if(entry['rating'] != 0){
+												for(var i=0;i<5;i++){
+													if(i < entry['rating']){
+										cmntText += "<span class=\"ms10\"></span>";
+													}else{
+										cmntText += "<span class=\"ms0\"></span>";
+													}
+												}
+											}
+							cmntText +='</span>'+
+									'</span>'+
+									'<p class="sec">'+
+										'<span class="sec1">'+entry['mob_email']+'</span>'+
+										'<span class="dtyr ratx pull-right">'+entry['date']+'</span>'+
+									'</p>'+
+									'<p id="rwopinion0" class="thr tcon">'+entry['comment']+'</p>'+
+								'</div>'+
+							'</div>';
+			});
+
+			//pagination
+			var pgnText= "";
+			var cnts_ap=0;
+			var paging_ap="";
+			var previous_ap="";
+			var next_ap="";
+			for(var pg_ap = 1 ; pg_ap <= response['totalpages']; pg_ap++){
+				if(response['page']==pg_ap){
+					if(response['totalpages']>1){
+						paging_ap = paging_ap+"<li class='active'><a>"+pg_ap+"<span class='sr-only'>(current)</span></a></li>";
+					}
+					else{
+						paging_ap = paging_ap+"<li><span>&nbsp;</span></li>";
+					}
+					if(response['page']>1)
+					{
+						pgs_ap = response['page']-1;
+						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_video("+pgs_ap+","+sby+")'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+					}
+					else
+					{
+						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+					}
+					if(response['page']!=response['totalpages'])
+					{
+						pgs2_ap = response['page']+1;
+						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_video("+pgs2_ap+","+sby+")'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+					}
+					else
+					{
+						 next_ap = "<li><a href='#comment' aria-label='Next'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+					}
+				}
+				else if((pg_ap>(response['page']-5))&&(pg_ap<(response['page']+5)))
+				{
+						paging_ap = paging_ap+"<li><a href='#comment' onclick='javascript:source_press_video("+pg_ap+","+sby+")'>"+pg_ap+"</a></li>";
+				}
+				cnts_ap++;
+			}
+
+			pgnText += "<nav id='videopg' class=\"new_pagination\">" +
+							"<ul class=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
+					   "</nav>";
+			cmntText += pgnText+'</div>';
+			$("#comment").replaceWith(cmntText);
+			if(ETRBO==0){
+			 cmslanguage.init(web_lang,web_langs);
+			}
+		}
+	});
+}
+
+function source_press_comment(page_source,sby){
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+				action: 'pressCmntpgn',
+				page: page_source,
+				sby: sby,
+			  },
+		success: function(result){
+			response = JSON.parse(result);
+			var cmntText = "";
+
+			$.each(response['results'], function (index, entry) {
+				cmntText += '<div class="ratuserdiv">'+
+								'<div class="allratL">'+
+									'<div class="fr">'+
+										'<img width="50px" height="50px" src="'+entry['img']+'" alt="" id="rwimg0">'+
+									'</div>'+
+								'</div>'+
+								'<div class="allratR">'+
+									'<span class="fr">'+
+										'<span class="rName trat" id="rwname0">'+entry['name']+'</span>'+
+										'<span id="rwstars0" class="star_m">';
+											if(entry['rating'] != 0){
+												for(var i=0;i<5;i++){
+													if(i < entry['rating']){
+										cmntText += "<span class=\"ms10\"></span>";
+													}else{
+										cmntText += "<span class=\"ms0\"></span>";
+													}
+												}
+											}
+							cmntText +='</span>'+
+									'</span>'+
+									'<p class="sec">'+
+										'<span class="sec1">'+entry['mob_email']+'</span>'+
+										'<span class="dtyr ratx pull-right">'+entry['date']+'</span>'+
+									'</p>'+
+									'<p id="rwopinion0" class="thr tcon">'+entry['comment']+'</p>'+
+								'</div>'+
+							'</div>';
+			});
+
+			//pagination
+			var pgnText= "";
+			var cnts_ap=0;
+			var paging_ap="";
+			var previous_ap="";
+			var next_ap="";
+			for(var pg_ap = 1 ; pg_ap <= response['totalpages']; pg_ap++){
+				if(response['page']==pg_ap){
+					if(response['totalpages']>1){
+						paging_ap = paging_ap+"<li class='active'><a>"+pg_ap+"<span class='sr-only'>(current)</span></a></li>";
+					}
+					else{
+						paging_ap = paging_ap+"<li><span>&nbsp;</span></li>";
+					}
+					if(response['page']>1)
+					{
+						pgs_ap = response['page']-1;
+						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_comment("+pgs_ap+","+sby+")'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+					}
+					else
+					{
+						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+					}
+					if(response['page']!=response['totalpages'])
+					{
+						pgs2_ap = response['page']+1;
+						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_comment("+pgs2_ap+","+sby+")'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+					}
+					else
+					{
+						 next_ap = "<li><a href='#comment' aria-label='Next'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+					}
+				}
+				else if((pg_ap>(response['page']-5))&&(pg_ap<(response['page']+5)))
+				{
+						paging_ap = paging_ap+"<li><a href='#comment' onclick='javascript:source_press_comment("+pg_ap+","+sby+")'>"+pg_ap+"</a></li>";
+				}
+				cnts_ap++;
+			}
+
+			pgnText += "<nav id=\"presspg\" class=\"new_pagination\">" +
+							"<ul class=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
+					   "</nav>";
+			cmntText += pgnText+'</div>';
+			$("#comment").html(cmntText);
+			if(ETRBO==0){
+			 cmslanguage.init(web_lang,web_langs);
+			}
+
+		}
+	});
+}
+
+function validate_shareviaemailfrm() {
+	$("#etr").html("");
+    var oFieldYName = $('#yname').val().trim();
+    var oFieldYEmail = $('#yemailid').val().trim();
+    var oFieldFName1 =  $('#fname1').val().trim();
+    var oFieldFEmail1 = $('#femailid1').val().trim();
+    var oFieldFName2 =  $('#fname2').val().trim();
+    var oFieldFEmail2 = $('#femailid2').val().trim();
+    var oFieldFName3 =  $('#fname3').val().trim();
+    var oFieldFEmail3 = $('#femailid3').val().trim();
+    var oFieldFName4 =  "e.g Ravi Verma";
+    var oFieldFEmail4 = "e.g abc@xyz.com";
+    var oFieldFName5 =  "e.g Ravi Verma";
+    var oFieldFEmail5 = "e.g abc@xyz.com";
+    var subject = $('#Esubject').val().trim();
+    var message = $('#fmsg').val().trim();
+    var sharehid = $('#sharehid').val().trim();
+    var sharefurl = $('#sharefurl').val().trim();
+    var isValid  = share_email(oFieldYName,oFieldYEmail,oFieldFName1,oFieldFEmail1,oFieldFName2,oFieldFEmail2,oFieldFName3,oFieldFEmail3,oFieldFName4,oFieldFEmail4,oFieldFName5,oFieldFEmail5);
+    if(!isValid){
+
+        if($('#yname').val() != 'e.g Raj Desai' )
+        {
+             $('#yname').removeClass("gray");
+        }
+        if($('#yemailid').val() != 'e.g xyz@abc.com' )
+        {
+             $('#yemailid').removeClass("gray");
+        }
+
+        return false;
+    }
+    else
+    {
+        var randNum=parseInt(Math.random()*1000);
+        $.ajax({
+            url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+            type: 'POST',
+            dataType: "json",
+            data: {
+                action: 'shareViaEmail',
+                oFieldYName:oFieldYName,
+                oFieldYEmail: oFieldYEmail,
+                frndname1:oFieldFName1,
+                oFieldFEmail1:oFieldFEmail1,
+                frndname2:oFieldFName2,
+                oFieldFEmail2:oFieldFEmail2,
+                frndname3:oFieldFName3,
+                oFieldFEmail3:oFieldFEmail3,
+                frndname4:oFieldFName4,
+                oFieldFEmail4:oFieldFEmail4,
+                frndname5:oFieldFName5,
+                oFieldFEmail5:oFieldFEmail5,
+                subject:subject,
+                message:message,
+                hid:sharehid,
+                furl:sharefurl,
+            },
+            success: function (response) {
+                if(response['errors']['code']=="0"){
+					$('#shareviaemailpopup').modal('hide');
+                    $('#yname').val("e.g Raj Desai");
+                    $('#yemailid').val("e.g xyz@abc.com");
+                    $('#fname1').val("e.g Ravi Verma");
+                    $('#femailid1').val("e.g abc@xyz.com");
+                    $('#fname2').val("e.g Ravi Verma");
+                    $('#femailid2').val("e.g abc@xyz.com");
+                    $('#fname3').val("e.g Ravi Verma");
+                    $('#femailid3').val("e.g abc@xyz.com");
+                    $('#fname4').val("e.g Ravi Verma");
+                    $('#femailid4').val("e.g abc@xyz.com");
+                    $('#fname5').val("e.g Ravi Verma");
+                    $('#femailid5').val("e.g abc@xyz.com");
+                    $('#fmsg').val("");
+                    $('#shareviaemailsuccess').modal('show');
+				}
+            },
+            error: function () {
+                alert("Communication with Server Failed.. Try Again.");
+            }
+        });
+    }
+}
+
+function clear_text_share_mail(eg_type,id,event) {
+    if(event=="onfocus") {
+        if(document.getElementById(id).value=="e.g Raj Desai" || document.getElementById(id).value=="e.g xyz@abc.com" || document.getElementById(id).value=="e.g Ravi Verma" || document.getElementById(id).value=="e.g abc@xyz.com" || document.getElementById(id).value=="") {
+            document.getElementById(id).value = "";
+            document.getElementById(id).className = 'form-control';
+            /* code for focus */
+            if($("#"+id).offset() != null){
+				$('#shareviaemailpopup').animate({
+					scrollTop: $("#"+id).offset().top
+				},100);
+			}
+        }
+    }
+    if(event == "onblur") {
+        if(document.getElementById(id).value=="") {
+            if(id == "yname") {
+            document.getElementById(id).value = "e.g Raj Desai";
+            }
+            if(id == "yemailid") {
+            document.getElementById(id).value = "e.g xyz@abc.com";
+            }
+            if(id == "fname1") {
+            document.getElementById(id).value = "e.g Ravi Verma";
+            }
+            if(id == "femailid1") {
+            document.getElementById(id).value = "e.g abc@xyz.com";
+            }
+            if(id == "fname2") {
+            document.getElementById(id).value = "e.g Ravi Verma";
+            }
+            if(id == "femailid2") {
+            document.getElementById(id).value = "e.g abc@xyz.com";
+            }
+            if(id == "fname3") {
+            document.getElementById(id).value = "e.g Ravi Verma";
+            }
+            if(id == "femailid3") {
+            document.getElementById(id).value = "e.g abc@xyz.com";
+            }
+            if(id == "fname4") {
+            document.getElementById(id).value = "e.g Ravi Verma";
+            }
+            if(id == "femailid4") {
+            document.getElementById(id).value = "e.g abc@xyz.com";
+            }
+            if(id == "fname5") {
+            document.getElementById(id).value = "e.g Ravi Verma";
+            }
+            if(id == "femailid5") {
+            document.getElementById(id).value = "e.g abc@xyz.com";
+            }
+            document.getElementById(id).className = 'gray form-control';
+        }
+        else
+        {
+            document.getElementById(id).className = 'form-control';
+        }
+    }
+}
+
+function share_email(oFieldYName,oFieldYEmail,oFieldFName1,oFieldFEmail1,oFieldFName2,oFieldFEmail2,oFieldFName3,oFieldFEmail3,oFieldFName4,oFieldFEmail4,oFieldFName5,oFieldFEmail5){
+
+    var isValid = true;
+
+    var oRegX = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var oRegX1 = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var oRegX2 = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var oRegX3 = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var oRegX4 = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var oRegX5 = new RegExp(/^[\w_-]+(\.[\w_-]+)*@[\w_-]+(\.[\w_-]+)*\.\w{2,7}$/gi);
+    var emailExpJD = /^[a-zA-Z0-9._-]+@justdial.com$/i;
+
+    if(oFieldYName == "" || oFieldYName == 'e.g Raj Desai')
+    {
+        $("#yname").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else if(oFieldYName.length > 50)
+    {
+        $("#yname").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else if(!isNameValid(oFieldYName,'name'))
+    {
+        $("#yname").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else
+    {
+        $("#yname").removeClass("form-control_err").addClass("gray");
+    }
+
+    if(oFieldYEmail == "" || oFieldYEmail == 'e.g xyz@abc.com' )
+    {
+        $("#yemailid").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else if(!oRegX.test(oFieldYEmail))
+    {
+        $("#yemailid").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else if(oFieldYEmail.match(emailExpJD))
+    {
+        $("#yemailid").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    else
+    {
+        $("#yemailid").removeClass("form-control_err").addClass("gray");
+    }
+
+    if(oFieldFName1 == "e.g Ravi Verma"  && oFieldFName2 == "e.g Ravi Verma" && oFieldFName3 == "e.g Ravi Verma" && oFieldFName4 == "e.g Ravi Verma" && oFieldFName5 == "e.g Ravi Verma" )
+    {
+        $("#fname1").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+    if(oFieldFEmail1 == "e.g abc@xyz.com"  && oFieldFEmail2 == "e.g abc@xyz.com" && oFieldFEmail3 == "e.g abc@xyz.com" && oFieldFEmail4 == "e.g abc@xyz.com" && oFieldFEmail5 == "e.g abc@xyz.com")
+    {
+        $("#femailid1").removeClass("gray").addClass("form-control_err");
+        isValid = false;
+    }
+
+    if(oFieldFName1 != "e.g Ravi Verma" || oFieldFEmail1 != "e.g abc@xyz.com" )
+    {
+
+        if(oFieldFName1.length > 50)
+        {
+            $("#fname1").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+        else if(!isNameValid(oFieldFName1,'name'))
+        {
+            $("#fname1").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+
+        if(oFieldFEmail1 == oFieldYEmail)
+        {
+	        $("#femailid1").removeClass("gray").addClass("form-control_err");
+	        isValid = false;
+        }
+
+        else if(oRegX1.test(oFieldFEmail1) == false)
+        {
+			$("#femailid1").removeClass("gray").addClass("form-control_err");
+			isValid = false;
+        }
+        else if(oFieldFEmail1.match(emailExpJD))
+        {
+            $("#femailid1").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+
+    }
+
+    if(oFieldFName2 != "e.g Ravi Verma" || oFieldFEmail2 != "e.g abc@xyz.com")
+    {
+        if(oFieldFName2.length > 50)
+        {
+            $("#fname2").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+        else if(!isNameValid(oFieldFName2,'name'))
+        {
+            $("#fname2").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+
+
+        if(oFieldFEmail2 == "" || oFieldFEmail2 == "e.g abc@xyz.com")
+        {
+           $("#femailid2").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(oFieldFEmail2 == oFieldYEmail)
+        {
+            $("#femailid2").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(!oRegX2.test(oFieldFEmail2))
+        {
+           $("#femailid2").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(oFieldFEmail2.match(emailExpJD))
+        {
+            $("#femailid2").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+
+    }
+
+    if(oFieldFName3 != "e.g Ravi Verma" || oFieldFEmail3 != "e.g abc@xyz.com")
+    {
+
+		if(oFieldFName3 == oFieldYName)
+        {
+            $("#fname3").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+		else if(oFieldFName3.length > 50)
+        {
+            $("#fname3").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+        else if(!isNameValid(oFieldFName3,'name'))
+        {
+            $("#fname3").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+
+        if(oFieldFEmail3 == "" || oFieldFEmail3 == "e.g abc@xyz.com")
+        {
+           $("#femailid3").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        if(oFieldFEmail3 == oFieldYEmail )
+        {
+          $("#femailid3").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(!oRegX3.test(oFieldFEmail3))
+        {
+    		$("#femailid3").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+        else if(oFieldFEmail3.match(emailExpJD))
+        {
+            $("#femailid3").removeClass("gray").addClass("form-control_err");
+        	isValid = false;
+    	}
+
+    }
+
+    if(oFieldFName4 != "e.g Ravi Verma" || oFieldFEmail4 != "e.g abc@xyz.com")
+    {
+            if(oFieldFName4.length > 50)
+            {
+            $("#fname4").removeClass("gray").addClass("form-control_err");
+                            isValid = false;
+            }
+            else if(!isNameValid(oFieldFName4,'name'))
+            {
+                    $("#fname4").removeClass("gray").addClass("form-control_err");
+                    isValid = false;
+            }
+            if(oFieldFEmail4 == "" || oFieldFEmail1 == "e.g abc@xyz.com")
+            {
+               $("#femailid4").removeClass("gray").addClass("form-control_err");
+               isValid = false;
+            }
+        	if(oFieldFEmail4 == oFieldYEmail )
+            {
+              $("#femailid4").removeClass("gray").addClass("form-control_err");
+               isValid = false;
+            }
+            else if(!oRegX4.test(oFieldFEmail4))
+            {
+        		$("#femailid4").removeClass("gray").addClass("form-control_err");
+               isValid = false;
+            }
+            else if(oFieldFEmail4.match(emailExpJD))
+	        {
+                $("#femailid4").removeClass("gray").addClass("form-control_err");
+                isValid = false;
+	        }
+
+    }
+
+    if(oFieldFName5 != "e.g Ravi Verma" || oFieldFEmail5 != "e.g abc@xyz.com")
+    {
+        if(oFieldFName5.length > 50)
+        {
+            $("#fname5").removeClass("gray").addClass("form-control_err");
+            isValid = false;
+        }
+        else if(!isNameValid(oFieldFName5,'name'))
+        {
+                $("#fname5").removeClass("gray").addClass("form-control_err");
+                isValid = false;
+        }
+
+        if(oFieldFEmail5 == "" || oFieldFEmail5 == "e.g abc@xyz.com")
+        {
+          $("#femailid5").removeClass("gray").addClass("form-control_err");
+          isValid = false;
+        }
+        if(oFieldFEmail5 == oFieldYEmail)
+        {
+          $("#femailid5").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(!oRegX5.test(oFieldFEmail5))
+        {
+           $("#femailid5").removeClass("gray").addClass("form-control_err");
+           isValid = false;
+        }
+        else if(oFieldFEmail5.match(emailExpJD))
+        {
+            $("#femailid5").removeClass("gray").addClass("form-control_err");
+                    isValid = false;
+        }
+
+
+    }
+
+   if(isValid == false) {
+	   $('#etr').text('Please enter valid  name and email id');
+	   $('#etr').show();
+   }
+	return isValid;
+}
+
+function isNameValid(value, type) {
+    switch(type) {
+        case 'name':
+        return/^[a-zA-Z]+([.]{0,1}[']{0,1}[ ]{0,1}[a-zA-Z]+)*$/.test(value);
+        case 'alpha':
+        return /^[A-Za-z]*$/.test(value);
+        case 'numeric':
+        return /^[0-9]*$/.test(value);
+        case 'email':
+        return /^(([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,7}){0,1}$/.test(value);
+    }
+}
+	$(".img_click").click(function(){
+		$(this).parent().addClass("img_scroll");
+		$(this).hide();
+		$('.img_close').show();
+	});
+	$('.img_close').click(function(){
+		$(this).hide();
+		$(this).parent().removeClass("img_scroll");
+		$('.img_click').show();
+	})
+if(!navigator.userAgent.match(/iPhone|iPad/i)){
+	$('.undone').hover(
+		function() {
+			if($('#rating').val() == "")
+			{
+				var rel_att = $(this).attr('rel');
+
+				if(rel_att == 1)
+					mo_text = 'Poor';
+				else if(rel_att == 2)
+					mo_text = 'Average';
+				else if(rel_att == 3)
+					mo_text = 'Good';
+				else if(rel_att == 4)
+					mo_text = 'Very Good';
+				else if(rel_att == 5)
+					mo_text = 'Excellent';
+				$('#rtText').html('You are rating this as <b><i>"'+mo_text+'"</b></i>');
+				if(ETRBO==0){
+					cmslanguage.init(web_lang,web_langs);
+				}
+			}
+
+			$(this).prevAll().andSelf().addClass('rhvr');
+			$(this).prevAll().andSelf().removeClass('done');
+			$(this).nextAll().andSelf().removeClass('done');
+
+
+
+		}, function() {
+			$(this).prevAll().andSelf().removeClass('rhvr');
+			if($('#rating').val() != "")
+			{
+				for(var i=1;i<=$('#rating').val();i++)
+				{
+					$('.edit'+i).addClass('done');
+				}
+			}
+			else
+			{
+				var rtm = $('#rtText4movie').val();
+
+				if(rtm != "movie")
+					rtm = "establishment";
+
+				$('#rtText').html('Click on the stars to rate this');
+				if(ETRBO==0){
+					cmslanguage.init(web_lang,web_langs);
+				}
+			}
+	});
+
+}
+
+
+function addStarInReview(noOfStar){
+    var i,j;
+    for(i=1;i<=5;i++){
+        if ( $(".edit"+i).hasClass("done") ){
+            $(".edit"+i).removeClass("done").addClass("undone");
+        }
+    }
+    for(j=1;j<=noOfStar;j++){
+        $(".edit"+j).removeClass("undone").addClass("done");
+    }
+   var numRating = $('a.done').length;
+   if(numRating==1){
+       $("#rtText").html('You are rating this as <b><i>"Poor"</i></b>');
+   }else if(numRating==2){
+       $("#rtText").html('You are rating this as <b><i>"Average"</i></b>');
+   }else if(numRating==3){
+       $("#rtText").html('You are rating this as <b><i>"Good"</i></b>');
+   }else if(numRating==4){
+       $("#rtText").html('You are rating this as <b><i>"Very Good"</i></b>');
+   }else if(numRating==5){
+       $("#rtText").html('You are rating this as <b><i>"Excellent"</i></b>');
+   }
+   $("#rating").val(numRating);
+   if(ETRBO==0){
+	cmslanguage.init(web_lang,web_langs);
+   }
+    /*var ids = $('a.bs0').map(function() {
+	  var idStr =  $(this).attr('id');
+	 if($("#"+idStr).hasClass("done")){
+		 return idStr;
+	 }
+	});
+	//ids= JSON.stringify(ids);
+
+	function replacer(key,value){
+		if (key== 0 || key == 1 || key == 2 || key == 3 || key == 4 ){
+				return value;
+		}
+	}
+
+	var str = JSON.stringify(ids, replacer);
+	$("#ratStr").val(str);*/
+}
+
+function clickWriteReview(){
+    var nameWR=$('#wrname').val();
+    var mobileWR=$('#wrmob').val();
+    var emailWR=$('#wremail').val();
+    var reviewWR=$('#wrereview').val();
+    var ipAddress=$('#ipAddress').val();
+    var getUrl=$('#getUrl').val();
+    var numRating = $('#rating').val();
+    var hid=$('#hidname').val();
+    var logimgurl=$('#logimgurl').val();
+    $('#photoErr').html("");
+    $('#wrereviewErr').html("");
+
+    if(numRating == "" ){
+        $('#wrrateErr').html("Please select rating");
+        return false;
+    }else{
+        $('#wrrateErr').html("");
+    }
+    if(nameWR == '' || nameWR == null) {
+        $('#wrnameErr').html("Please enter your name");
+        $('#wrname').val("");
+        $('#wrname').focus();
+        return false;
+    }
+    else if(/^[a-zA-Z]+([.]{0,1}[']{0,1}[ ]{0,1}[a-zA-Z]+)*$/.test(nameWR) == false || /^[\.]+$/.test(nameWR) == true || ($("#wrname").val().length > 50)){
+        $('#wrnameErr').html("Please enter your valid name");
+        $('#wrname').val("");
+        $('#wrname').focus();
+        return false;
+    }
+    if(validateMobile_review(mobileWR)) {
+		if (logimgurl == undefined || logimgurl == PROTOCOL+'img.jdmagicbox.com/profilepic/he.gif' || logimgurl == PROTOCOL+'img.jdmagicbox.com/profilepic/she.gif' || logimgurl == "")
+		{
+			if(photo != ""  && photo != undefined && photo.value != undefined && photo.value != "" )
+			{
+				file_name = photo.value;
+				last_dot_pos = photo.value.lastIndexOf(".");
+				string_length = photo.value.length;
+				file_extension = file_name.slice(last_dot_pos,string_length);
+				if(	file_extension.toLowerCase() != ".jpg" && file_extension.toLowerCase() != ".jpeg" && file_extension.toLowerCase() != ".gif" && file_extension.toLowerCase() != ".png")
+				{
+					$('#photoErr').html("Please select jpg/png/gif image file only");
+					isValids = false;
+					return isValids;
+					//return false;
+				}
+				var iSize = validphotosize();
+				if(iSize > 2097152)
+				{
+					$('#photoErr').html("Please select  image file less than 2MB only");
+					isValids = false;
+					return isValids;
+				}
+			}
+		}
+		if(emailWR != ""){
+			var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+			if (!filter.test(emailWR)) {
+				$('#wremailErr').html("Please enter valid Email Id");
+				$('#wremail').val("");
+				$('#wremail').focus();
+				return false;
+			}
+		}
+        if(mobileWR == '9867045061' || mobileWR == 'e.g 9867045061' || mobileWR == 'Mobile Number*') {
+            $('#wrmobErr').html("Please enter your mobile number");
+            $('#wrmob').val("");
+            $('#wrmob').focus();
+            return false;
+        }
+        if(reviewWR == 'Add Review' || reviewWR.trim()=="")
+        {
+            $('#wremailErr').html("");
+            $('#wrereviewErr').html("Please write some Review");
+            $('#wrereview').val("");
+            $('#wrereview').focus();
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
+
+function viewOtherAds(video_id){
+	var arr = video_id.split('://');
+	videoId = PROTOCOL+arr[1];
+
+	if(navigator.userAgent.match(/iPad/i)) {
+		var fmp4 = videoId.replace('.flv', "_m.mp4");
+		var fogg = videoId.replace('.flv', "_m.ogg");
+		var f3gp = videoId.replace('.flv', "_m.3gp");
+		var fwmv = videoId.replace('.flv', "_m.wmv");
+		var fflv = videoId.replace('.flv', "_m.flv");
+
+		var strVideoFile1 = fmp4;
+		var strVideoFile2 = fogg;
+		var strVideoFile3 = f3gp;
+		var strVideoFile4 = fwmv;
+		var strVideoFile5 = fflv;
+
+		var video_details = '<video controls="controls" width="323" height="285"><source src="'+strVideoFile1+'" type="video/mp4"/><source src="'+strVideoFile2+'" type="video/ogg"/><source src="'+strVideoFile3+'" type="video/3gp"/><source src="'+strVideoFile4+'" type="video/wmv"/><source src="'+strVideoFile5+'" type="video/flv"/></video>';
+		$('#imagespaces').hide();
+		$("#mediaspaces").html(video_details);
+	}
+	else
+	{
+		var strVideoFile=videoId;
+		$('#imagespaces').hide();
+		if($("#mbview").val() == 1){
+			var vWidth = $(window).width() - 90;
+			var vheight = $(window).height() - 280;
+		}else{
+			var vWidth = 640;
+			var vheight = 360;
+		}
+		jwplayer("mediaspaces").setup({
+			flashplayer:JDDOMAIN+"player.swf",
+			autostart: true,
+			fullscreen: true,
+			file: strVideoFile,
+			height: vheight,
+			width: vWidth
+
+		});
+	}
+}
+
+
+function validateMobile_review(mobileWR){
+    var x = mobileWR;
+    $('#wrnameErr').html("");
+    if(x == "")
+    {
+        $('#wrmobErr').html("Please enter mobile number");
+        $('#wrmobErr').show();
+        $('#wrmobErr').focus();
+        return false;
+    }
+    if(isNaN(x)|| x.indexOf(" ")!=-1)
+    {
+        $('#wrmobErr').html("Please enter numeric value");
+        $('#wrmobErr').show();
+        $('#wrmobErr').focus();
+        return false;
+    }
+    var alphaExp = /^[0-9]+$/;
+    if(!x.match(alphaExp))
+    {
+            $('#wrmobErr').html("Please enter valid mobile number");
+            $('#wrmobErr').show();
+            $('#wrmobErr').focus();
+            return false;
+    }
+    if(x.length != 10)
+    {
+            $('#wrmobErr').html("Please enter valid 10 digit mobile number");
+            $('#wrmobErr').show();
+            $('#wrmobErr').focus();
+            return false;
+    }
+    $fchar = x.charAt(0);
+    if($fchar != 7 && $fchar != 8 && $fchar != 9)
+    {
+            $('#wrmobErr').html("Please enter valid 10 digit mobile number");
+            $('#wrmobErr').show();
+            $('#wrmobErr').focus();
+            return false;
+    }
+    $('#wrmobErr').hide();
+    $('#wrmobErr').html("");
+    return true;
+}
+
+function gotoShare(){
+	$('.mbdiv').removeClass('active');
+	$('body').removeClass('mhead-body');
+	window.location.href = CMSDOMAIN+"cms/justdial-testimonials?jdlite="+JDLITEQUERY+"#shyv";
+}
+ function show_div(id){
+ 	if(id == 'car' || id == 'ads' || id == 'inv' || id == 'mark' || id == 'med' || id == 'abt' || id == 'prod_mob' || id == 'more_mob'){
+		$("a .menuarrow_up").parent().hide();
+		$("a .menuarrow_dw").parent().show();
+	 }
+ 	if(id == 'tv' || id == 'scn' || id == 'inv' || id == 'corp' || id == 'invs' || id == 'gov' || id == 'new' || id == 'fil' || id == 'qua' || id == 'fill' || id == 'fin'){
+		//$("a .menuarrow_minus").parent().hide();
+		//$("a .menuarrow_plus").parent().show();
+	}
+
+	if (document.getElementById(id).style.display=="none"){
+		if(id == 'car'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('licar').className = 'sm';
+			$('#acar').css('display','none');
+			$('#hidecar').css('display','block');
+			document.getElementById('hidecar').className = 'slcted';
+		}
+		if(id == 'tv'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+
+			if( $("#atv").css('display') === 'block' && $("#hidetv").css('display') === 'none') {
+				$('#atv').css('display','none');
+				$('#hidetv').css('display','block');
+			}else if( $("#atv").css('display') === 'none' && $("#hidetv").css('display') === 'block') {
+				$('#atv').css('display','block');
+				$('#hidetv').css('display','none');
+			}
+			document.getElementById('hidetv').className = 'slcted';
+		}
+		if(id == 'scn'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+
+			if( $("#ascn").css('display') === 'block' && $("#hidescn").css('display') === 'none') {
+				$('#ascn').css('display','none');
+				$('#hidescn').css('display','block');
+			}else if( $("#ascn").css('display') === 'none' && $("#hidescn").css('display') === 'block') {
+				$('#ascn').css('display','block');
+				$('#hidescn').css('display','none');
+			}
+			document.getElementById('hidescn').className = 'slcted';
+		}
+		if(id == 'ads'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('liads').className = 'sm';
+			$('#aads').css('display','none');
+			$('#hideads').css('display','block');
+			document.getElementById('hideads').className = 'slcted';
+		}
+		if(id == 'corp'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+
+			if( $("#acorp").css('display') === 'block' && $("#hidecorp").css('display') === 'none') {
+				$('#acorp').css('display','none');
+				$('#hidecorp').css('display','block');
+			}else if( $("#acorp").css('display') === 'none' && $("#hidecorp").css('display') === 'block') {
+				$('#acorp').css('display','block');
+				$('#hidecorp').css('display','none');
+			}
+
+			document.getElementById('hidecorp').className = 'slcted';
+		}
+		if(id == 'invs'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+
+			if( $("#ainvs").css('display') === 'block' && $("#hideinvs").css('display') === 'none') {
+				$('#ainvs').css('display','none');
+				$('#hideinvs').css('display','block');
+			}else if( $("#ainvs").css('display') === 'none' && $("#hideinvs").css('display') === 'block') {
+				$('#ainvs').css('display','block');
+				$('#hideinvs').css('display','none');
+			}
+			document.getElementById('hideinvs').className = 'slcted';
+		}
+		if(id == 'gov'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#agov").css('display') === 'block' && $("#hidegov").css('display') === 'none') {
+				$('#agov').css('display','none');
+				$('#hidegov').css('display','block');
+			}else if( $("#agov").css('display') === 'none' && $("#hidegov").css('display') === 'block') {
+				$('#agov').css('display','block');
+				$('#hidegov').css('display','none');
+			}
+			document.getElementById('hidegov').className = 'slcted';
+		}
+		if(id == 'new'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#anew").css('display') === 'block' && $("#hidenew").css('display') === 'none') {
+				$('#anew').css('display','none');
+				$('#hidenew').css('display','block');
+			}else if( $("#anew").css('display') === 'none' && $("#hidenew").css('display') === 'block') {
+				$('#anew').css('display','block');
+				$('#hidenew').css('display','none');
+			}
+			document.getElementById('hidenew').className = 'slcted';
+		}
+		if(id == 'fill'){
+			$('.four-label').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#afill").css('display') === 'block' && $("#hidefill").css('display') === 'none') {
+				$('#afill').css('display','none');
+				$('#hidefill').css('display','block');
+			}else if( $("#afill").css('display') === 'none' && $("#hidefill").css('display') === 'block') {
+				$('#afill').css('display','block');
+				$('#hidefill').css('display','none');
+			}
+			document.getElementById('hidefill').className = 'slcted';
+		}
+		if(id == 'qua'){
+			$('.four-label').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#aqua").css('display') === 'block' && $("#hidequa").css('display') === 'none') {
+				$('#aqua').css('display','none');
+				$('#hidequa').css('display','block');
+			}else if( $("#aqua").css('display') === 'none' && $("#hidequa").css('display') === 'block') {
+				$('#aqua').css('display','block');
+				$('#hidequa').css('display','none');
+			}
+			document.getElementById('hidequa').className = 'slcted';
+		}
+		if(id == 'fil'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#afil").css('display') === 'block' && $("#hidefil").css('display') === 'none') {
+				$('#afil').css('display','none');
+				$('#hidefil').css('display','block');
+			}else if( $("#afil").css('display') === 'none' && $("#hidefil").css('display') === 'block') {
+				$('#afil').css('display','block');
+				$('#hidefil').css('display','none');
+			}
+			document.getElementById('hidefil').className = 'slcted';
+		}
+		if(id == 'fin'){
+			$('.sub_navex').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			if( $("#afin").css('display') === 'block' && $("#hidefin").css('display') === 'none') {
+				$('#afin').css('display','none');
+				$('#hidefin').css('display','block');
+			}else if( $("#afin").css('display') === 'none' && $("#hidefin").css('display') === 'block') {
+				$('#afin').css('display','block');
+				$('#hidefin').css('display','none');
+			}
+			document.getElementById('hidefin').className = 'slcted';
+		}
+		if(id == 'inv'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('liinv').className = 'sm';
+			$('#ainv').css('display','none');
+			$('#hideinv').css('display','block');
+			document.getElementById('hideinv').className = 'slcted';
+		}
+		if(id == 'mark'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('limark').className = 'sm';
+			$('#amark').css('display','none');
+			$('#hideamark').css('display','block');
+			document.getElementById('hideamark').className = 'slcted';
+		}
+		if(id == 'med'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('limed').className = 'sm';
+			$('#amed').css('display','none');
+			$('#hideamed').css('display','block');
+			document.getElementById('hideamed').className = 'slcted';
+		}
+		if(id == 'abt'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('liabt').className = 'sm';
+			$('#aabt').css('display','none');
+			$('#hideabt').css('display','block');
+			document.getElementById('hideabt').className = 'slcted';
+		}
+		if(id == 'prodserv'){
+			$('#'.concat(id)).slideDown('');
+			$("#aprodserv").find(".cms_sprt2").removeClass("menuarrow_rgt").addClass("menuarrow_dw");
+			if($('#more').css('display') == 'block'){
+				$('#more').slideUp('');
+				$('#amore').removeClass();
+				$("#aprodserv").find(".cms_sprt2").removeClass("menuarrow_dw").addClass("menuarrow_rgt");
+			}
+		}
+		if(id == 'more'){
+			$('#'.concat(id)).slideDown('');
+			$("#amore").find(".cms_sprt2").removeClass("menuarrow_rgt").addClass("menuarrow_dw");
+			if($('#prodserv').css('display') == 'block'){
+				$('#prodserv').slideUp('');
+				$('#aprodserv').removeClass();
+			}
+		}
+		if(id == 'prod_mob'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('liprodserv').className = 'sm';
+			$('#aprod_mob').css('display','none');
+			$('#hideaprod_mob').css('display','block');
+			document.getElementById('hideaprod_mob').className = 'slcted';
+		}
+		if(id == 'more_mob'){
+			if($("a").hasClass("slcted")){
+				$("a").removeClass("slcted");
+			}
+			$('.sub_nav').css('display','none');
+            $('#'.concat(id)).slideDown('');
+			document.getElementById('limore').className = 'sm';
+			$('#amore_mob').css('display','none');
+			$('#hideamore_mob').css('display','block');
+			document.getElementById('hideamore_mob').className = 'slcted';
+		}
+    }else if(document.getElementById(id).style.display== "" || document.getElementById(id).style.display=="block") {
+		if(id == 'car'){
+			$('#'.concat(id)).slideUp('');
+			document.getElementById('licar').className = '';
+			$('#acar').css('display','block');
+			$('#hidecar').css('display','none');
+			document.getElementById('hidecar').className = '';
+		}
+		if(id == 'tv'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#atv").css('display') === 'block' && $("#hidetv").css('display') === 'none') {
+				$('#atv').css('display','none');
+				$('#hidetv').css('display','block');
+			}else if( $("#atv").css('display') === 'none' && $("#hidetv").css('display') === 'block') {
+				$('#atv').css('display','block');
+				$('#hidetv').css('display','none');
+			}
+			document.getElementById('hidetv').className = '';
+		}
+		if(id == 'scn'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#ascn").css('display') === 'block' && $("#hidescn").css('display') === 'none') {
+				$('#ascn').css('display','none');
+				$('#hidescn').css('display','block');
+			}else if( $("#ascn").css('display') === 'none' && $("#hidescn").css('display') === 'block') {
+				$('#ascn').css('display','block');
+				$('#hidescn').css('display','none');
+			}
+			document.getElementById('hidescn').className = '';
+		}
+		if(id == 'ads'){
+			$('#'.concat(id)).slideUp('');
+			document.getElementById('liads').className = '';
+			$('#aads').css('display','block');
+			$('#hideads').css('display','none');
+			document.getElementById('hideads').className = '';
+		}
+		if(id == 'corp'){
+			$('#'.concat(id)).slideUp('');
+			$('#acorp').css('display','block');
+			$('#hidecorp').css('display','none');
+			document.getElementById('hidecorp').className = '';
+		}
+		if(id == 'invs'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#ainvs").css('display') === 'block' && $("#hideinvs").css('display') === 'none') {
+				$('#ainvs').css('display','none');
+				$('#hideinvs').css('display','block');
+			}else if( $("#ainvs").css('display') === 'none' && $("#hideinvs").css('display') === 'block') {
+				$('#ainvs').css('display','block');
+				$('#hideinvs').css('display','none');
+			}
+			document.getElementById('hideinvs').className = '';
+		}
+		if(id == 'gov'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#ainvs").css('display') === 'block' && $("#hideinvs").css('display') === 'none') {
+				$('#ainvs').css('display','none');
+				$('#hideinvs').css('display','block');
+			}else if( $("#ainvs").css('display') === 'none' && $("#hideinvs").css('display') === 'block') {
+				$('#ainvs').css('display','block');
+				$('#hideinvs').css('display','none');
+			}
+			if( $("#agov").css('display') === 'block' && $("#hidegov").css('display') === 'none') {
+				$('#agov').css('display','none');
+				$('#hidegov').css('display','block');
+			}else if( $("#agov").css('display') === 'none' && $("#hidegov").css('display') === 'block') {
+				$('#agov').css('display','block');
+				$('#hidegov').css('display','none');
+			}
+			document.getElementById('hidegov').className = '';
+		}
+		if(id == 'new'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#anew").css('display') === 'block' && $("#hidenew").css('display') === 'none') {
+				$('#anew').css('display','none');
+				$('#hidenew').css('display','block');
+			}else if( $("#anew").css('display') === 'none' && $("#hidenew").css('display') === 'block') {
+				$('#anew').css('display','block');
+				$('#hidenew').css('display','none');
+			}
+			document.getElementById('hidenew').className = '';
+		}
+		if(id == 'fill'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#afill").css('display') === 'block' && $("#hidefill").css('display') === 'none') {
+				$('#afill').css('display','none');
+				$('#hidefill').css('display','block');
+			}else if( $("#afill").css('display') === 'none' && $("#hidefill").css('display') === 'block') {
+				$('#afill').css('display','block');
+				$('#hidefill').css('display','none');
+			}
+			document.getElementById('hidefill').className = '';
+		}
+		if(id == 'qua'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#aqua").css('display') === 'block' && $("#hidequa").css('display') === 'none') {
+				$('#aqua').css('display','none');
+				$('#hidequa').css('display','block');
+			}else if( $("#aqua").css('display') === 'none' && $("#hidequa").css('display') === 'block') {
+				$('#aqua').css('display','block');
+				$('#hidequa').css('display','none');
+			}
+			document.getElementById('hidequa').className = '';
+		}
+		if(id == 'fil'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#afil").css('display') === 'block' && $("#hidefil").css('display') === 'none') {
+				$('#afil').css('display','none');
+				$('#hidefil').css('display','block');
+			}else if( $("#afil").css('display') === 'none' && $("#hidefil").css('display') === 'block') {
+				$('#afil').css('display','block');
+				$('#hidefil').css('display','none');
+			}
+			document.getElementById('hidefil').className = '';
+		}
+		if(id == 'fin'){
+			$('#'.concat(id)).slideUp('');
+			if( $("#afin").css('display') === 'block' && $("#hidefin").css('display') === 'none') {
+				$('#afin').css('display','none');
+				$('#hidefin').css('display','block');
+			}else if( $("#afin").css('display') === 'none' && $("#hidefin").css('display') === 'block') {
+				$('#afin').css('display','block');
+				$('#hidefin').css('display','none');
+			}
+			document.getElementById('hidefin').className = '';
+		}
+		if(id == 'inv'){
+			$('#'.concat(id)).slideUp('');
+			document.getElementById('liinv').className = '';
+			$('#ainv').css('display','block');
+			$('#hideinv').css('display','none');
+			document.getElementById('hideinv').className = '';
+		}
+		if(id == 'mark'){
+			$('#'.concat(id)).slideUp('');
+			document.getElementById('limark').className = '';
+			$('#amark').css('display','block');
+			$('#hideamark').css('display','none');
+			document.getElementById('hideamark').className = '';
+		}
+		if(id == 'med'){
+			$('#'.concat(id)).slideUp('');
+			document.getElementById('limed').className = '';
+			$('#amed').css('display','block');
+			$('#hideamed').css('display','none');
+			document.getElementById('hideamed').className = '';
+		}
+		if(id == 'abt'){
+            $('#'.concat(id)).slideUp('');
+			document.getElementById('liabt').className = '';
+			$('#aabt').css('display','block');
+			$('#hideabt').css('display','none');
+			document.getElementById('hideabt').className = '';
+		}
+		if(id == 'prod_mob'){
+            $('#'.concat(id)).slideUp('');
+			document.getElementById('liprodserv').className = '';
+			$('#aprod_mob').css('display','block');
+			$('#hideaprod_mob').css('display','none');
+			document.getElementById('hideaprod_mob').className = '';
+		}
+		if(id == 'more_mob'){
+            $('#'.concat(id)).slideUp('');
+			document.getElementById('limore').className = '';
+			$('#amore_mob').css('display','block');
+			$('#hideamore_mob').css('display','none');
+			document.getElementById('hideamore_mob').className = '';
+		}
+		if(id == 'prodserv'){
+			$('#'.concat(id)).slideUp('');
+			$("#aprodserv").find(".cms_sprt2").removeClass("menuarrow_dw").addClass("menuarrow_rgt");
+		}
+		if(id == 'more'){
+			$('#'.concat(id)).slideUp('');
+			$("#amore").find(".cms_sprt2").removeClass("menuarrow_dw").addClass("menuarrow_rgt");
+		}
+    }
+}
+
+
+function show_menu(id){
+	if (document.getElementById(id).style.display=="none"){
+
+	}
+}
+
+function openDiv(divname){
+        if(divname == 'exitpopup')
+	{
+            $('#'+divname).bPopup({modalColor:'#000000'});return false;
+	}
+	if(divname == 'jfp')
+	{
+		$('#flid').val($('#em').val());
+		$('#captcha_code').val('');
+		var path =WEBROOT+"webmain/securimage/securimage_show.php?" + Math.random();
+		document.getElementById("divCaptchCode").innerHTML="<img id='captcha' width='100' height='25' alt='CAPTCHA Image' src='"+path+"'/>";
+	}
+
+	if(touchy)
+	{
+		$('#'+divname).bPopup({
+			amsl: 100,
+			follow: [false, false]
+		});
+	}
+	else
+	{
+		$('#'+divname).bPopup();
+	}
+
+}
+function openPopup(divname,name){
+ $('#'+divname).bPopup();
+}
+
+/* Popup JS */
+(function(a){a.fn.bPopup=function(D,B){function x(){a.isFunction(P.onOpen)&&P.onOpen.call(O);G=(M.data("bPopup")||0)+1;N="__bPopup"+G;F="auto"!==P.position[1];E="auto"!==P.position[0];I="fixed"===P.positionStyle;H=z(O,P.amsl);L=F?P.position[1]:H[1];K=E?P.position[0]:H[0];A=y();var d=v()+"px";var c=b()+"px";P.modal&&a('<div class="bModal '+N+'"></div>').css({"background-color":P.modalColor,height:d,left:0,opacity:0,position:"absolute",top:0,width:c,"z-index":P.zIndex+G}).each(function(){P.appending&&a(this).appendTo(P.appendTo)}).animate({opacity:P.opacity},P.fadeSpeed);O.data("bPopup",P).data("id",N).css({left:!P.follow[0]&&E||I?K:J.scrollLeft()+K,position:P.positionStyle||"absolute",top:!P.follow[1]&&F||I?L:J.scrollTop()+L,"z-index":P.zIndex+G+1}).each(function(){P.appending&&a(this).appendTo(P.appendTo);if(null!=P.loadUrl){switch(P.contentContainer=a(P.contentContainer||O),P.content){case"iframe":a('<iframe scrolling="no" frameborder="0"></iframe>').attr("src",P.loadUrl).appendTo(P.contentContainer);break;default:P.contentContainer.load(P.loadUrl)}}}).fadeIn(P.fadeSpeed,function(){a.isFunction(B)&&B.call(O);w()})}function C(){P.modal&&a(".bModal."+O.data("id")).fadeOut(P.fadeSpeed,function(){a(this).remove()});O.stop().fadeOut(P.fadeSpeed,function(){null!=P.loadUrl&&P.contentContainer.empty()});M.data("bPopup",0<M.data("bPopup")-1?M.data("bPopup")-1:null);P.scrollBar||a("html").css("overflow","auto");a("."+P.closeClass).on("click."+N);a(".bModal."+N).on("click");J.unbind("keydown."+N);M.unbind("."+N);O.data("bPopup",null);a.isFunction(P.onClose)&&setTimeout(function(){P.onClose.call(O)},P.fadeSpeed);return !1}function v(){var c=document;return Math.max(Math.max(c.body.scrollHeight,c.documentElement.scrollHeight),Math.max(c.body.clientHeight,c.documentElement.clientHeight))}function b(){var c=document;return Math.max(Math.max(c.body.scrollWidth,c.documentElement.scrollWidth),Math.max(c.body.clientWidth,c.documentElement.clientWidth))}function w(){M.data("bPopup",G);a("."+P.closeClass).on("click."+N,C);P.modalClose&&a(".bModal."+N).on("click",C).css("cursor","default");(P.follow[0]||P.follow[1])&&M.bind("scroll."+N,function(){A&&O.stop().animate({left:P.follow[0]&&!I?J.scrollLeft()+K:K,top:P.follow[1]&&!I?J.scrollTop()+L:L},P.followSpeed)}).bind("resize."+N,function(){if(A=y()){H=z(O,P.amsl),P.follow[0]&&(K=E?K:H[0]),P.follow[1]&&(L=F?L:H[1]),O.stop().each(function(){I?a(this).css({left:K,top:L},P.followSpeed):a(this).animate({left:E?K:K+J.scrollLeft(),top:F?L:L+J.scrollTop()},P.followSpeed)})}});P.escClose&&J.bind("keydown."+N,function(c){27==c.which&&C()})}function z(f,e){var h=(M.width()-f.outerWidth(!0))/2,g=(M.height()-f.outerHeight(!0))/2-e;return[h,20>g?20:g]}function y(){return M.height()>O.outerHeight(!0)+20&&M.width()>O.outerWidth(!0)+20}a.isFunction(D)&&(B=D,D=null);var P=a.extend({},a.fn.bPopup.defaults,D);P.scrollBar||a("html").css("overflow","hidden");var O=this,J=a(document),M=a(window),G,N,A,F,E,I,H,L,K;this.close=function(){P=O.data("bPopup");C()};return this.each(function(){O.data("bPopup")||x()})};a.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",closeClass:"jcl",content:"ajax",contentContainer:null,escClose:!0,fadeSpeed:250,follow:[!0,!0],followSpeed:500,loadUrl:null,modal:!0,modalClose:!0,modalColor:"#fff",onClose:null,onOpen:null,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,zIndex:9997}})(jQuery);
+
+function setCareersCity(city) {
+	$("#searchcity").hide();
+	$("#hdncity, #selectcity").val(city);
+}
+
+function selectdata(id,title,spnid,idset,idtxtbx, deptid=''){
+	$("#"+idset).val(id);
+	$("#"+idtxtbx).val(title);
+	$("#"+spnid).hide();
+
+	if($("button#dropdownMenu2").hasClass('disabled')){
+		$("button#dropdownMenu2").removeClass('disabled');
+	}
+
+	if(spnid == "joboptions"){
+		$("#dropdownMenu2 span.cdr").html('Preferred Location');
+		$("#citylistId").html("");
+		var randNum=parseInt(Math.random()*1000);
+		$("#hdncity").removeClass('disabled');
+		if(deptid == 11) {
+			$('#hdncity').on('input', function() {
+				$("#searchcity").show();
+				if (!$("#hdncity").val()) { return false;}
+					var cookie_city = (getCookie('main_city') != '') ? getCookie('main_city') : 'Mumbai';
+					$.ajax({
+						url: CMSDOMAIN+'webmain/autosuggest.php?cases=city&city='+cookie_city+'&source='+source+'&dtcity='+cookie_city+'&search='+$("#hdncity").val()+'&s=1',
+						type: 'GET',
+						dataType: "json",
+						success: function (response) {
+							var citylist = 	"";
+							var city_arr = [];
+							var obj = {};
+
+							$.each(response.results, function (i, data) {
+								obj[data.value] = data.text;
+							});
+							var html = '';
+							var array = $.map(obj, function(value, index) {
+								city_arr.push(value);
+								var setval = "'"+value+"'";
+								html += '<li onclick="setCareersCity('+setval+')">'+value+'</li>';
+							});
+							$("#searchcity").html(html);
+						},
+						error: function () {
+							alert("Communication with Server Failed.. Try Again.");
+						}
+					});
+					return false;
+			});
+		}else {
+			$.ajax({
+				url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+				type: 'POST',
+				dataType: "json",
+				data: {
+					action: 'getJobCity',
+					jobid: id,
+				},
+				success: function (response) {
+					var citylist = 	"";
+					$.each(response['results'], function (index, entry) {
+						citylist += "<li id=\"li_"+entry['city']+"\" onclick=\"selectdata('"+entry['city']+"','"+entry['city']+"','cityoptions','hdncity','txtcity')\" ><a data-value=\""+entry['city']+"\" data-stdcode=\""+entry['stdcode']+"\" class=\"langClass tcon\" href=\"javascript:void(0);\" >"+entry['city']+"</a></li>";
+					});
+					$("#citylistId").html(citylist);
+					if(ETRBO==0){
+						cmslanguage.init(web_lang,web_langs);
+					}
+				},
+				error: function () {
+					alert("Communication with Server Failed.. Try Again.");
+				}
+			});
+		}
+	}else if(spnid == "cityoptions"){
+		$("#dropdownMenu2 span.cdr").html(title);
+	}
+}
+function submitJob(){
+	if(validatejobdetails()){
+		$.ajax({
+			type:'post',
+			url:WEBROOT+"functions/ajaxCaptchaValidate.php",
+			data:{captcha_code:$("#captcha_code").val(), code_auth:'job_listing'},
+			cache:false,
+			async:false,
+			success:function(data){
+				if (data == "true") {
+					saveData();
+				}
+				else
+				{
+					$(".textjobthnks").html('The Captcha code was not entered correctly!');
+					jQuery("#submitModaljob").modal("show");
+					$('#captcha_code').val('');
+					var path =WEBROOT+"webmain/securimage/securimage_show.php?" + Math.random();
+					document.getElementById("divCaptchCode").innerHTML="<img id='captcha' width='100' height='25' alt='CAPTCHA' src='"+path+"'/>";
+					return false;
+				}
+			}
+		});
+	}
+	return false;
+}
+
+function closepop(id){
+	closeDiv("popthnx");
+	$("#"+id).remove();
+}
+
+function saveData(){
+	formdata = {};
+	$('.formcareers input').each(function(index,value){
+		formdata[value.id] = value.value;
+	});
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		type:'post',
+		url:CMSDOMAIN+"webcms_new/functions/cms/ajax_cms.php?randno="+randNum,
+		data:{"action" : "saveresume","formdata" : formdata},
+		cache:false,
+		async:false,
+		dataType : "json",
+		success:function(data){
+			var path =WEBROOT+"securimage/securimage_show.php?" + Math.random();
+			document.getElementById("divCaptchCode").innerHTML="<img id='captcha' width='100' height='25' alt='CAPTCHA Image' src='"+path+"'/>";
+			if(data['errors']['code'] == "1" && data['errors']['msg'] == "data inserted successfully"){
+				$(".formcareers").find("input, textarea").val("");
+				$(".cdr").removeClass("cdrcolor");
+				$("#dropdownMenu1").find(".cdr").text("Select position*");
+				$("#dropdownMenu2").find(".cdr").text("Preferred Location*");
+				$("#dropdownMenuNew").find(".cdr").text("Highest Completed Qualification*");
+				$("#dropdownMenuNew2").find(".cdr").text("Years of Experience*");
+				$(".textjobthnks").html('Congratulation, <span class="subspn">you have successfully Uploaded Resume.</span>');
+				jQuery("#submitModaljob").modal("show");
+				$("#txtposteddate").val(data['results']);
+			}
+			else{
+				$(".textjobthnks").html('There is some error.Please try after some time.');
+				jQuery("#submitModaljob").modal("show");
+			}
+		}
+	});
+}
+
+function validatejobdetails(){
+	var jobname = $.trim($("#hdnjobid").val());
+	var city = $.trim($("#hdncity").val());
+	var selectcity = $.trim($("#selectcity").val());
+
+	var txtfname = $.trim($("#txtfname").val());
+	var txtemail = $.trim($("#txtemail").val());
+	var txtmob = $.trim($("#txtmob").val());
+	var txtgrdspec = $.trim($("#txtschspc").val());
+	var txtexpyear = $.trim($("#txtexpyear").val());
+	var captcha_code = $.trim($("#captcha_code").val());
+	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	var mobArr = ["6","7","8","9"];
+	$("input").removeClass("err_msg");
+	$(".almsg").hide();
+	if(jobname == ""){
+		$("#dropdownMenu1").addClass("err_msg");
+		$("#errjob").show();
+		scrollToDiv("jobnamediv");
+		return false;
+	}
+	if(city == ""){
+		$("#dropdownMenu2").addClass("err_msg");
+		$("#errcity").show();
+		scrollToDiv("citydiv");
+		return false;
+	}
+	if(selectcity == '' && $("#selectcity").length == 1){
+		$("#dropdownMenu2").addClass("err_msg");
+		$("#errcity").show();
+		scrollToDiv("citydiv");
+		return false;
+	}
+
+	if(txtfname == "" || txtfname == "First Name"){
+		$("#txtfname").addClass("err_msg");
+		$("#errfname").html('<span id="adCompErr">Please enter details to proceed</span><span class="adsprite arw"></span>');
+		$("#errfname").show();
+		$("#txtfname").focus();
+		return false;
+	}
+	else if(!isNaN(txtfname)){
+		$("#txtfname").addClass("err_msg");
+		$("#errfname").html('<span id="adCompErr">Please enter valid first name</span><span class="adsprite arw"></span>');
+		$("#errfname").show();
+		$("#txtfname").focus();
+		return false;
+	}
+	if(txtfname.length > 50) {
+		$("#txtfname").addClass("err_msg");
+		$("#errfname").html('<span id="adCompErr">Full name should not be more than 50 characters</span><span class="adsprite arw"></span>');
+		$("#errfname").show();
+		$("#txtfname").focus();
+		return false;
+	}
+	var regexfn = new RegExp("^[a-zA-Z ]+$");
+	if(!regexfn.test($("#txtfname").val())) {
+		$("#txtfname").addClass("err_msg");
+		$("#errfname").html('<span id="adCompErr">Please enter valid full name</span><span class="adsprite arw"></span>');
+		$("#errfname").show();
+		$("#txtfname").focus();
+		return false;
+	}
+
+	if(txtmob == ""){
+		$("#txtmob").addClass("err_msg");
+		$("#errmob").html('<span id="adCompErr">Please enter details to proceed</span><span class="adsprite arw"></span>');
+		$("#errmob").show();
+		$("#txtmob").focus();
+		return false;
+	}
+	else if($.inArray(txtmob[0],mobArr) == -1 || txtmob.length != 10){
+		$("#txtmob").addClass("err_msg");
+		$("#errmob").html('<span id="adCompErr">Please enter valid mobile number</span><span class="adsprite arw"></span>');
+		$("#errmob").show();
+		$("#txtmob").focus();
+		return false;
+	}
+	if(txtemail == "" ){
+		$("#txtemail").addClass("err_msg");
+		$("#erremail").html('<span id="adCompErr">Please enter emailid to proceed</span><span class="adsprite arw"></span>');
+		$("#erremail").show();
+		$("#txtemail").focus();
+		return false;
+	}
+	if(!regex.test(txtemail) && txtemail != "" && txtemail != "Email ID"){
+		$("#txtemail").addClass("err_msg");
+		$("#erremail").html('<span id="adCompErr">Please enter valid Email Id</span><span class="adsprite arw"></span>');
+		$("#erremail").show();
+		$("#txtemail").focus();
+		return false;
+	}
+	if(txtgrdspec == "" ){
+		$("#dropdownMenuNew").addClass("err_msg");
+		$("#errgrdspec").show();
+		scrollToDiv("spcdiv");
+		$("#txtgrdspec").focus();
+		return false;
+	}
+	if(txtexpyear == ""){
+		$("#dropdownMenuNew2").addClass("err_msg");
+		$("#errexpyear").show();
+		scrollToDiv("expDiv");
+		return false;
+	}
+	if(captcha_code == "" || captcha_code == "Type the characters displayed above"){
+		$("#captcha_code").addClass("err_msg");
+		$("#errcaptcha").show();
+		$("#captcha_code").focus();
+		return false;
+	}
+	return true;
+}
+function scrollToDiv(id)
+{
+	if($("#"+id).offset() != null){
+		$('html,body').animate({
+			scrollTop: $("#"+id).offset().top
+		},100);
+	}
+}
+if(typeof String.prototype.trim !== 'function') {
+  String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, '');
+  }
+}
+function mediacontactus(){
+    var alphaExp = /^[a-zA-Z]+([.]{0,1}[ ]{0,1}[a-zA-Z ']+)*$/;
+    var medianameid 	= $("#medianameid").val();
+    var mediamobileid 	= $("#mediamobileid").val();
+    var mediaemailid = $('#mediaemailid').val();
+    var emailExp = /^(([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,7}){0,1}$/;
+    var mobExp = /^[7,8,9]{1}[0-9]{9}$/;
+    var mediacommentid = $("#mediacommentid").val();
+
+
+    if(medianameid.trim() == "") {
+            $("#err_medianameid").html("Name is compulsary");
+            $("#err_medianameid").css('color','#FF0000');
+            $("#medianameid").focus();
+            $("#err_medianameid").show();
+            return false;
+    }
+    if(!isNaN(medianameid)) {
+        $("#err_medianameid").html("Please enter a valid name");
+        $("#err_medianameid").css('color','#FF0000');
+        $("#medianameid").focus();
+        $('#err_medianameid').show();
+        return false;
+    }
+    if(!medianameid.match(alphaExp)) {
+            $("#err_medianameid").html("Please enter a valid name");
+            $("#err_medianameid").css('color','#FF0000');
+            $("#medianameid").focus();
+            $('#err_medianameid').show();
+            return false;
+    }
+    if(medianameid != "") {
+            $("#err_medianameid").html("");
+            $('#err_medianameid').hide();
+    }
+    if((mediamobileid.trim() == '' || mediamobileid.match(mobExp) == null)) {
+        $("#err_mediamobile").html("Please enter a valid mobile");
+        $("#err_mediamobile").css('color','#FF0000');
+        $("#mediamobileid").focus();
+        $('#err_mediamobile').show();
+        return false;
+    }
+    else {
+        $("#err_mediamobile").html("");
+        $("#err_mediamobile").hide();
+    }
+    if(!emailExp.test(mediaemailid)) {
+        $("#err_mediaemail").html("Please enter a valid email id.");
+        $("#err_mediaemail").css('color','#FF0000');
+        $("#mediaemailid").focus();
+        $('#err_mediaemail').show();
+        return false;
+    }
+    if(mediaemailid != "") {
+            $("#err_mediaemail").html("");
+            $('#err_mediaemail').hide();
+    }
+    if(mediacommentid.trim() == "" || mediacommentid.trim() == "Comments*") {
+            $("#err_mediacomment").html("Comment is compulsary");
+            $("#err_mediacomment").css('color','#FF0000');
+            $("#mediacommentid").focus();
+            $('#err_mediacomment').show();
+            return false;
+    }
+    else {
+            $("#err_mediacomment").html("");
+            $("#err_mediacomment").hide();
+    }
+
+    var randNum=parseInt(Math.random()*1000);
+    $.ajax({
+        url: CMSDOMAIN+'webcms_new/functions/contactus/ajax_contactus.php?randno='+randNum,
+        type: 'POST',
+        data: {
+            action: 'actionmedia',
+            name: medianameid,
+            mobile: mediamobileid,
+            email:mediaemailid,
+            comment:mediacommentid,
+        },
+        success: function (response) {
+            response = JSON.parse(response);
+            if(response.errors.code == 0){
+                $("#mediaContactPopup").modal('hide');
+                $("#thankverifyupdate").modal('show');
+            }
+            else if(response.errors.code == 1){
+                // alert(response.errors.msg);
+            }
+        },
+        error: function () {
+        }
+    });
+
+}
+
+function isNumber(evt,id) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 57)
+        return false;
+    if($.trim($("#"+id).val()).length > 9 && charCode >= 48){
+        return false;
+    }
+    return true;
+}
+
+
+function getMeBack(url){
+	if(document.referrer == ""){
+		if(JDLITE == 1 && historyBack != 1){
+			location.href = "https://jdext.php";
+		} else if(historyBack == 1){
+			window.history.go(-1);
+		} else {
+			if(CMSSOURCE != "undefined" && CMSSOURCE == "22"){
+				location.href = "https://www.jdmart.com";
+			}else{
+				location.href = CMSDOMAIN;
+			}
+		}
+	} else {
+		if(typeof curPageName != "undefined" && curPageName == "customercareinner")
+			submitform(url);
+		else if(typeof curPageName != "undefined" && curPageName == "customercareinnermenu")
+			location.href = CMSDOMAIN+"customer-care?jdlite="+JDLITEQUERY;
+		else
+			window.history.go(-1);
+	}
+}
+
+function closePage(){
+	if(JDLITE == 1 && historyBack != 1){
+		location.href = "https://jdext.php";
+	} else if(historyBack == 1){
+			window.history.go(-1);
+	} else {
+		if(CMSSOURCE != "undefined" && CMSSOURCE == "22"){
+			location.href = "https://www.jdmart.com";
+		}else{
+			location.href = CMSDOMAIN;
+		}
+	}
+
+}
+
+
+
+String.prototype.stripSlashes = function(){
+    return this.replace(/\\(.)/mg, "$1");
+}
+
+function makeDetailUrl(data){
+	var jdliteStr = "";
+	if(JDLITE == 1){
+		jdliteStr = "?jdlite="+JDLITE;
+	}
+	var cn			= data[5].stripSlashes().replace(/\\/g,'');
+	var area		= data[4].stripSlashes().replace(/\\/g,'');
+	var CompanyName	= cn.stripSlashes();
+	var CompanyName	= CompanyName.replace(/[^a-zA-Z\s0-9(),]+/g,' ');
+	var CompanyName	= CompanyName.replace(/[\r\n\t]+/g,' ');
+	var comName		= CompanyName.replace(/\s/g,'-');
+	var comName		= comName.replace(/[.]/g,'-');
+	var comName		= comName.replace("/",'-');
+	var comarea		= area.replace(/[\s]/g,'-');
+	var comarea		= comarea.replace(/[.]/g,'-');
+	var comarea		= comarea.replace("/",'-');
+	var hrefCity	= data[3].replace(/[\s]/g,"-");
+	var gcyUrl		= "https://www.justdial.com/"+hrefCity+'/'+comName+'-'+comarea+'/';
+	if(typeof data[14] != "undefined" && $.trim(data[14]) != "undefined" && data[14] != ""){
+		gcyUrl += "nct-"+data[14]+jdliteStr;
+	}
+	else{
+		var urid		= data[0].stripSlashes().replace(/\\/g,'')+"_BZDET";
+		gcyUrl += urid+jdliteStr;
+	}
+	return gcyUrl;
+}
+
+function openFeedback(type){
+	if(type == "1"){
+		location.href = CMSDOMAIN+"cms/feedback-menu?jdlite="+JDLITEQUERY;
+	}
+	else{
+		$("#cms_contactus_popup").modal('show');
+	}
+}
+
+
+function getBuyBackData(fdate_id){
+	var month = "";
+	var fdate = $('#'+fdate_id).attr('data-value');
+	var year = $('.sel_year .cdr').text();
+	var hname = $("#headName").val();
+	hname = hname.replace(/-/g, ' ');
+	hname = hname.replace('And', '&');
+	if(fdate == ""){
+		$('.sel_month .cdr').html("Show All");
+	}else{
+		$('.sel_month .cdr').html(fdate);
+	}
+
+	if(year == "Show All"){ year = "";}
+	//if(month == "Show All"){ month = "";}
+var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: hname,
+			fdate:fdate,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="copRw">'+
+									'<div class="col-sm-12 padding0">'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span class="copdate tcon">'+entry['display_date'];
+										if(entry['city'] != null){
+								fill_text +=' | '+entry['city'];
+										}
+								fill_text +='</span>'+
+											'<span class="co-info tcon">'+entry['title']+'</span>'+
+										'</div>'+
+										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'</div>'+
+									'</div>'+
+								'</div>';
+				});
+			}
+			$('#fillDta').html(fill_text);
+			if(ETRBO==0){
+				cmslanguage.init(web_lang,web_langs);
+			}
+		}
+	});
+
+}
+
+/*function lng_drop(ts,shw){
+	if ($("#lng_drpdwn").is(":visible") == true) {
+		$('#lng_drpdwn').hide();
+	}else{
+		$('#lng_drpdwn').show();
+	}
+}*/
+function clanguage(ln,slan){
+	if(ln!='eng'){
+		document.cookie = 'web_lang='+ln+';path=/;domain='+cookieondomain;
+		document.cookie = 'web_langs='+slan+';expires=0;path=/;domain='+cookieondomain;
+	}else if(ln=='eng'){
+		var date = new Date();
+		var minutes = 60;
+		date.setTime(date.getTime() + (minutes * 60 * 1000));
+		var expires = "; expires=" + date.toGMTString();
+		document.cookie = "web_lang=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;domain=" + cookieondomain;
+		document.cookie = "web_langs=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;domain=" + cookieondomain;
+	}
+	location.reload();
+	//language.init(ln,slan);
+}
+/*function trigger_lan_change(nlang,D_data,evn,page) {
+	$.ajax({
+			  url: 'http://jigneshgore.jdsoftware.com/jd_rwd/languages/cmslanguage.php',
+			  type : 'POST',
+			  async: false,
+			  data : { lan : nlang , page : page , data : D_data, evn :evn},
+			  dataType: 'json',
+			  success: function (data) {
+			  		if((typeof data.lng_hq_rat != 'undefined') && data.lng_hq_rat!='' &&  data.lng_hq_rat.length){
+						data.lng_hq_rat.map(function(currentValue , index , arr){
+							if(currentValue!=''){$(".lng_hq_rat")[index].innerHTML = currentValue;}
+						})
+					}if((typeof data.lng_mvhtml != 'undefined') && data.lng_mvhtml.length){
+						data.lng_mvhtml.map(function(currentValue , index , arr){
+							if(currentValue!=''){$(".lng_mvhtml")[index].innerHTML = currentValue;}
+						})
+					}if((typeof data.fratings != 'undefined') && data.fratings.length){
+						data.fratings.map(function(currentValue , index , arr){
+							if(currentValue!=''){$(".lng_frating")[index].innerHTML = currentValue;}
+						})
+					}
+			  	},
+			  	error: function(e, ts, et){
+			      console.log("error msg",ts,e,et);
+			   }
+			});
+}*/
+
+function downlaodCMSPDF(url){
+	if(url != ""){
+		var ll = curPageName.replace(/ /g, "_").toLowerCase();
+		clicktracker('download', ll);
+		if(CMSSOURCE !== undefined && (parseInt(CMSSOURCE) == 21 || parseInt(CMSSOURCE) == 1)){
+			var randNum=parseInt(Math.random()*1000);
+			var redirecturl = 'https://wap.justdial.com/filedownload.php?m=1&old=1&randno='+randNum+'&fpath='+url;
+			window.location.href = redirecturl;
+			//window.open(url, '_blank');
+		} else {
+			window.open(url, '_blank');
+		}
+	}
+
+}
+
+function redirectLogin(redirectlogin){
+    if(CMSSOURCE !== undefined && (parseInt(CMSSOURCE) == 3 || parseInt(CMSSOURCE) == 23)){
+      var logjson = JSON.stringify({'type':'verticalLogin','fn':'globalLogin'});
+      window.webkit.messageHandlers.callbackHandler.postMessage(logjson);
+    } else if(CMSSOURCE !== undefined && (parseInt(CMSSOURCE) == 1 || parseInt(CMSSOURCE) == 21)){
+      var logjson = JSON.stringify({'fn':'globalLogin'});
+      JdLiteInterface.verticalLogin(logjson);
+    } else if(CMSSOURCE !== undefined && (parseInt(CMSSOURCE) == 2)){
+      let url = 'https://www.justdial.com/login?redirect='+encodeURIComponent(redirectlogin);
+      window.location.href=url;
+    } else {
+		$("#updateLogin").modal("show");
+      //let url = 'https://www.justdial.com/login?redirect='+encodeURIComponent(redirectlogin);
+      //window.location.href=url;
+    }
+ }
+
+ function globalLogin(logjson){
+    var logresponse = JSON.parse(logjson);
+    var url = window.location.href;
+        url += '&sid='+logresponse['sid']+'&mobile='+logresponse['mobile']+'&name='+logresponse['name']+'&email='+logresponse['email'];
+    window.history.replaceState("", "",url);
+    setTimeout(function(){
+       window.location.reload(true);
+    },100);
+  }
+
+	function checkValidLogin(){
+		var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+			url: CMSDOMAIN+'webcms_new/functions/contactus/ajax_contactus.php?randno='+randNum,
+			type: 'POST',
+			async: false,
+			dataType: "json",
+			data: {
+				action:'checklogin',
+				mobile:MOBILE,
+				sid:LSID,
+				source:CMSSOURCE
+			},
+			success: function(response){
+				ISLOGIN = response['results'];
+			}
+		});
+	}
+	$(".navbar_wrapper_li_inner").click(function() {
+		// $(".inner_dropdown_inner").css({'display':'none'});
+		var menu_id = $(this).attr('id');
+		$("#"+menu_id+" div").toggle();
+	});
+	
+/*
+	$('.navbar_wrapper_li ').on( "click",function(){
+		 if(!$(this).hasClass('active')) {
+			$('.navbar_wrapper_li').removeClass('active');
+			$(this).addClass('active');
+		} else {
+		  $(this).removeClass('active');
+		 }
+	})
+
+    function setActiveTab(id){
+	 $(".panel_wrapper").removeClass("active");
+	 $("#"+id).addClass("active");
+   }
+
+   function redirectNewsEvents(url){
+	   window.location.href = url;
+   }
+   
+   function redirectFilings(url){
+	   window.location.href = url;
+   }
+
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
+
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = (count + inc).toFixed(1);
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = numberWithCommas(target);
+		}
+	};
+
+	updateCount();
+});
+function numberWithCommas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+const counters1 = document.querySelectorAll('.decrement');
+const speed1 = 900;
+counters1.forEach(counter => {
+	const updateCount1 = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc1 = target / speed1;
+		// Check if target is reached
+		if (count > target) {
+			// Add inc to count and output in counter
+			counter.innerText = Math.round(count - inc1);
+			// Call function every ms
+			setTimeout(updateCount1, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount1();
+});
+
+
+
+// <!-- start Banner Swiper -->
+ var swiper = new Swiper(".mySwiper_bannerslide", {
+	spaceBetween: 30,
+	centeredSlides: true,
+	 autoplay: {
+		 delay: 5000,
+		 disableOnInteraction: false,
+	 },
+	 effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+	pagination: {
+	el: ".swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+// <!-- End Banner Swiper -->
+
+
+// <!-- start Key highlight Swiper -->
+var swiper = new Swiper(".mySwiper_keyhighlight", {
+	spaceBetween: 50,
+	autoplay: {
+		  delay: 2500,
+		  disableOnInteraction: false,
+	},
+});
+
+var swiper2 = new Swiper(".mySwiper_keyhighlight2", {
+	direction: "vertical",
+	spaceBetween: 50,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+});
+// <!-- end Key highlight Swiper -->
+
+function getFilingDataYear(val){
+	$('#finmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getNewFilingReports',
+			year: year,
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#fillDta').html(fill_text);
+		}
+	})
+}
+
+function getFilingDataMonth(val){
+	var year = $('#finyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getNewFilingReports',
+			year: year,
+			month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#fillDta').html(fill_text);
+		}
+	})
+}
+
+function getPressReleasesDataYear(val){
+	$('#finmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Press Releases',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#PressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getPressReleasesDataMonth(val){
+	var year = $('#finyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Press Releases',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#PressReleasesData').html(fill_text);
+		}
+	})
+}*/
+function redirectContactUs(url, li, ll){
+	clicktracker(li, ll, url);
+	// window.location.href = url;
+}
+
+function redirectFeedback(url, li, ll){
+	clicktracker(li, ll, url);
+	// window.location.href = url;
+}
+
+function redirect_new_url(url, li = '', ll= ''){
+	clicktracker(li, ll, url);
+	// window.location.href = url;
+}
+function redirect_new_url_whatsnew(url){
+	window.open(url, '_blank');
+}
+
+
+function redirectToSupport() {
+    var url = '';
+    url = 'https://www.justdial.com/support?source=' + SOURCE + '&jdlite=' + JDLITE + '&version=' + VERSION;
+    if(source === '3' || source === '23') {
+      var params_ios = {'type' : 'deeplinkJD', 'shareUrl' : url};
+      window.webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(params_ios));
+    } else if(source === '1' || source === '21' || source === 21) {
+      openSMSWhatsApp(url);
+    } else if(source === '2' || source === '22') {
+      window.open(url, '_blank');
+    } else if(source === '2') {
+      window.JdLiteInterface.openUrlInWindow(url, "", "", "1", "0", "1");
+    } else if(source === '7'){
+      url = 'https://www.justdial.com/support?source=' + source + '&jdlite=' + JDLITE + '&version=' + VERSION;
+      window.open(url, '_blank');
+    } else {
+	  window.open(url, '_blank');
+    }
+}
+
+function openSMSWhatsApp(surl){
+	var data = {};
+	data["ürl"] = surl;
+	data["header"] = 'justdial';
+	data["confirmationheader"] = '';
+	data["hideheader"] = 0;
+	data["webviewhistory"] = 0;
+	data["transaction"] = 0;
+	JdLiteInterface.openUrlInWindow(JSON.stringify(data));
+}
+
+function selectcity(cityname) {
+	  $("#selectcity").val(cityname);
+  }
+
+function isIOS() {
+	return (/iPad|iPhone|iPod/.test(window.navigator.userAgent));
+}
+
+function sendToApp(payload) {
+	const encodedData = window.btoa(JSON.stringify({ ...payload }));
+	if (window.android && window.android.__externalCall) window.android.__externalCall(encodedData);
+	if (window.__externalCall) window.__externalCall(encodedData);
+	if (isIOS() && window.webkit.messageHandlers && window.webkit.messageHandlers.callback) window.webkit.messageHandlers.callback.postMessage(encodedData);
+	return null;
+}
+
+function setMyJioHeader(value) {
+	sendToApp({ type: 'header_VISIBILITY', value });
+}
+
+function closeWebView() {
+	sendToApp({ type: 'close' });
+}
+
+function success_videos_new(video_id,city,cname,compname, clientid){
+	var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    if(navigator.userAgent.match(/iPad|android|iphone/i) || msie > 0) {
+		$("html, body").animate({
+			scrollTop: $(".mpad_section").offset().top-20
+		}, 100);
+	}
+	var video_ext  = video_id.split('.');
+		if($("#mbview").val() == 1){
+			var vWidth = $(window).width() - 30;
+		}else{
+			var vWidth = 400;
+		}
+		$("#video_play").html('');
+		$(".videocontainer").removeClass('active');
+		$("#vid_"+clientid).addClass('active');
+		var vheight = 300;
+		if(video_ext[1] == 'flv') {
+			var fflv = video_id.replace('.flv', ".flv");
+			strVideoFile=PROTOCOL+'videos.jdmagicbox.com/client_videos/' + city + '/' + fflv;
+			$("#video_play").hide();
+			$(".mgimgbox").addClass('flv');
+			$("#flv_play_div").show();
+			jwplayer("flv_play").setup({
+				flashplayer:JDDOMAIN+"player.swf",
+				autostart: true,
+				fullscreen: true,
+				file: strVideoFile,
+				height: '300',
+				width: '300',
+				androidhls: true
+				/*width: 320
+				width: $(window).width() - 30,*/
+			});
+		} else {
+			$("#flv_play_div").hide();
+			$(".mgimgbox").removeClass('flv');
+			$("#video_play").show();
+			var video_details = '<div class="mgimgbox"><div class="ytframe-wrap"><iframe title="video details" width="100%" height="100%" frameborder="0" allowfullscreen="" src="'+video_id+'" allow="autoplay" id="svideo"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div><div class="mgtext_2">'+compname+'</div><div class="mgtext_1">'+cname+' | '+city+'</div>';
+			$("#video_play").html(video_details);
+		}
+}
+
+function clicktracker(li, ll, url='') {
+	var randNum=parseInt(Math.random()*1000);
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'clicktrack',
+			jdlite : JDLITEQUERY,
+			li : li,
+			ll : ll,
+			source : SOURCE,
+			async: true
+		},
+		success: function(response){
+			console.log('response ', response);
+			if(url != '') {
+				window.location.href = url;
+			}
+
+		}
+	})
+}

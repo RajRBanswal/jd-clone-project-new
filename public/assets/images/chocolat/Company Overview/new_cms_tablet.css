@@ -1,0 +1,15 @@
+@media only screen and (min-width: 992px) and (max-width:1024px) {
+.lft_big_tab a.linht{line-height:normal;}
+.lft_big_tab li a{height:auto;}
+.lft_big_tab li a:hover{color:#747474;}
+
+}
+
+/*Ipad Portrait Tablet Media Query*/
+@media only screen and (min-width: 768px) and (max-width:992px) {
+.lft_big_tab a.linht{line-height:normal;}
+.lft_big_tab li a{height:auto;font-size:13px;}
+.freelisting .input-group{ width:85%;}
+.lft_big_tab li a:hover{color:#747474;}
+.rgt_cont_addrs .addrs_tab .m_addrs{width:380px;}
+}

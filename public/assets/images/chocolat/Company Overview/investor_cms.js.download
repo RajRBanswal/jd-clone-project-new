@@ -1,0 +1,1438 @@
+
+	$('.navbar_wrapper_li ').on( "click",function(){
+		 if(!$(this).hasClass('active') && !$(this).hasClass('cureent')) {
+			$('.navbar_wrapper_li').removeClass('active');
+			$(this).addClass('active');
+		} else {
+		  $(this).removeClass('active');
+		 }
+	})
+
+	function setActiveTab(id){
+		if($("#"+id).hasClass('active')) {
+			$("#"+id).removeClass("active");
+		} else {
+			$("#"+id).addClass("active");
+		}
+		var id_name = $('#'+id).offset();
+		$('html, body').animate({scrollTop: id_name.top - 70}, 500);
+	}
+
+   function redirectNewsEvents(url){
+	   window.location.href = url;
+   }
+
+   function redirectContactUs(url){
+	   window.location.href = url;
+   }
+
+   function redirectFeedback(url){
+	   window.location.href = url;
+   }
+
+   function redirectFilings(url, li, ll){
+		clicktracker(li, ll, url);
+	//    window.location.href = url;
+   }
+
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
+
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = (count + inc).toFixed(1);
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = numberWithCommas(target);
+		}
+	};
+
+	updateCount();
+});
+function numberWithCommas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+const counters1 = document.querySelectorAll('.decrement');
+const speed1 = 900;
+counters1.forEach(counter => {
+	const updateCount1 = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc1 = target / speed1;
+		// Check if target is reached
+		if (count > target) {
+			// Add inc to count and output in counter
+			counter.innerText = Math.round(count - inc1);
+			// Call function every ms
+			setTimeout(updateCount1, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount1();
+});
+
+
+
+// <!-- start Banner Swiper -->
+ var swiper = new Swiper(".mySwiper_bannerslide", {
+	spaceBetween: 30,
+	centeredSlides: true,
+	 autoplay: {
+		 delay: 5000,
+		 disableOnInteraction: false,
+	 },
+	 effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+	pagination: {
+	el: ".swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+// <!-- End Banner Swiper -->
+
+
+// <!-- start Key highlight Swiper -->
+var swiper = new Swiper(".mySwiper_keyhighlight", {
+	spaceBetween: 50,
+	autoplay: {
+		  delay: 2500,
+		  disableOnInteraction: false,
+	},
+});
+
+var swiper2 = new Swiper(".mySwiper_keyhighlight2", {
+	direction: "vertical",
+	spaceBetween: 50,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+});
+// <!-- end Key highlight Swiper -->
+
+function getFilingDataYear(val){
+	$('#finmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getNewFilingReports',
+			year: year,
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
+					fill_text +='<div class="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#fillDta').html(fill_text);
+		}
+	})
+}
+
+function getFilingDataMonth(val){
+	var year = $('#finyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getNewFilingReports',
+			year: year,
+			month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
+					fill_text +='<div class="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#fillDta').html(fill_text);
+		}
+	})
+}
+
+function getPressReleasesDataYear(val){
+	$('#finmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getAllPressReleases',
+			year: year,
+			hname: 'Press Releases',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#PressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getPressReleasesDataMonth(val){
+	var year = $('#finyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getAllPressReleases',
+			year: year,
+			month: month,
+			hname: 'Press Releases',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#PressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getEarningsPressReleasesDataYear(val){
+	$('#finmonth').val('');
+	$('#finquarter').val('');
+	var year = val;
+	var quarter = $('#finquarter').val();
+	if(year == undefined){ year = ""; }
+	if(quarter == undefined){quarter = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Earnings Press Releases',
+			//month: month,
+			quarter:quarter,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#EarningsPressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getEarningsPressReleasesDataMonth(val){
+	var year = $('#finyear').val();
+	var month = val;
+	var quarter = $('#finquarter').val();
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	if(quarter == undefined){quarter = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Earnings Press Releases',
+			quarter: quarter,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#EarningsPressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getEarningsPressReleasesQuater(val){
+	var year = $('#finyear').val();
+	var month = $('#finmonth').val();
+	var quarter = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	if(quarter == undefined){quarter = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Earnings Press Releases',
+			quarter: quarter,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#EarningsPressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function latestNewsMore() {
+	if($(".inner_newslist_wrapper").hasClass('dn')) {
+		var cnt = $(".newslist_wrapper .dn").index();
+		for (var i = cnt; i < cnt+3; i ++) {
+			$(".newslist_wrapper").find('.inner_newslist_wrapper:eq('+i+')').removeClass('dn');
+		};
+	}
+}
+var page = 1;
+function setActiveMedia(id){
+	page = 1;
+	if($(".mediatabs_anchr").hasClass('active')) {
+		$(".mediatabs_anchr").removeClass("active");
+		$("#"+id).addClass(" active");
+		$('.tab').addClass('dn');
+		$('#media_details').addClass('dn');
+		$('#'+id+'_art').removeClass('dn');
+		var src = $("#iframevideo").attr('src');
+		$('#iframevideo').attr('src', '');
+		$('#iframevideo').attr('src', src);
+		var first_video = $(".videocontainer").attr('id').split('_');
+		media_details('video', first_video[1], '', { isScroll: false });
+	}
+}
+
+function showMoreMedia(name) {
+	page = page+1;
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php',
+		type: 'POST',
+		data: {
+			action: 'getMediaArtical',
+			page : page,
+			async: false,
+			hname: name
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			if(response['result']['data'] != null){
+
+				var img = '';
+				var articlename = '';
+				var body = '';
+				var fill_text = '';
+				var className = '';
+				var sel_type = ''
+				var created_date = '';
+				var d = '';
+				var mnth = search_url = '';
+				$.each(response['result']['data'], function (index, entry) {
+					img = entry['newthumbnailpath'];
+					articlename = entry['articlename'];
+					body = entry['body'];
+					className = '';
+					sel_type = '';
+					if(entry['pid'] == '25') {
+						className = 'playicon';
+						type = 'video';
+						sel_type = 'media_all';
+						search_url = 'video-releases';
+					} else {
+						type = 'Press';
+						search_url = 'press-releases';
+
+					}
+					hid = entry['hid'];
+					d = new Date(entry['created_date']);
+					mnth = d.toLocaleString('default', { month: 'long' });
+					created_date = d.getDate() + " " + mnth.slice(0, 3) + ' ' + d.getFullYear();
+					var art_articlename	= entry['articlename'].replace(/[&\/\#, +$~%.'":@^*?<>{}]/g,'-');
+					var art_publishername	= entry['sourcename'].replace(/[&\/\#, +$~%.'":@^*?<>{}]/g,'-');
+					redirection_client_url = CMSDOMAIN+'cms/'+search_url+'/'+art_publishername+'/'+art_articlename+'/id-'+entry['hid']+'?jdlite='+JDLITEQUERY;
+
+					if(entry['pid'] == '25' ) {
+						redirection_client_url = CMSDOMAIN+'cms/'+search_url+'/'+art_articlename+'/id-'+entry['hid']+'?jdlite='+JDLITEQUERY;
+					}
+					fill_text += '<div class="dtbl mdbox_row"><div class="dcell_top crpcolum_img">';
+					if(entry['consumer_report_flag'] == 1 && entry['imageattached'] == '' && entry['pid'] == '11') { 
+						fill_text +='<div class="contentimg" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")">'; 
+					} else {
+						fill_text += '<div class="contentimg"><a href="'+redirection_client_url+'">';
+					}
+					fill_text +='<img class="" src="'+img+'"><i class="'+className+'"></i></a></div></div><div class="dcell_top crpcolum_info mdcolum_info"><div class="crpcolum_1">'+created_date+'</div>';
+					if(entry['consumer_report_flag'] == 1 && entry['imageattached'] == '' && entry['pid'] == '11') { 
+						fill_text +='<div class="crpcolum_2" onclick="downlaodCMSPDF("'+entry['pdfattached']+'");">'+articlename+'</div>';
+					} else { 
+						fill_text +='<div class="crpcolum_2"><a href="'+redirection_client_url+'">'+articlename+'</a></div>';
+					}
+					fill_text +='<div class="crpcolum_3 mbcolum">'+body+'</div>';
+					if(entry['pdfattached'] != '' && entry['pdfattached'] != null) { 
+						fill_text +='<div class="reporig" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")"> <span class="downlimgc"></span>Download</div>';
+					} 
+					fill_text +='</div></div>';
+				});
+				if(name == 'Media') {
+					$('#media_all_data').append(fill_text);
+				} else if(name == 'Press') {
+					$('#press_data').append(fill_text);
+				} else if(name == 'consumer_report') {
+					$('#consumer_report_data').append(fill_text);
+				}
+				if(response['result']['numPages'] == page || response['result']['numPages'] == 0) {
+					$('#'+name.toLowerCase()+'_showmore_anchr').addClass('disabled');
+					$('#'+name.toLowerCase()+'_showmore_anchr').prop("onclick", null).off("showMoreVideo");
+				}
+			}
+		}
+	})
+}
+var vedio_page = 1;
+function showMoreVideo() {
+	vedio_page = vedio_page+1;
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php',
+		type: 'POST',
+		data: {
+			action: 'getVideoArtical',
+			page : vedio_page,
+			async: false
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			if(response['result']['data'] != null){
+				var img = '';
+				var articlename = '';
+				var body = '';
+				var fill_text = '';
+				var className = '';
+				var mediaid = $("#media_id").val();
+				var active = '';
+				var redirection_client_url = '';
+				$.each(response['result']['data'], function (index, entry) {
+					img = entry['newthumbnailpath'];
+					if(entry['newthumbnailpath'] == null) {
+						img = 'https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/noimage_dt2.png';
+					}
+					articlename = entry['articlename'];
+					body = entry['body'];
+					className = 'playicon';
+					hid = entry['hid'];
+					active = mediaid == hid ? ' active' : '';
+					redirection_client_url = CMSDOMAIN+'cms/video-releases/'+articlename.replace(/[&\/\#, +()$~%.'":@^*?<>{}]/g, "-")+'/id-'+entry['hid']+'?jdlite='+JDLITEQUERY;
+					d = new Date(entry['created_date']);
+					mnth = d.toLocaleString('default', { month: 'long' });
+					created_date = d.getDate() + " " + mnth.slice(0, 3) + ' ' + d.getFullYear();
+					fill_text += '<div class="videosectionwrap" ><div class="videosection"><a class="videocontainer'+active+'" href="'+redirection_client_url+'" alt="'+articlename+'" id=\'vid_'+hid+'\'><img src="'+img+'"><span class="overlaywrap"></span><i class="playicon"></i></a><div class="videocontainer_text" >'+articlename+'</div><div class="crpcolum_1" style="font-size: 14px;color:#777">'+created_date+'</div></div></div>';
+				});
+				$('#video_data').append(fill_text);
+				if(response['result']['total_pages'] == vedio_page) {
+					$('#video_showmore_anchr').addClass('disabled');
+					$('#video_showmore_anchr').prop("onclick", null).off("showMoreVideo");
+				}
+			}
+		}
+	})
+}
+
+function media_details(name, id, sel_tab='', restvalues ={}) {
+	const obj = Object.assign({isScroll: true}, restvalues)
+	if (obj.isScroll) {
+		if((name == 'Press' && sel_tab == '') || (name == 'consumer_report' && sel_tab == '') || (name == 'video' && sel_tab == 'media_all') || detectDevice == 'mobile') {
+			$("html, body").animate({
+				scrollTop: $(".mpad_section").offset().top-20
+			}, 100);
+		}
+		if(name == 'video' && sel_tab == '' &&  detectDevice == 'desktop') {
+			$("html, body").animate({
+				scrollTop:   $("#vid_"+id).offset().top - 100
+			}, 2000);
+		}
+	}
+
+	$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php',
+		type: 'POST',
+		data: {
+			action: 'showMediaArticle',
+			page : page,
+			async: false,
+			hname : id,
+			type : name
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			if(name == 'video' && sel_tab == '' ) { //This is for video tab. video will open in left popupbox
+				$(".videocontainer").removeClass('active');
+				$("#vid_"+id).addClass('active');
+				$("#video_play").html('');
+				var videos_link = response['results']['videos_attached'].split('//');
+
+				$("#video_play").html('<div class="mgimgbox"><div class="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'?autoplay=1&mute=1" allow="autoplay"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div><div class="mgtext_1">'+response['results']['created_date']+'</div><div class="mgtext_2">'+response['results']['articlename']+'</div>');
+			} else { // This is for media all and press tab. vedio and press will open in popupbox
+				$('#media_details').removeClass('dn');
+				$(".tab").addClass('dn');
+				if(sel_tab == 'media_all' && name == 'video') {
+					var videos_link = response['results']['videos_attached'].split('//');
+					$("#media_details").html('<div class="mgimgbox" style="background-color:#fff"><div class="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span class="imageclose_icon" onclick="closetab(\''+name+'\');"></span></div><div class="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'" id="iframevideo"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div>');
+				} else {
+					$("#media_details").html('<div class="mdbox"><div class="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span class="imageclose_icon" onclick="closetab();"></span></div><img style="width:80%" src="'+response['results']['imagesattached']+'"><img></div></div>');
+				}
+			}
+		}
+	})
+}
+
+function closetab(seltab = '') {
+	if($('.mediatabs_anchr').hasClass('active')) {
+		var tabname = ''; //$('.mediatabs_anchr').attr('id');
+		if($('.mediatabs_anchr').hasClass('active')) {
+			tabname = $(".active").attr('id');
+		}
+		if((tabname == 'media_all' && seltab == 'video') || (tabname == 'consumer_report' && seltab == 'video')) {
+			var src = $("#iframevideo").attr('src');
+			$('#iframevideo').attr('src', '');
+			$('#iframevideo').attr('src', src);
+		}
+		$("#"+tabname+"_art").removeClass('dn');
+		$("#media_details").addClass('dn');
+
+	}
+}
+function getAnalystsDataYear(val){
+	$('#analystsmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'allFillingReport',
+			year: year,
+			hname: '["Schedule of Analysts / Investors meet", "Schedule of Analysts / Investors meet 2"]',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#AnalystsData').html(fill_text);
+		}
+	})
+}
+
+function getAnalystsDataMonth(val){
+	var year = $('#analystsyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'allFillingReport',
+			year: year,
+			month: month,
+			hname: '["Schedule of Analysts / Investors meet", "Schedule of Analysts / Investors meet 2"]',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#EarningsPressReleasesData').html(fill_text);
+		}
+	})
+}
+
+function getBoardMeetingDataYear(val){
+	$('#boardmeetingmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Board Meeting Notice',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#BoardMeetingData').html(fill_text);
+		}
+	})
+}
+
+function getBoardMeetingDataMonth(val){
+	var year = $('#boardmeetingyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Board Meeting Notice',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#BoardMeetingData').html(fill_text);
+		}
+	})
+}
+
+function getInformationUnderRegulationDataYear(val){
+	$('#information_under_regulation_month').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Events or Information Under Regulation 30',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#information_under_regulation_data').html(fill_text);
+		}
+	})
+}
+
+function getInformationUnderRegulationDataMonth(val){
+	var year = $('#information_under_regulation_year').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Events or Information Under Regulation 30',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#information_under_regulation_data').html(fill_text);
+		}
+	})
+}
+
+function getEarningsCallDetailsDataYear(val){
+	$('#earnings_call_details_month').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Earnings Call Details',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#earnings_call_details_data').html(fill_text);
+		}
+	})
+}
+
+function getEarningsCallDetailsDataMonth(val){
+	var year = $('#earnings_call_details_year').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Earnings Call Details',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#earnings_call_details_data').html(fill_text);
+		}
+	})
+}
+function getCompanyPresentationDataYear(val){
+	$('#company_presentation_month').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getallCompanyPresentation',
+			year: year,
+			hname: 'Company Presentation',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#company_presentation_data').html(fill_text);
+		}
+	})
+}
+
+function getCompanyPresentationDataMonth(val){
+	var year = $('#company_presentation_year').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'getallCompanyPresentation',
+			year: year,
+			month: month,
+			hname: 'Company Presentation',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#company_presentation_data').html(fill_text);
+		}
+	})
+}
+/******** EarningCallRecordings ******** */
+function getEarningCallRecordingsDataYear(val){
+	$('#EarningCallRecordingsMonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Earnings Call Transcripts',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					var result = entry['thumbnail_path'].split('//');
+					var title = entry['title'].replace("Transcript","Recording");
+					//console.log(result[0]);
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+title+'</div></div><div class="quwrapper"><div class="quhead" data-toggle="modal" data-target="#audioclip1'+index+'"><i class="quicon_box audio_icon"></i>  </div><div class="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div class="modal-dialog" role="document"><div class="modal-content dtable"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="earningcallT"><p class="text-center frp tcon">Earnings Call Recording For <span class="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div class="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls" ></audio></div>	<p class="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
+					//fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"></div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#EarningCallRecordingsData').html(fill_text);
+		}
+	})
+}
+
+function getEarningCallRecordingsDataMonth(val){
+	var year = $('#EarningCallRecordingsYear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Earnings Call Transcripts',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					var result = entry['thumbnail_path'].split('//');
+					var title = entry['title'].replace("Transcript","Recording");
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+title+'</div></div><div class="quwrapper"><div class="quhead" data-toggle="modal" data-target="#audioclip1'+index+'" ><i class="quicon_box audio_icon"></i>  </div><div class="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div class="modal-dialog" role="document"><div class="modal-content dtable"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="earningcallT"><p class="text-center frp tcon">Earnings Call Recording For <span class="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div class="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls"></audio></div>	<p class="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"> </div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#EarningCallRecordingsData').html(fill_text);
+		}
+	})
+}
+/***********Earning call transacripts ********* */
+function getEarningCallTranscriptsDataYear(val){
+	$('#earning_call_transcripts_month').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Earnings Call Transcripts',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					if(entry['reportfiling_pdf'] != '') {
+						fill_text +='<div class="reportblck">';
+						fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+						fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+						fill_text +='</div>';
+					}
+				});
+			}
+			$('#earning_call_transcripts_data').html(fill_text);
+		}
+	})
+}
+/******** Financial Subsidaries Report ******** */
+function getSubsidiariesDataYear(val){
+	$('#subsidiariesmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Subsidiary Annual Reports',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#SubsidiariesData').html(fill_text);
+		}
+	})
+}
+/******** Secretarial Compliance Report ******** */
+function getSecretarialDataYear(val){
+	$('#secretarialmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Secretarial Compliance Report',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#SecretarialData').html(fill_text);
+		}
+	})
+}
+
+/******** Statement of deviation ******** */
+function getStatementsOfDeviationDataYear(val){
+	$('#StatementsOfDeviationmonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Statements of Deviation',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#StatementsOfDeviationData').html(fill_text);
+		}
+	})
+}
+
+function getStatementsOfDeviationDataMonth(val){
+	var year = $('#StatementsOfDeviationyear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Statements of Deviation',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			//console.log(fill_text);
+			$('#StatementsOfDeviationData').html(fill_text);
+		}
+	})
+}
+/******* Annual Report ******* */
+function getAnnualReportDataYear(val){
+	$('#annual_report_month').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FinancialReport',
+			year: year,
+			hname: 'Annual Report',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#annual_report_data').html(fill_text);
+		}
+	})
+}
+function getFinancialsResultDataYear(val){
+	$('#financialsResultMonth').val('');
+	var year = val;
+	if(year == undefined){ year = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			hname: 'Financial Results',
+			//month: month,
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title'] + ' Q'+entry['quarter']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#financialsResultData').html(fill_text);
+		}
+	})
+}
+
+function getFinancialsResultDataMonth(val){
+	var year = $('#financialsResultYear').val();
+	var month = val;
+	if(year == undefined){ year = ""; }
+	if(month == undefined){month = ""; }
+	var randNum=parseInt(Math.random()*1000);
+		$.ajax({
+		url: CMSDOMAIN+'webcms_new/functions/cms/ajax_cms.php?randno='+randNum,
+		type: 'POST',
+		data: {
+			action: 'FillingReport',
+			year: year,
+			month: month,
+			hname: 'Financial Results',
+			async: false,
+		},
+		success: function(response){
+			response = JSON.parse(response);
+			var fill_text = "";
+			if(response['results']['data'] != null){
+				$.each(response['results']['data'], function (index, entry) {
+					fill_text +='<div class="reportblck">';
+					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> </div>';
+					fill_text +='</div>';
+				});
+			}
+			$('#financialsResultData').html(fill_text);
+		}
+	})
+}
+// if(curPageName ==  "Earnings Call Recordings") {
+// 	$(document).on('click','body',function(event){
+// 		if($('.earning_audio').is(':visible') && !$(event.target).closest('.modal-content ').length) {
+// 			//$(".mejs-playpause-button").trigger('click');
+// 			audioclose();
+// 		}
+// 	});
+// }
+if(curPageName ==  "Earnings Call Recordings" || curPageName == 'Financial Results') {
+	$(document).on('click','body',function(event){
+		if($('.earning_audio').is(':visible') && !$(event.target).closest('.modal-content').length) {
+			audioclose();
+		} else if($('.financial_audio').is(':visible') && !$(event.target).closest('.modal-content').length) {
+			audioclose();
+		}
+
+	});
+	// $(window).focus(function(event) {
+	// //	if($('.earning_audio').is(':visible')) {
+	// 		audioclose();
+	// //	}
+	// });
+	document.addEventListener("visibilitychange", (event) => {
+		if (document.visibilityState != "visible") {
+			audioclose();
+		}
+	});
+	window.addEventListener('blur', function() {
+		audioclose();
+    }, false);
+
+
+
+}
+
+// csr swiper
+if(curPageName ==  'Corporate Social Responsibility') {
+	// <!-- start csrswiper_1 Swiper -->
+var swiper = new Swiper(".csrswiper_1", {
+	slidesPerView: 3,
+	spaceBetween: 20,
+	keyboard: {
+		enabled: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    // when window width is >= 767px
+    767: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
+});
+
+// <!-- start csrswiper_2 Swiper -->
+ var swiper = new Swiper(".csrswiper_2", {
+	slidesPerView: 3,
+	spaceBetween: 20,
+	keyboard: {
+		enabled: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    // when window width is >= 767px
+    767: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
+});
+
+
+// <!-- start csrswiper_3 Swiper -->
+ var swiper = new Swiper(".csrswiper_3", {
+	slidesPerView: 3,
+	spaceBetween: 20,
+	keyboard: {
+		enabled: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+		  slidesPerView: 1.5,
+		  spaceBetween: 10
+		},
+		// when window width is >= 480px
+		480: {
+		  slidesPerView: 3,
+		  spaceBetween: 20
+		},
+		// when window width is >= 767px
+		767: {
+		  slidesPerView: 3,
+		  spaceBetween: 20
+		}
+	}
+});
+
+    thumbnail_popup();
+	const myCustomSlider = document.querySelectorAll('.large-thumb');
+	const myCustomGalleryThumbs = document.querySelectorAll('.small-thumb');
+	for (i = 0; i < myCustomSlider.length; i++) {
+		myCustomSlider[i].classList.add('large-thumb-' + i);
+		myCustomGalleryThumbs[i].classList.add('small-thumb-' + i);
+		var galleryThumbs = new Swiper('.small-thumb-' + i, {
+			spaceBetween: 10,
+			slidesPerView: 6,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			observer: true,
+            observeParents: true,
+            // loop: true
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+				  slidesPerView: 4,
+				  spaceBetween: 10
+				},
+				// when window width is >= 480px
+				480: {
+				  slidesPerView: 4,
+				  spaceBetween: 20
+				},
+				// when window width is >= 767px
+				767: {
+				  slidesPerView: 6,
+				  spaceBetween: 20
+				}
+			  }
+		});
+		var galleryTop = new Swiper('.large-thumb-' + i, {
+			spaceBetween: 10,
+			thumbs: {
+				// el: '.large-class',
+				// slidesPerView: 5,
+				swiper: galleryThumbs
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+	}
+	function thumbnail_popup() {
+		$('.eduction_gallery').click(function () {
+			$('body').addClass('bodyfixed');
+			$('.thumbnail-wrapper').addClass('show-popup');
+		})
+		$('.healthcare_gallery').click(function () {
+			$('body').addClass('bodyfixed');
+			$('.thumbnail-wrapper1').removeClass('dn');
+			$('.thumbnail-wrapper1').addClass('show-popup');
+		})
+
+		$('.close-icon').click(function () {
+			$('.thumbnail-wrapper').removeClass('show-popup');
+			$('.thumbnail-wrapper1').removeClass('show-popup');
+			$('body').removeClass('bodyfixed');
+		});
+	}
+}
+
+function contactusDetails(id) {
+	var info_div = id+"_info";
+	$("#"+info_div).toggle();
+	if($("#"+info_div).is(':visible')) {
+		$("#"+id).addClass('active');
+	} else {
+		$("#"+id).removeClass('active');
+	}
+	if($("#"+info_div).is(':visible')) {	
+		$("html, body").animate({
+			scrollTop: $("#"+info_div).offset().top-300
+		}, 100);
+	}
+}
+
+
+
+
+
+
+

@@ -431,3 +431,11 @@ textarea.input {
 .molk {
   padding-top: 65%;
 }
+
+.car-name{
+  text-align: center;
+}
+.service-heading{
+  text-align: center;
+  padding-top:2em;
+}

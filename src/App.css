@@ -157,7 +157,28 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn-login {
+.btn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #1b1c1c;
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+}
+.btn:hover{
+  background-color: transparent;
+  color:#149279;
+}
+
+ 
+
+.btn-login{
   padding: 0.6rem 1.3rem;
   background-color: #74808b;
   border: 2px solid #fafafa;
@@ -170,11 +191,7 @@ textarea.input {
   transition: 0.3s;
   margin: 0;
   width: 100%;
-}
-
-.btn-login:hover {
-
-  border: 1px solid;
+  
 }
 
 .input-container span {

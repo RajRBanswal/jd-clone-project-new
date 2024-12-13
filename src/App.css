@@ -40,15 +40,13 @@
 .contact.container {
   position: relative;
   width: 100%;
+
   padding: 2rem;
+
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.bg-warning{
-  background-color: #fac504 !important;
 }
 
 .form {
@@ -158,23 +156,6 @@ textarea.input {
   top: 1rem;
   transform: translateY(0);
 }
-
-.btn {
-  padding: 0.6rem 1.3rem;
-  background-color: transparent;
-  border: 2px solid #fafafa;
-  font-size: 0.95rem;
-  color: #1abc9c;
-  line-height: 1;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0;
-  width: 100%;
-  
-}
-
 .btn-login {
   padding: 0.6rem 1.3rem;
   background-color: #080905;
@@ -189,6 +170,21 @@ textarea.input {
   margin: 0;
   width: 100%;
 }
+.btn-send{
+  padding: 0.6rem 1.3rem;
+  background-color:transparent;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #1abc9c;
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+}
+
 
 
 .btn-login:hover {

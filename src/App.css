@@ -27,6 +27,7 @@
 .App-link {
   color: #61dafb;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -39,9 +40,9 @@
 .contact.container {
   position: relative;
   width: 100%;
-   
+
   padding: 2rem;
- 
+
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -156,6 +157,22 @@ textarea.input {
   transform: translateY(0);
 }
 
+.btn {
+  padding: 0.6rem 1.3rem;
+  background-color: transparent;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #1abc9c;
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+  
+}
+
 .btn-login {
   padding: 0.6rem 1.3rem;
   background-color: #080905;
@@ -170,6 +187,7 @@ textarea.input {
   margin: 0;
   width: 100%;
 }
+
 
 .btn-login:hover {
 
@@ -237,7 +255,7 @@ textarea.input {
 }
 
 .information {
-  
+
   color: #555;
   margin: 0.7rem 0;
   align-items: center;
@@ -294,16 +312,16 @@ textarea.input {
   opacity: 0.3;
 }
 
-  .big-circle {
+.big-circle {
   position: absolute;
   width: 500px;
   height: 500px;
   border-radius: 50%;
   background: linear-gradient(to bottom, #1b1c1c, #080905);
   bottom: 50%;
-   
+
   transform: translate(-60%, 49%);
-} 
+}
 
 .big-circle:after {
   content: "";
@@ -324,6 +342,8 @@ textarea.input {
   transform: translate(181%, 11%);
   opacity: 0.2;
 }
+
+
 
 @media (max-width: 850px) {
   .form {
@@ -430,18 +450,19 @@ textarea.input {
 
 
 
-.btn-login-color{
+.btn-login-color {
   background-color: #0e1c36;
   color: #fff;
-  
-}
-.btn-loginn-color:hover{
-  color: yellow;
-  background-color: #0e1c36;
-   
+
 }
 
-.profile-image-pic{
+.btn-loginn-color:hover {
+  color: yellow;
+  background-color: #0e1c36;
+
+}
+
+.profile-image-pic {
   height: 200px;
   width: 200px;
   object-fit: cover;
@@ -449,10 +470,10 @@ textarea.input {
 
 
 
-.cardbody-color{
+.cardbody-color {
   background-color: #ebf2fa;
 }
 
-a{
+a {
   text-decoration: none;
 }

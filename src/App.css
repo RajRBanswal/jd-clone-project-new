@@ -94,7 +94,7 @@
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #eb0e19;
+  background-color: #fff700fc;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -125,7 +125,7 @@ form {
   border: 1px solid #0f0e0e;
   background: white;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+  color: #120f0f;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -160,7 +160,7 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn {
+.btn-login {
   padding: 0.6rem 1.3rem;
   background-color: #080905;
   border: 2px solid #fafafa;
@@ -175,9 +175,9 @@ textarea.input {
   width: 100%;
 }
 
-.btn:hover {
-  background-color: transparent;
-  color: #8a6328;
+.btn-login:hover {
+
+  border: 1px solid;
 }
 
 .input-container span {

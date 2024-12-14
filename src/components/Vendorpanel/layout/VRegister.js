@@ -13,9 +13,9 @@ const VRegister = () => {
 
                         <div class="information-form mt-3">
                             <div class="row">
-                                <div class="form-floating mb-3  col-sm-6">
-                                    <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" />
-                                    <label for="floatingText"> First Name</label>
+                            <div class="form-floating mb-3 col-sm-6">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <label for="floatingInput">First Name</label>
                                 </div>
                                 <div class="form-floating mb-3 col-sm-6">
                                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />

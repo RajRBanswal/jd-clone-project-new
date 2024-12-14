@@ -157,12 +157,12 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn-login {
+.btn-logine {
   padding: 0.6rem 1.3rem;
+  color: #fff;
   background-color: #080905;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #1abc9c;
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -463,14 +463,14 @@ textarea.input {
 
 
 
-.btn-login-color {
+.btn-loginn{
   background-color: #0e1c36;
   color: #fff;
 
 }
 
-.btn-loginn-color:hover {
-  color: yellow;
+.btn-loginn:hover {
+
   background-color: #0e1c36;
 
 }

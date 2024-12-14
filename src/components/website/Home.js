@@ -47,7 +47,28 @@ const Home = () => {
           backgroundPosition: "right bottom",
         }}
       >
-        <div class="container-fluid">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/img/slider1.jpeg" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/img/slider2.jpeg" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/img/slider3.jpeg" class="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        {/* <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="banner-blocks">
@@ -184,7 +205,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section>
@@ -243,7 +264,6 @@ const Home = () => {
                 <p class="car-name pt-4"><b>Verna</b></p>
               </div>
             </div>
-
             <div class="col-lg-2 col-6 pt-4">
               <div class="card h-100">
                 <img src="./assets/images/aura.jpg"  />

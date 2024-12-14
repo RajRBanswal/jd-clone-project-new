@@ -27,6 +27,7 @@
 .App-link {
   color: #61dafb;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -39,9 +40,9 @@
 .contact.container {
   position: relative;
   width: 100%;
-   
+
   padding: 2rem;
- 
+
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -90,7 +91,7 @@
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #eb0e19;
+  background-color: #fff700fc;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -121,7 +122,7 @@ form {
   border: 1px solid #0f0e0e;
   background: white;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+  color: #120f0f;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -156,9 +157,24 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn-login {
+.btn-logine {
   padding: 0.6rem 1.3rem;
+  color: #fff;
   background-color: #080905;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+}
+
+.btn-send {
+  padding: 0.6rem 1.3rem;
+  background-color: transparent;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
   color: #1abc9c;
@@ -170,6 +186,8 @@ textarea.input {
   margin: 0;
   width: 100%;
 }
+
+
 
 .btn-login:hover {
 
@@ -237,11 +255,12 @@ textarea.input {
 }
 
 .information {
-  
+
   color: #555;
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
+ 
 }
 
 .information i {
@@ -292,18 +311,19 @@ textarea.input {
   bottom: -77px;
   right: 50px;
   opacity: 0.3;
+ 
 }
 
-  .big-circle {
+.big-circle {
   position: absolute;
   width: 500px;
   height: 500px;
   border-radius: 50%;
   background: linear-gradient(to bottom, #1b1c1c, #080905);
   bottom: 50%;
-   
+
   transform: translate(-60%, 49%);
-} 
+}
 
 .big-circle:after {
   content: "";
@@ -324,6 +344,20 @@ textarea.input {
   transform: translate(181%, 11%);
   opacity: 0.2;
 }
+
+.form-floating>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 1.5rem !important;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out
+}
+
+
 
 @media (max-width: 850px) {
   .form {
@@ -386,6 +420,7 @@ textarea.input {
   .information,
   .social-media p {
     font-size: 0.8rem;
+   
   }
 
   .title {
@@ -430,18 +465,19 @@ textarea.input {
 
 
 
-.btn-login-color{
+.btn-loginn{
   background-color: #0e1c36;
   color: #fff;
-  
-}
-.btn-loginn-color:hover{
-  color: yellow;
-  background-color: #0e1c36;
-   
+
 }
 
-.profile-image-pic{
+.btn-loginn:hover {
+
+  background-color: #0e1c36;
+
+}
+
+.profile-image-pic {
   height: 200px;
   width: 200px;
   object-fit: cover;
@@ -449,10 +485,30 @@ textarea.input {
 
 
 
-.cardbody-color{
+.cardbody-color {
   background-color: #ebf2fa;
 }
 
-a{
+a {
   text-decoration: none;
 }
+
+.admin {
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  text-align: center;
+}
+
+.information {
+
+  font-family: var(--heading-font);
+  justify-content: center;
+}
+
+.car-name{
+   text-align: center;
+}
+   

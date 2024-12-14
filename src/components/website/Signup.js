@@ -17,7 +17,7 @@ const Signup = () => {
                     <input type="password" placeholder="Enter Password" name="password" required className='form-control form-control-lg mt-3' />
                     <input type="password" placeholder="Repeat Password" name="repeat password" className='form-control form-control-lg mt-3' required />
 
-                    <button className='btn-login btn-warning btn-lg mt-3'>Sign-Up</button>
+                    <button className='btn-logine btn-warning btn-lg mt-3'>Sign-Up</button>
 
                     <p className='py-2'> If you already have a account? <Link to='/login' style={{ color: "#fd7e14" }}>Login Now</Link></p>
                 </div>

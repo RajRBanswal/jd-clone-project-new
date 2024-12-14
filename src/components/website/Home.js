@@ -210,7 +210,7 @@ const Home = () => {
 
       <section>
         <div>
-          <h2 class="service-heading">Our Services</h2>
+          <h2 class="service-heading text-center">Our Services</h2>
         </div>
         <div class="container py-5 ">
           <div class="row">

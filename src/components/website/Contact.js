@@ -78,6 +78,7 @@ const Contact = () => {
             <div class="input-container">
               <input type="text" name="name" class="input" />
               <label for="">Username</label>
+              
               <span>Username</span>
             </div>
             <div class="input-container">
@@ -95,7 +96,7 @@ const Contact = () => {
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="btn-send" />
           </form>
         </div>
       </div>

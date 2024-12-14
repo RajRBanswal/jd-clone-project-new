@@ -54,13 +54,13 @@ const VRegister = () => {
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div> 
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-25 mb-4">Sign Up</button>
+                        <button type="submit" class="btn btn-primary py-2 w-45  mb-4">Sign Up</button>
                         <p class="text-center mb-0">Already have an Account? <a href="vendor-login">Sign In</a></p>
                     </div>
                 </div>
             </div>
         </div>
     )
-}
+} 
 
 export default VRegister

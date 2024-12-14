@@ -260,7 +260,7 @@ textarea.input {
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
-  margin: 50px;
+ 
 }
 
 .information i {
@@ -311,6 +311,7 @@ textarea.input {
   bottom: -77px;
   right: 50px;
   opacity: 0.3;
+ 
 }
 
 .big-circle {
@@ -419,6 +420,7 @@ textarea.input {
   .information,
   .social-media p {
     font-size: 0.8rem;
+   
   }
 
   .title {
@@ -502,7 +504,7 @@ a {
 
 .information {
 
-
+  font-family: var(--heading-font);
   justify-content: center;
 }
 

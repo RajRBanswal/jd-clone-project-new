@@ -8,14 +8,14 @@ const Home = () => {
       <div className="container py-3 d-block d-sm-block d-md-none d-lg-none">
         <div class="search-bar bg-light py-4 px-2 my-2 rounded-3 border border-danger">
           <div className="row g-2">
-          <div class="col-12 col-lg-12 col-md-12">
-            <h3 className="text-center">Search Here</h3>
-          </div>
+            <div class="col-12 col-lg-12 col-md-12">
+              <h3 className="text-center">Search Here</h3>
+            </div>
             <div class="col-4 col-lg-4 col-md-4">
               <select class="form-select form-control">
                 <option>Select City</option>
-                <option>Groceries</option>
-                <option>Drinks</option>
+                <option>Buldhana</option>
+                <option> PUNE</option>
                 <option>Chocolates</option>
               </select>
             </div>
@@ -267,7 +267,7 @@ const Home = () => {
             </div>
             <div class="col-lg-2 col-6 pt-4">
               <div class="card h-100">
-                <img src="./assets/images/aura.jpg"  />
+                <img src="./assets/images/aura.jpg" />
                 <p class="car-name pt-3"><b>Hyundai Aura</b></p>
               </div>
             </div>
@@ -294,7 +294,7 @@ const Home = () => {
 
             <div class="col-lg-2 col-6 pt-4">
               <div class="card h-100" >
-                <img src="./assets/images/traveler.png"  />
+                <img src="./assets/images/traveler.png" />
                 <p class="car-name pt-3"><b>Tempo Traveller</b></p>
               </div>
             </div>
@@ -315,6 +315,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
     </>
   );
 };

@@ -48,277 +48,472 @@ const Home = () => {
         }}
       >
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/img/slider1.jpeg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/slider2.jpeg" class="d-block w-100" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/slider3.jpeg" class="d-block w-100" alt="..."/>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/img/slider1.jpeg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/slider2.jpeg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/slider3.jpeg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </section>
+
+      <section class="top-cities container pt-5 pb-5 ">
+
+      <div>
+          <h2 class="service-heading text-center">OUR SURVICES</h2>
+        </div>
+
+        <table border="1" width="70%" cellspacing="0" cellpadding="0" align="CENTER" >
+          <thead align="" bgcolor="#ffc107">
+            <tr>
+              <th class="top-cities pt-1 pb-1 text-center">Top Cities</th>
+              <th>Top cities</th>
+              <th>SUV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="BOTTOM">
+              <td>
+                <p class="hover-underline-animation" align="CENTER"><a class="text-dark" href="#" target="_blank">Mumbai</a></p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹5461</p>
+              </td>
+              <td  >
+                <p align="CENTER"> ₹8387</p>
+              </td>
+
+            </tr>
+            <tr valign="BOTTOM">
+              <td>
+                <p class="hover-underline-animation" align="CENTER"><a class="text-dark" href="#" target="_blank">Pune</a></p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹3919</p>
+              </td>
+              <td>
+                <p align="CENTER"> ₹5022</p>
+              </td>
+
+            </tr>
+            <tr valign="BOTTOM">
+              <td >
+                <p class="hover-underline-animation" align="CENTER"><a class="text-dark" href="#" target="_blank">Kolhapur</a></p>
+              </td>
+              <td >
+                <p align="CENTER">Kolhapur</p>
+              </td>
+              <td>
+                <p align="CENTER"> ₹6978</p>
+              </td>
+
+            </tr>
+            <tr valign="BOTTOM">
+              <td  >
+                <p class="hover-underline-animation " align="CENTER"><a class="text-dark" href="#"  target="_blank">Nagpur</a></p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹2213</p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹3085</p>
+              </td>
+
+            </tr>
+            <tr valign="BOTTOM">
+              <td>
+                <p class="hover-underline-animation"  align="CENTER"><a class="text-dark" href="#" target="_blank">Dhule</a></p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹3236</p>
+              </td>
+              <td >
+                <p align="CENTER"> ₹5014</p>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+{
+
+<section>
+
+
+<div class="container mb-5">
+  <div class="col-12 mt-5">
+    <div class="row justify-content-center mb-5">
+    <div>
+          <h2 class="service-heading text-center">OUR SURVICES</h2>
+        </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="row mb-5  card-effects">
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/swift.jpg" alt="..."/>
+                  
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Swift dzier</a>
+             </div>
+           
+               
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/scorpio.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-3">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Scorpio</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/ertiga.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Ertiga</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/cretaimg.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center pt-3">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Creta</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/crysta.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Crysta</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/verna.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center pt-4">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Verna</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 pt-5 col-6">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/aura.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center pt-3">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Hyundai Aura</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/vitara.webp" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Vitara brezza</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/force.webp" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center pt-4">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Cruiser</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/traveler.png" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Tempo Traveller</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/alto.jpg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Alto</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+     <div class="col-md-2 col-6 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/i20.webp" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">I20</a>
+             </div>
+             
+           </div>
+          
+         </div>
+       </div>
+     </div>
+  </div>
 </div>
-        {/* <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-blocks">
-                <div class="banner-ad large bg-info block-1">
-                  <div class="swiper main-swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="row banner-content p-5">
-                          <div class="content-wrapper col-md-7">
-                            <div class="categories my-3">100% natural</div>
-                            <h3 class="display-4">
-                              Fresh Smoothie & Summer Juice
-                            </h3>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Dignissim massa diam elementum.
-                            </p>
-                            <a
-                              href="#"
-                              class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3"
-                            >
-                              Shop Now
-                            </a>
-                          </div>
-                          <div class="img-wrapper col-md-5">
-                            <img
-                              src="./assets/images/product-thumb-1.png"
-                              class="img-fluid"
-                            />
-                          </div>
-                        </div>
-                      </div>
+</section>
+}
 
-                      <div class="swiper-slide">
-                        <div class="row banner-content p-5">
-                          <div class="content-wrapper col-md-7">
-                            <div class="categories mb-3 pb-3">100% natural</div>
-                            <h3 class="banner-title">
-                              Fresh Smoothie & Summer Juice
-                            </h3>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Dignissim massa diam elementum.
-                            </p>
-                            <a
-                              href="#"
-                              class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1"
-                            >
-                              Shop Collection
-                            </a>
-                          </div>
-                          <div class="img-wrapper col-md-5">
-                            <img
-                              src="./assets/images/product-thumb-1.png"
-                              class="img-fluid"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="row banner-content p-5">
-                          <div class="content-wrapper col-md-7">
-                            <div class="categories mb-3 pb-3">100% natural</div>
-                            <h3 class="banner-title">Heinz Tomato Ketchup</h3>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Dignissim massa diam elementum.
-                            </p>
-                            <a
-                              href="#"
-                              class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1"
-                            >
-                              Shop Collection
-                            </a>
-                          </div>
-                          <div class="img-wrapper col-md-5">
-                            <img
-                              src="./assets/images/product-thumb-2.png"
-                              class="img-fluid"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </div>
-
-                <div
-                  class="banner-ad bg-warning block-2"
-                  style={{
-                    background: `url('./assets/images/ad-image-1.png')`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "right bottom",
-                  }}
-                >
-                  <div class="row banner-content p-5">
-                    <div class="content-wrapper col-md-7">
-                      <div class="categories sale mb-3 pb-3">20% off</div>
-                      <h3 class="banner-title">Fruits & Vegetables</h3>
-                      <a href="#" class="d-flex align-items-center nav-link">
-                        Shop Collection{" "}
-                        <svg width="24" height="24">
-                          <use href="#arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="banner-ad bg-danger block-3"
-                  style={{
-                    background: `url('./assets/images/ad-image-2.png')`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "right bottom",
-                  }}
-                >
-                  <div class="row banner-content p-5">
-                    <div class="content-wrapper col-md-7">
-                      <div class="categories sale mb-3 pb-3">15% off</div>
-                      <h3 class="item-title">Baked Products</h3>
-                      <a href="#" class="d-flex align-items-center nav-link">
-                        Shop Collection{" "}
-                        <svg width="24" height="24">
-                          <use href="#arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="container mb-5 pt-5 pb-4">
+  <div class="col-12 mt-5">
+    <div class="row justify-content-center mb-5">
+    <div>
+          <h2 class="service-heading text-center pb-4">RENTAL-TYPES</h2>
+        </div>
+    </div>
+  </div>
+  <div class="row mb-5 card-effects">
+     <div class="col-md-3 pt-5">
+       <div class="card card-effect p-0 h-100">
+         <div class="card-img rounded-0">
+           <div class="img-hover">
+             <img class="rounded-top img-fluid" 
+                  src="./assets/images/wedding.jpeg" alt="..."/>
+           </div>
+         </div>
+         <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+           <div class="pt-6">
+             <div class="h4 mb-3 mt-4 text-center">
+               <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">wedding</a>
+             </div>
+             <p class="text-secondary text-center lh-base">
+               Customizable headers, footers, and interactive elements within cards empower you to create 
+               engaging and modern web designs.</p>
+           </div>
+           <div class="text-center">
+             <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+               <i class="fa fa-arrow-right icon-arrow before"></i>
+               <span class="label fw-normal">Know More!</span>
+               <i class="fa fa-arrow-right icon-arrow after"></i>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+    <div class="col-md-3 pt-5">
+      <div class="card card-effect p-0 h-100">
+        <div class="card-img rounded-0">
+          <div class="img-hover">
+            <img class="rounded-top img-fluid " src="./assets/images/vintageimg.webp" alt="..." />
           </div>
-        </div> */}
-      </section>
+        </div>
+        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+          <div class="pt-6">
+            <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Vintage Car</a></div>
+            <p class="text-secondary text-center ">Effortlessly stylish and responsive, Bootstrap 5 cards adapt beautifully to diverse screen sizes, enhancing user experience.</p>
+          </div>
+           <div class="text-center">
+             <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+               <i class="fa fa-arrow-right icon-arrow before"></i>
+               <span class="label fw-normal">Know More!</span>
+               <i class="fa fa-arrow-right icon-arrow after"></i>
+             </a>
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 pt-5">
+      <div class="card card-effect p-0 h-100">
+        <div class="card-img rounded-0">
+          <div class="img-hover">
+            <img class="rounded-top img-fluid" src="./assets/images/townimg.jpg" alt="..."/>
+          </div>
+        </div>
+        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+          <div class="pt-6">
+            <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Outstation</a></div>
+            <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+          </div>
+           <div class="text-center">
+             <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+               <i class="fa fa-arrow-right icon-arrow before"></i>
+               <span class="label fw-normal">Know More!</span>
+               <i class="fa fa-arrow-right icon-arrow after"></i>
+             </a>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 pt-5" >
+      <div class="card card-effect p-0 h-100">
+        <div class="card-img rounded-0">
+          <div class="img-hover">
+            <img class="rounded-top img-fluid" src="./assets/images/luxury.png" alt="..."/>
+          </div>
+        </div>
+        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+          <div class="pt-6">
+            <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">luxury cars</a></div>
+            <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+          </div>
+           <div class="text-center">
+             <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+               <i class="fa fa-arrow-right icon-arrow before"></i>
+               <span class="label fw-normal">Know More!</span>
+               <i class="fa fa-arrow-right icon-arrow after"></i>
+             </a>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+
       
-
-      <section>
-        <div>
-          <h2 class="service-heading text-center">Our Services</h2>
-        </div>
-        <div class="container py-5 ">
-          <div class="row">
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img src="./assets/images/swift.jpg" width={"100%"} />
-                <p class="car-name pt-3"><b>Swift dezire</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img
-                  src="./assets/images/ertiga.jpg"
-                  width={"100%"}
-                />
-                <p class="car-name pt-3"><b>Ertiga</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img src="./assets/images/scorpio.jpg" />
-                <p class="car-name"><b>scorpio</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img src="./assets/images/cretaimg.jpg" width={"100%"} />
-                <p class="car-name pt-4"><b>Creta</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img
-                  src="./assets/images/crysta.jpg"
-                  width={"100%"}
-                />
-                <p class="car-name pt-2"><b>Crysta</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 mt-3">
-              <div class="card h-100">
-                <img
-                  src="./assets/images/verna.jpg"
-                  width={"100%"}
-                />
-                <p class="car-name pt-4"><b>Verna</b></p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100">
-                <img src="./assets/images/aura.jpg" />
-                <p class="car-name pt-3"><b>Hyundai Aura</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100">
-                <img
-                  src="./assets/images/vitara.webp"
-                  width={"100%"}
-                />
-                <p class="car-name"><b>Vitara brezza</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100">
-                <img
-                  src="./assets/images/force.webp"
-                  width={"100%"}
-                />
-                <p class="car-name pt-3"><b>Cruiser</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100" >
-                <img src="./assets/images/traveler.png" />
-                <p class="car-name pt-3"><b>Tempo Traveller</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100">
-                <img src="./assets/images/alto.jpg" />
-                <p class="car-name pt-3"><b>Alto</b></p>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6 pt-4">
-              <div class="card h-100">
-                <img src="./assets/images/i20.webp" />
-                <p class="car-name"><b>I20</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
+    
 
     </>
+    
   );
 };
 

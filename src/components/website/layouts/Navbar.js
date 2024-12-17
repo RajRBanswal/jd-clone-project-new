@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <header className="bg-warning">
+      <header className="footer">
         <div class="container-fluid">
           <div class="row py-1 border-bottom">
             <div class="col-sm-3 col-6 col-lg-2  m-auto m-lg-start text-center text-sm-start">

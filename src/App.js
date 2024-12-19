@@ -33,7 +33,7 @@ function App() {
         <Route path="/:talukas/:keyword" Component={Listings} />
 
         <Route path="/admin-login" Component={AdminLogin} />
-        <Route path="/admins" Component={AdminLayout}>
+        <Route path="/admins" Component={AdminLayout}>         
           <Route index Component={AdminDashboard} />
 
         </Route>

@@ -104,63 +104,36 @@ const Navbar = () => {
         </div>
       </div>
 
+
+     
+
       <header className="footer">
         <div class="container-fluid">
           <div class="row py-1 border-bottom">
             <div class="col-sm-3 col-6 col-lg-2  m-auto m-lg-start text-center text-sm-start">
-              <div class="main-logo pt-2">
+              <div class="main-logo pt-2 px-3">
                 <Link to="/">
-                  <img src="./logo.png" alt="logo" class="img-fluid" />
+                  <img src="./Assets/images/logo.png" alt="logo" class="web-logo" />
                 </Link>
               </div>
             </div>
 
-            <div class="col-sm-6 col-lg-6  offset-sm-2 offset-md-0 d-none d-md-block d-lg-block ps-3">
-              <div class="search-bar bg-light  p-2 px-3 my-2 rounded-3 border border-danger">
-                <div className="row">
-                  <div class="col-6 col-md-4 col-lg-4">
-                    <select class="form-select form-control">
-                      <option>Select City</option>
-                      <option>Groceries</option>
-                      <option>Drinks</option>
-                      <option>Chocolates</option>
-                    </select>
-                  </div>
-                  <div class="col-11 col-md-7 col-lg-7">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Search for more than 20,000 products"
-                    />
-                  </div>
-                  <div class="col-1 col-lg-1 col-md-1 pt-1 d-flex justify-content-center align-items-center">
-                    <h4 className="mb-0">
-                      <i className="fa fa-search"></i>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
 
             <div class="col-sm-12 col-12 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-lg-0 mt-4 justify-content-center justify-content-sm-end">
               <ul class="d-flex justify-content-end list-unstyled m-0 navbarItem">
                 <li>
-                  <a href="#" class=" p-2 mx-1">
+              <Link to="/" class="  p-2 mx-1">
                     Home
-                  </a>
-                </li>
+                  </Link>
+                  </li>
                 <li>
-                  <Link to="/about" class=" p-2 mx-1">
-                    About
+                  <Link to="/about" class="  p-2 mx-1">
+                     Free Listing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" class=" p-2 mx-1">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login" class=" p-2 mx-1">
+                  <Link to="/login" class="  p-2 mx-1">
                     Login
                   </Link>
                 </li>

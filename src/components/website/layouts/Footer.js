@@ -9,7 +9,7 @@ const Footer = () => {
           <div class="row g-3">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-menu">
-                <img src="./logo.png" width={200} alt="logo" />
+                <img src="./assets/images/logo.png" width={200} alt="logo" />
                 <div class="social-links mt-5 text-center">
                   <ul class="d-flex list-unstyled gap-2 m-auto">
                     <li>

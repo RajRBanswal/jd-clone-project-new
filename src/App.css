@@ -60,6 +60,19 @@ font-size: 13px;
 padding: 20px;
 }
 .footer{
+  background-color: #fff;
+}
+
+.web-logo{
+  width: 50%;
+   
+}
+
+.review{
+  color: #000;
+}
+
+.testimonial-slider{
   background-color: #ffc107;
 }
 
@@ -79,6 +92,8 @@ padding: 20px;
 .App-link {
   color: #61dafb;
 }
+
+.img-fluid
 
 
 .form {
@@ -224,6 +239,10 @@ textarea.input {
 .btn-login:hover {
 
   border: 1px solid;
+}
+
+.logo-img{
+  width:5erm ;
 }
 
 .input-container span {
@@ -759,5 +778,60 @@ a {
   transform-origin: bottom left;
 }
 
+.testimonial-slider .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  background-color:#000;
+  border-radius: 100%;
+}
+.testimonial-slider {
+  padding: 10px 0px 40px;
+  border-radius: 60%;
+}
+
+.carousel-indicators {
+  bottom: -60px;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
  
-  
+ .carousel-inner{
+  border-radius: 20px;
+ }
+
+  @media (max-width:786px){
+    .carousel-inner{
+      border-radius: 0%;
+    }
+  }
+ 
+
+ 
+
+ 
+
+.web-logo{
+   align-items: start;
+}
+
+ 
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+}
+
+ 
+ 

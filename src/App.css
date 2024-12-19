@@ -812,6 +812,28 @@ a {
       border-radius: 0%;
     }
   }
+  .accordion-item{
+    background-color:#373534 ;
+    width: 50%;
+    margin-left: 20rem;
+    
+
+    
+    
+
+  }
+
+  @media(max-width:786px) {
+    .accordion-item{
+      margin-left: 0;
+      width: 100%;
+    }
+    
+  }
+  .accordion-button{
+    background-color: hsl(45, 100%, 51%);
+     
+  }
  
 
  

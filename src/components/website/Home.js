@@ -1,9 +1,32 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
-        
+  const navigate = useNavigate()
+  const [talukas, setTalukas] = useState([]);
+  const [selectedTalukas, setSelectedTalukas] = useState('');
+  const [keyword, setKeyword] = useState('');
+
+  const getAllTalukas = async () => {
+    const res = await fetch('http://localhost:8000/api/admin/all-talukas');
+    const result = await res.json();
+    if (result.status === 201) {
+      setTalukas(result.result)
+    } else {
+      setTalukas([])
+    }
+
+  }
+
+  useEffect(() => {
+    getAllTalukas();
+  }, [])
+
+  const getSearch = () => {
+    navigate(`/${selectedTalukas}/${keyword}`)
+  }
 
   return (
     <>
@@ -16,9 +39,14 @@ const Home = () => {
             <div className="row">
 
               <div class="col-6 col-md-4 col-lg-4 ">
-                <select class="form-select form-control">
+                <select class="form-select form-control" onChange={(e) => setSelectedTalukas(e.target.value)}>
                   <option>Select City</option>
-                  <option>Groceries</option>
+                  {
+                    talukas.map((item) => {
+                      return <option value={item.taluka_name + '-' + item.district}>{item.taluka_name + ' (' + item.district + ')'}</option>
+
+                    })
+                  }
                   <option>Drinks</option>
                   <option>Chocolates</option>
                 </select>
@@ -28,11 +56,12 @@ const Home = () => {
                   type="text"
                   class="form-control"
                   placeholder="Search for more than 20,000 products"
+                  onChange={(e) => setKeyword(e.target.value)}
                 />
               </div>
               <div class="col-1 col-lg-1 col-md-1 pt-1 d-flex justify-content-center align-items-center">
                 <h4 className="mb-0">
-                  <i className="fa fa-search"></i>
+                  <i className="fa fa-search" onClick={getSearch}></i>
                 </h4>
               </div>
             </div>
@@ -728,7 +757,47 @@ const Home = () => {
       </div>
 
 
-       
+      <div class="accordion container" id="accordionExample">
+        <div class="accordion-item content-center">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-light">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-light">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-light">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 
 
 

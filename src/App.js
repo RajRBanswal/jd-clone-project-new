@@ -15,6 +15,7 @@ import Vendorlogin from "./components/Vendorpanel/Vendorlogin";
 import VendorLayout from "./components/Vendorpanel/layout/VendorLayout";
 import VendorDashboard from "./components/Vendorpanel/layout/VendorDashboard";
 import VRegister from "./components/Vendorpanel/layout/VRegister";
+import Listings from "./components/website/Listings";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="login" Component={Login} />
 
         </Route>
+        <Route path="/:talukas/:keyword" Component={Listings} />
 
         <Route path="/admin-login" Component={AdminLogin} />
         <Route path="/admins" Component={AdminLayout}>

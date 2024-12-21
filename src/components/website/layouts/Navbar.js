@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+const logo = './assets/images/logo.png'
 
 const Navbar = () => {
   return (
@@ -105,7 +106,7 @@ const Navbar = () => {
       </div>
 
 
-     
+
 
       <header className="footer">
         <div class="container-fluid">
@@ -113,23 +114,23 @@ const Navbar = () => {
             <div class="col-sm-3 col-6 col-lg-2  m-auto m-lg-start text-center text-sm-start">
               <div class="main-logo pt-2 px-3">
                 <Link to="/">
-                  <img src="./Assets/images/logo.png" alt="logo" class="web-logo" />
+                  <img src={'/assets/images/logo.png'} alt="logo" class="web-logo" />
                 </Link>
               </div>
             </div>
 
-           
+
 
             <div class="col-sm-12 col-12 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-lg-0 mt-4 justify-content-center justify-content-sm-end">
               <ul class="d-flex justify-content-end list-unstyled m-0 navbarItem">
                 <li>
-              <Link to="/" class="  p-2 mx-1">
+                  <Link to="/" class="  p-2 mx-1">
                     Home
                   </Link>
-                  </li>
+                </li>
                 <li>
                   <Link to="/about" class="  p-2 mx-1">
-                     Free Listing
+                    Free Listing
                   </Link>
                 </li>
                 <li>

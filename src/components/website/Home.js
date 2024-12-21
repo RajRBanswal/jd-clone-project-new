@@ -610,7 +610,9 @@ const Home = () => {
           </div>
         </section>
       }
+      
 
+      
       <div class="container mb-5 pt-2 pb-4">
         <div class="col-12 mt-5">
           <div class="row justify-content-center mb-5">
@@ -716,7 +718,11 @@ const Home = () => {
           </div>
         </div>
 
-        <section class="testimonial-slider">
+        <div>
+              <h2 class="service-heading text-center pb-4 pt-4">TESTIMONIAL</h2>
+            </div>
+
+        <section class="testimonial-slider pt-5">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -755,9 +761,13 @@ const Home = () => {
           </div>
         </section>
       </div>
+    
 
+      <div>
+              <h2 class="service-heading text-center pb-5">FRIQUNTLY-ASK-QUESTIONS</h2>
+            </div>
 
-      <div class="accordion container" id="accordionExample">
+      <div class="accordion container pt-3" id="accordionExample">
         <div class="accordion-item content-center">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

@@ -24,13 +24,14 @@ function App() {
       <Routes>
         <Route path="/" Component={Layout}>
           <Route index Component={Home} />
+          <Route path="/:talukas/:keyword" Component={Listings} />
           <Route path="about" Component={About} />
           <Route path="contact" Component={Contact} />
           <Route path="signup" Component={Signup} />
           <Route path="login" Component={Login} />
 
         </Route>
-        <Route path="/:talukas/:keyword" Component={Listings} />
+      
 
         <Route path="/admin-login" Component={AdminLogin} />
         <Route path="/admins" Component={AdminLayout}>         

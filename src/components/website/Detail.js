@@ -63,7 +63,7 @@ const Detail = () => {
                 </div>
 
             {/* Price List Section */}
-            <div className="pricee-list ">
+            <div className="pricee-list container ">
                     <h3 >Price List</h3>
                     <div className="cards-container">
                         <div className="cards">

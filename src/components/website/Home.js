@@ -101,78 +101,12 @@ const Home = () => {
             </div>
           </div>
           <div class="row mb-1  card-effects">
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                    <div class="h4   text-center ">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Mumbai</a>
                     </div>
 
                   </div>
@@ -181,11 +115,38 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100 ">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Pune</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4  ">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Nagpur</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-6 pt-4 ">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Nashik</a>
                     </div>
 
                   </div>
@@ -194,11 +155,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100 ">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Thane</a>
                     </div>
 
                   </div>
@@ -207,11 +168,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Aurangabad</a>
                     </div>
 
                   </div>
@@ -220,11 +181,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Solapur</a>
                     </div>
 
                   </div>
@@ -233,11 +194,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Kolhapur</a>
                     </div>
 
                   </div>
@@ -246,11 +207,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Mumbai</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Amravati</a>
                     </div>
 
                   </div>
@@ -259,11 +220,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Jalgaon</a>
                     </div>
 
                   </div>
@@ -272,11 +233,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Akola</a>
                     </div>
 
                   </div>
@@ -285,11 +246,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Latur</a>
                     </div>
 
                   </div>
@@ -298,11 +259,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Ratnagiris</a>
                     </div>
 
                   </div>
@@ -311,11 +272,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Chandrapur</a>
                     </div>
 
                   </div>
@@ -324,11 +285,50 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Sangli</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Ahmednagar</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Dhule</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Nanded</a>
                     </div>
 
                   </div>
@@ -615,7 +615,7 @@ const Home = () => {
                   <div class="h4 mb-3 mt-2 text-center">
                     <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">wedding</a>
                   </div>
-                  <p class="text-secondary text-center lh-base">
+                  <p class="text-dark text-center lh-base">
                     Customizable headers, footers, and interactive elements within cards empower you to create
                     engaging and modern web designs.</p>
                 </div>
@@ -639,7 +639,7 @@ const Home = () => {
               <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Vintage Car</a></div>
-                  <p class="text-secondary text-center ">Effortlessly stylish and responsive, Bootstrap 5 cards adapt beautifully to diverse screen sizes, enhancing user experience.</p>
+                  <p class="text-dark text-center ">Effortlessly stylish and responsive, Bootstrap 5 cards adapt beautifully to diverse screen sizes, enhancing user experience.</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
@@ -661,7 +661,7 @@ const Home = () => {
               <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Outstation</a></div>
-                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                  <p class="text-dark text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
@@ -684,7 +684,7 @@ const Home = () => {
               <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">luxury cars</a></div>
-                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                  <p class="text-dark text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">

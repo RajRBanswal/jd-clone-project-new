@@ -62,7 +62,7 @@ const Detail = () => {
             </div>
 
             {/* Price List Section */}
-            <div className="pricee-list ">
+            <div className="pricee-list  ">
                     <h3 >Price List</h3>
                     <div className="cards-container">
                         <div className="cards">
@@ -82,6 +82,20 @@ const Detail = () => {
                         <div className="cards">
                             <h4>Car on Rent - Local</h4>
                             <p>Local rental services for nearby trips.</p>
+                            <div className="price">₹11 onwards / km</div>
+                            <button>View Details</button>
+                        </div>
+
+                        <div className="cards">
+                            <h4>Rental-Duration</h4>
+                            <p>Longer Rental Period May Qualify For Discounrted Rate</p>
+                            <div className="price">₹11 onwards / km</div>
+                            <button>View Details</button>
+                        </div>
+
+                        <div className="cards">
+                            <h4>Seasonal Demand</h4>
+                            <p>Price may rise during peak tourist seasons due to higher demand</p>
                             <div className="price">₹11 onwards / km</div>
                             <button>View Details</button>
                         </div>

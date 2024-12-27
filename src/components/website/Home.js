@@ -594,7 +594,7 @@ const Home = () => {
 
       
       <div class="container mb-5 pt-2 pb-4">
-        <div class="col-12 mt-5">
+        <div class="col-12 mt-3">
           <div class="row justify-content-center mb-5">
             <div>
               <h2 class="service-heading text-center pb-1">RENTAL-TYPES</h2>
@@ -602,7 +602,7 @@ const Home = () => {
           </div>
         </div>
         <div class="row mb-5 card-effects">
-          <div class="col-md-3 pt-2">
+          <div class="col-md-3 mt-2">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -629,7 +629,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-3 pt-2">
+          <div class="col-md-3  mt-3">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -651,7 +651,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-3 pt-2">
+          <div class="col-md-3 mt-3">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -674,7 +674,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div class="col-md-3 pt-2" >
+          <div class="col-md-3 mt-3" >
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">

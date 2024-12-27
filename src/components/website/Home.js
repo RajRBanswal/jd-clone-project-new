@@ -31,14 +31,14 @@ const Home = () => {
   return (
     <>
 
-      <div class="col-lg-8 col-6 container row  pt-3">
+      <div class=" pt-3">
 
-        <div class="selectbar  col-lg-9 col-6  offset-sm-2 offset-md-0 d-none d-md-block d-lg-block ps-3 w-100 pt-0">
-          <div class="search-bar bg-light  p-2 px-3 my-2 rounded-3 border border-warning">
+        <div class="  col-lg-9 col-6  ps-3 w-100 pt-0">
+          <div class="search-bar   p-2 px-3 my-2">
 
-            <div className="row">
+            <div className="row justify-content-center">
 
-              <div class="col-6 col-md-4 col-lg-4 ">
+              <div class="search-city">
                 <select class="form-select form-control" onChange={(e) => setSelectedTalukas(e.target.value)}>
                   <option>Select City</option>
                   {
@@ -51,7 +51,7 @@ const Home = () => {
                   <option>Chocolates</option>
                 </select>
               </div>
-              <div class="col-11 col-md-7 col-lg-7 ">
+              <div class="input-search">
                 <input
                   type="text"
                   class="form-control"

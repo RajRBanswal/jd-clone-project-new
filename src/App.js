@@ -16,6 +16,7 @@ import VendorLayout from "./components/Vendorpanel/layout/VendorLayout";
 import VendorDashboard from "./components/Vendorpanel/layout/VendorDashboard";
 import VRegister from "./components/Vendorpanel/layout/VRegister";
 import Listings from "./components/website/Listings";
+import Detail from "./components/website/Detail";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="contact" Component={Contact} />
           <Route path="signup" Component={Signup} />
           <Route path="login" Component={Login} />
+          <Route path="/keyword" Component={Detail}/>
 
         </Route>
       

@@ -101,7 +101,7 @@ const Detail = () => {
                             <button>View Details</button>
                         </div>
                     </div>
-                </div> */}
+                </div> 
 
             </div>
             <div className="highlights-container">

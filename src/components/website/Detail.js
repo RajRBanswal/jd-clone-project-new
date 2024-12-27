@@ -2,67 +2,68 @@ import React from 'react'
 
 const Detail = () => {
     return (
-        <div className="containerr">
-            <div class="col-md-10 w-100">
-                <div class="row p-2 bg-white border rounded pb-5">
-                    <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/aura.jpg" /></div>
-                    <div class="col-md-6 mt-1">
-                        <h5>Sairaj Cab service</h5>
-                        <div class="d-flex flex-row">
-                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+        <div>
+            <div className="containerr">
+                <div class="col-md-10 w-100">
+                    <div class="row p-2 bg-white border rounded pb-5">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/aura.jpg" /></div>
+                        <div class="col-md-6 mt-1">
+                            <h5>Sairaj Cab service</h5>
+                            <div class="d-flex flex-row">
+                                <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                            </div>
+                            <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
+                            <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
+
+                            <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
+                            <button class="no-btn btn btn-primary btn-lg mt-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
                         </div>
-                        <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
-                        <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
-
-                        <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
-
-
-                    </div>
-                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                        <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {/* Photos Section */}
-            <div className="photoss container mt-5">
-                <h3>Photos</h3>
-                <div className="photos-gallery">
+                {/* Photos Section */}
+                <div className="photoss container mt-5">
+                    <h3>Photos</h3>
+                    <div className="photos-gallery">
 
-                    <img class="w-75" src="/assets/images/verna.jpg" alt="Photo 2" />
-                    <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 3" />
-                    <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 4" />
-                    <img class="w-75" src="/assets/images/verna.jpg" alt="Photo 2" />
-                    <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 3" />
-                    <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 4" />
+                        <img class="w-75" src="/assets/images/verna.jpg" alt="Photo 2" />
+                        <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 3" />
+                        <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 4" />
+                        <img class="w-75" src="/assets/images/verna.jpg" alt="Photo 2" />
+                        <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 3" />
+                        <img class="w-75" src="./assets/images/verna.jpg" alt="Photo 4" />
+                    </div>
+                    <button className="uploadd-button">Upload Photos</button>
                 </div>
-                <button className="uploadd-button">Upload Photos</button>
-            </div>
 
-            {/* Contact Section */}
-            <div className="contactt mt-3">
-                <h2>INFORMATION</h2>
-                <h3>Contact</h3>
-                <p>
-                    <strong>Phone:</strong>{' '}
-                    <a href="tel:090549444627"> 090549444627</a>
-                </p>
-                <p>
-                    <strong>Address:</strong> Mohammadi Chowk, Beed By Pass Road, Station Road Aurangabad,
-                    Maharashtra - 431005
-                </p>
-                <p>
-                    <strong>Hours:</strong> Open 24 Hrs
-                </p>
-                <a href="#">Get Directions</a>
-                 
-              
+                {/* Contact Section */}
+                <div className="contactt mt-3">
+                    <h2>INFORMATION</h2>
+                    <h3>Contact</h3>
+                    <p>
+                        <strong>Phone:</strong>{' '}
+                        <a href="tel:090549444627"> 090549444627</a>
+                    </p>
+                    <p>
+                        <strong>Address:</strong> Mohammadi Chowk, Beed By Pass Road, Station Road Aurangabad,
+                        Maharashtra - 431005
+                    </p>
+                    <p>
+                        <strong>Hours:</strong> Open 24 Hrs
+                    </p>
+                    <a href="#">Get Directions</a>
 
 
-            </div>
+
+
+                </div>
 
             {/* Price List Section */}
-            <div className="pricee-list  ">
+            <div className="pricee-list ">
                     <h3 >Price List</h3>
                     <div className="cards-container">
                         <div className="cards">
@@ -100,10 +101,54 @@ const Detail = () => {
                             <button>View Details</button>
                         </div>
                     </div>
+                </div> 
+
+            </div>
+            <div className="highlights-container">
+                <h2>Highlights from the business</h2>
+                <div className="icons-section">
+                    <div className="icon-item">
+                        <img src=".\assets\images\luxury-diamond.png" alt="Luxury"  width={100}/>
+                        <p>Luxury</p>
+                    </div>
+                    <div className="icon-item">
+                        <img src="./assets/images/weeding-car.png" alt="Wedding" width={100}/>
+                        <p>Wedding</p>
+                    </div>
+                    <div className="icon-item">
+                        <img src="./assets/images/corporate.png" alt="Corporate"  width={100}/>
+                        <p>Corporate</p>
+                    </div>
                 </div>
+
+                <div className="details-section container">
+                    <div className="detail-item">
+                        <p><strong>Segment:</strong></p>
+                        <a href="#">Compact SUV</a>, <a href="#">Sedan +4</a>
+                    </div>
+                    <div className="detail-item">
+                        <p><strong>Packages Offered:</strong></p>
+                        <a href="#">Domestic</a>
+                    </div>
+                    <div className="detail-item">
+                        <p><strong>Seating Capacity:</strong></p>
+                        <a href="#">Tempo Traveller</a>
+                    </div>
+                    <div className="detail-item">
+                        <p><strong>Services:</strong></p>
+                        <p>Tempos On Rent For All India</p>
+                    </div>
+                </div>
+
+ 
+            </div>
         </div>
+
+
+
     );
 };
+export default Detail
 
 // <div>
 
@@ -251,4 +296,3 @@ const Detail = () => {
 
 // </div>
 
-export default Detail

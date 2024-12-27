@@ -14,14 +14,18 @@ const Detail = () => {
                         <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
                         <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
+                        <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
                     </div>
                     <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Contact US</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-sm mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
                     </div>
                     </div>
                 </div>
                 {/* Photos Section */}
-                <div className="photoss container">
+                <div className="photoss container mt-5">
                     <h3>Photos</h3>
                     <div className="photos-gallery">
                         
@@ -36,7 +40,7 @@ const Detail = () => {
                 </div>
 
                 {/* Contact Section */}
-                <div className="contactt">
+                <div className="contactt mt-3">
                     <h2>INFORMATION</h2>
                     <h3>Contact</h3>
                     <p>
@@ -51,11 +55,13 @@ const Detail = () => {
                         <strong>Hours:</strong> Open 24 Hrs
                     </p>
                     <a href="#">Get Directions</a>
+                    +
+                    
                 </div>
 
                 {/* Price List Section */}
                 <div className="pricee-list">
-                    <h3>Price List</h3>
+                    <h3 >Price List</h3>
                     <div className="cards-container">
                         <div className="cards">
                             <h4>Car on Rent - Airport Transfer</h4>

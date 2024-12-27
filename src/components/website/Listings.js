@@ -44,64 +44,80 @@ const Listings = () => {
             <div class="row p-2 bg-white border rounded pb-5">
               <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/aura.jpg" /></div>
               <div class="col-md-6 mt-1">
-                <h5>Sairaj Cab service</h5>
-                <div class="d-flex flex-row">
-                  <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
-                </div>
-                <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
-                <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
+                        <h5>Sairaj Cab service</h5>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        </div>
+                        <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
+                        <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
-              </div>
-              <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Contact US</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-sm mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
-              </div>
+                        <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
+                    </div>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                    </div>
             </div>
             <Link to='/keyword'>   <div class="row p-2 bg-white border rounded mt-3 pb-5">
               <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/verna.jpg" /></div>
               <div class="col-md-6 mt-1">
-                <h5>Sairaj Cab service</h5>
-                <div class="d-flex flex-row">
-                  <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
-                </div>
-                <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
-                <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
+                        <h5>Sairaj Cab service</h5>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        </div>
+                        <div class="mt-1 mb-2 spec-1 mt-2 text-dark "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
+                        <div class="mt-1 mb-2s spec-1 text-dark"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
-              </div>
-              <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Contact US</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-sm mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
-              </div>
+                        <button class="btn btn-primary btn-lg mt-4 " type="button">Book Now</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-4 " type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
+                    </div>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                    </div>
             </div>
 
             </Link>
             <div class="row p-2 bg-white border rounded mt-3 pb-5">
               <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/swift.jpg" /></div>
               <div class="col-md-6 mt-1">
-                <h5>Sairaj Cab service</h5>
-                <div class="d-flex flex-row">
-                  <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
-                </div>
-                <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
-                <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
+                        <h5>Sairaj Cab service</h5>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        </div>
+                        <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
+                        <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
-              </div>
-              <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Contact US</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-sm mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
-              </div>
+                        <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
+                    </div>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                    </div>
             </div>
             <div class="row p-2 bg-white border rounded mt-3 pb-5">
               <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/scorpio.jpg" /></div>
               <div class="col-md-6 mt-1">
-                <h5>Sairaj Cab service</h5>
-                <div class="d-flex flex-row">
-                  <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
-                </div>
-                <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
-                <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
+                        <h5>Sairaj Cab service</h5>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        </div>
+                        <div class="mt-1 mb-2 spec-1 mt-2 "><span ><i class="fa-solid fa-location-dot px-1"></i>By Pass Station Road Aurangabad, Aurangabad-Maharashtra</span></div>
+                        <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
-              </div>
-              <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Contact US</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-sm mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
-              </div>
+                        <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+
+
+                    </div>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-lg" type="button">Contact US</button><button class="btn btn-outline-primary btn-lg mt-2" type="button">Send Enquary</button><button class="btn btn-success btn-lg mt-2" type="button"><i class="fa-brands fa-whatsapp px-1"></i>Whatsapp</button></div>
+                    </div>
             </div>
           </div>
         </div>

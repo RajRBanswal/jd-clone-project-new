@@ -1,109 +1,73 @@
-import React from 'react'
+ import React from 'react'
+ 
+ const Contact = () => {
+   return (
+    <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>We’re here to help you with all your car rental needs!</p>
+ 
 
-const Contact = () => {
-
-  const inputs = document.querySelectorAll(".input");
-
-  function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
-  }
-
-  function blurFunc() {
-    let parent = this.parentNode;
-    if (this.value == "") {
-      parent.classList.remove("focus");
-    }
-  }
-
-  inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-  });
-
-
-  return (
-
-    <div class="contact container pt-10">
-      <span class="big-circle"></span>
-      <img src="img/shape.png" class="square" alt="" />
-      <div class="form">
-        <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
-            Book your Cab With full Safety And Enjoy
-          </p>
-
-          <div class="info">
-            <div class="information">
-              <i class="fas fa-map-marker-alt"></i> Our location :
-
-              <p>Chhatrapati Sambhajinagar (Aurangabad), Maharashtra 431003</p>
+ 
+<div class="container my-5">
+    <div class="row g-4">
+     
+        <div class="col-lg-6">
+            <div class="mb-4">
+                <h4>Our Location</h4>
+                <p><i class="bi bi-geo-alt-fill text-primary"></i> 123 Main Street, New York, NY</p>
             </div>
-            <div class="information">
-              <i class="fas fa-envelope"></i> Email Adress :
-              <p>info@ewebdigital.com</p>
+            <div class="mb-4">
+                <h4>Email Us</h4>
+                <p><i class="bi bi-envelope-fill text-primary"></i> support@carrental.com</p>
             </div>
-            <div class="information">
-              <i class="fas fa-phone"></i> Phone Number :
-              <p>+91 8983848591</p>
+            <div class="mb-4">
+                <h4>Call Us</h4>
+                <p><i class="bi bi-telephone-fill text-primary"></i> +1 (555) 123-4567</p>
             </div>
-          </div>
 
-          <div class="social-media">
-            <p>Connect with us :</p>
-            <div class="social-icons">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+          
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509608!2d144.95592831548604!3d-37.81720997975154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f6e4b21b%3A0x0!2zMzfCsDQ5JzAyLjAiUyAxNDTCsDU3JzIyLjIiRQ!5e0!3m2!1sen!2sus!4v1677127571545!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
             </div>
-          </div>
         </div>
 
-        <div class="contact-form">
-          <span class="circle one"></span>
-          <span class="circle two"></span>
-
-          <form action="index.html" autocomplete="off">
-            <h3 class="title">Contact us</h3>
-            <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              
-              <span>Username</span>
+   
+        <div class="col-lg-6">
+            <div class="contact-form-container">
+                <h4 class="mb-4 text-center">Send Us a Message</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your full name" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Preferred Pickup Date</label>
+                        <input type="date" id="date" class="form-control" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
             </div>
-            <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
-            </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
-              <span>Phone</span>
-            </div>
-            <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
-            </div>
-            <input type="submit" value="Send" class="btn-send" />
-          </form>
         </div>
-      </div>
     </div>
-
-
-  )
-}
-
-export default Contact
+</div>
+</div>
+   )
+ }
+ 
+ export default Contact

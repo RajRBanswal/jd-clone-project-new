@@ -124,7 +124,7 @@ const Detail = () => {
                 <div className="details-section container">
                     <div className="detail-item">
                         <p><strong>Segment:</strong></p>
-                        <a href="#">Compact SUV</a>, <a href="#">Sedan +4</a>
+                        <a href="#">Compact SUV</a>, <a href="#">Sedan </a>
                     </div>
                     <div className="detail-item">
                         <p><strong>Packages Offered:</strong></p>
@@ -136,7 +136,7 @@ const Detail = () => {
                     </div>
                     <div className="detail-item">
                         <p><strong>Services:</strong></p>
-                        <p>Tempos On Rent For All India</p>
+                        <a href="#">Tempos On Rent</a>
                     </div>
                 </div>
 

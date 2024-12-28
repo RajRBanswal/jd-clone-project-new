@@ -1,44 +1,40 @@
 import React from 'react'
 
 const Vendorlogin = () => {
-    return (
-        <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-
-                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                        <a href="index.html" class="text-center py-2">
-                            <h3 class="text-primary text-center">VENDOR SignIn</h3>
-
-                            <h3 class=""></h3>
-                        </a>
-
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-
-
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <a href="">Forgot Password</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
-                        <p class="text-center mb-0">Don't have an Account? <a href="vender-signup">Sign Up</a></p>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div class="wrapper">
+      <div class=" ven-login container">
+        <div class="col-left">
+          <div class="login-text">
+            <h2>Welcome Back</h2>
+            
+            <a class="btn" href="">Sign Up</a>
+          </div>
         </div>
-    )
+        <div class="col-right">
+          <div class="login-form">
+            <h2>Vendor-Login</h2>
+            <form>
+              <p>
+                <label>Username or email address<span>*</span></label>
+                <input type="text" placeholder="Username or Email" required />
+              </p>
+              <p>
+                <label>Password<span>*</span></label>
+                <input type="password" placeholder="Password" required />
+              </p>
+              <p>
+                <input type="submit" value="Sing In" />
+              </p>
+              <p>
+                <a class="mx-5" href="">Forget Password?</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Vendorlogin

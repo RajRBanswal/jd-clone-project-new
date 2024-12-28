@@ -62,8 +62,8 @@ const Detail = () => {
 
                 </div>
 
-            {/* Price List Section */}
-            <div className="pricee-list container ">
+                {/* Price List Section */}
+                <div className="pricee-list container ">
                     <h3 >Price List</h3>
                     <div className="cards-container">
                         <div className="cards">
@@ -101,22 +101,22 @@ const Detail = () => {
                             <button>View Details</button>
                         </div>
                     </div>
-                </div> 
+                </div>
 
             </div>
-            <div className="highlights-container">
+            <div className="highlights-container ">
                 <h2>Highlights from the business</h2>
                 <div className="icons-section">
                     <div className="icon-item">
-                        <img src=".\assets\images\luxury-diamond.png" alt="Luxury"  width={100}/>
+                        <img src=".\assets\images\luxury-diamond.png" alt="Luxury" width={100} />
                         <p>Luxury</p>
                     </div>
                     <div className="icon-item">
-                        <img src="./assets/images/weeding-car.png" alt="Wedding" width={100}/>
+                        <img src="./assets/images/weeding-car.png" alt="Wedding" width={100} />
                         <p>Wedding</p>
                     </div>
                     <div className="icon-item">
-                        <img src="./assets/images/corporate.png" alt="Corporate"  width={100}/>
+                        <img src="./assets/images/corporate.png" alt="Corporate" width={100} />
                         <p>Corporate</p>
                     </div>
                 </div>
@@ -140,8 +140,34 @@ const Detail = () => {
                     </div>
                 </div>
 
- 
+
             </div>
+
+            <div class="insights-container container">
+                <div class="insights-header">Key Insights</div>
+                <div class="insights-grid">
+
+                    <div class="insight-box">
+                        <h4 class="liked"><span class="icon">👍</span> What users liked</h4>
+                        <ul>
+                            <li>Drivers are polite, knowledgeable, and cooperative.</li>
+                            <li>Cars are clean, well-maintained, and safe to travel.</li>
+                            <li>The service is prompt and punctual.</li>
+                        </ul>
+                        <a href="#">More</a>
+                    </div>
+
+
+                    <div class="insight-box">
+                        <h4 class="improved"><span class="icon">📊</span> What can be improved</h4>
+                        <ul>
+                            <li>A few users mentioned that the pricing is on the higher side. However, many others felt that it was value for money.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
 

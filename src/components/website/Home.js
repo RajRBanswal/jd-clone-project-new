@@ -33,14 +33,14 @@ const Home = () => {
 
       <div class=" pt-3">
 
-        <div class="  col-lg-9 col-6  ps-3 w-100 pt-0">
+        <div  class="col-lg-9 col-6  ps-3 w-100 pt-0 ">
           <div class="search-bar   p-2 px-3 my-2">
 
-            <div className="row justify-content-center">
+            <div className="search-input row justify-content-center ">
 
               <div class="search-city">
                 <select class="form-select form-control" onChange={(e) => setSelectedTalukas(e.target.value)}>
-                  <option>Select City</option>
+                  <option><b>Select City</b></option>
                   {
                     talukas.map((item) => {
                       return <option value={item.taluka_name + '-' + item.district}>{item.taluka_name + ' (' + item.district + ')'}</option>
@@ -51,7 +51,7 @@ const Home = () => {
                   <option>Chocolates</option>
                 </select>
               </div>
-              <div class="input-search">
+              <div class="input-search ">
                 <input
                   type="text"
                   class="form-control"
@@ -60,7 +60,7 @@ const Home = () => {
                 />
               </div>
               <div class="col-1 col-lg-1 col-md-1 pt-1 d-flex justify-content-center align-items-center">
-                <h4 className="mb-0">
+                <h4 className="mb-0 ">
                   <i className="fa fa-search" onClick={getSearch}></i>
                 </h4>
               </div>
@@ -355,7 +355,7 @@ const Home = () => {
               </div>
             </div>
             <div class="row mb-5  card-effects">
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -376,7 +376,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -395,7 +395,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -415,7 +415,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -434,7 +434,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -453,7 +453,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -472,7 +472,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 pt-5 col-6">
+              <div class="col-md-2 pt-4 col-6">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -491,7 +491,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -510,7 +510,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -529,7 +529,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -548,7 +548,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -567,7 +567,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4 AboutSection">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -744,10 +744,10 @@ const Home = () => {
     
 
       <div>
-              <h2 class="service-heading text-center pb-5">FRIQUNTLY-ASK-QUESTIONS</h2>
+              <h2 class="service-heading text-center mb-3">FRIQUNTLY-ASK-QUESTIONS</h2>
             </div>
 
-      <div class="accordion container pt-3" id="accordionExample">
+      <div class="accordion container pt-3 mb-5" id="accordionExample">
         <div class="accordion-item content-center">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

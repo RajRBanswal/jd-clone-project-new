@@ -13,29 +13,84 @@ const Listings = () => {
       
 
 
-
       <section class=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
         
 
-<div class="location-bar col-lg-10 col-12">
-  <div class="icon">📍</div>
-  <h4 class="col-4">Find Results near you</h4>
-  <div class="location-options">
-    <button class="highlight">Use Precise Location</button>
-    <button>CIDCO</button>
-    <button>Waluj MIDC</button>
-    <button>HUDCO</button>
-    <button>CIDCO Colony</button>
-    <button>Jalna Road Aurangabad</button>
-    <button>Kannad Aurangabad</button>
-    <button>Garkheda</button>
+        <div class="location-bar col-lg-10 col-12">
+          
+          <div class="location-options">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn btn-primary dropdown-toggle text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn   dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+             
+          </div>
+        </div>
+        
+        
+        
+              </section>
      
-  </div>
-</div>
-
-
-
-      </section>
 
 
       <div class=" container mt-2 mb-5 ">
@@ -81,6 +136,29 @@ const Listings = () => {
             </div>
 
             </Link>
+
+            <section class=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
+        
+
+        <div class="location-bar col-lg-10 col-12">
+          <div class="icon">📍</div>
+          <h4 class="col-4">Find Results near you</h4>
+          <div class="location-options">
+            <button class="highlight">Use Precise Location</button>
+            <button>CIDCO</button>
+            <button>Waluj MIDC</button>
+            <button>HUDCO</button>
+            <button>CIDCO Colony</button>
+            <button>Jalna Road Aurangabad</button>
+            <button>Kannad Aurangabad</button>
+            <button>Garkheda</button>
+             
+          </div>
+        </div>
+        
+        
+        
+              </section>
             <div class="row p-2 bg-white border rounded mt-3 pb-5">
               <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/images/swift.jpg" /></div>
               <div class="col-md-6 mt-1">

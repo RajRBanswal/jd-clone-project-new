@@ -98,6 +98,12 @@ table {
   width: 50%;
 
 }
+@media(max-width:786px){
+  .web-logo{
+    margin-left: 9rem;
+  }
+}
+.col
 
 
 .review {
@@ -233,7 +239,7 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn-login {
+ /* .btn-login {
   padding: 0.6rem 1.3rem;
   color: #fff;
   background-color: #080905;
@@ -245,8 +251,8 @@ textarea.input {
   cursor: pointer;
   transition: 0.3s;
   margin: 0;
-  width: 100%;
-}
+  width: 100%; 
+} */
 
 .btn-send {
   padding: 0.6rem 1.3rem;
@@ -320,10 +326,7 @@ textarea.input {
   opacity: 1;
 }
 
-.contact-info {
-  padding: 2.3rem 2.2rem;
-  position: relative;
-}
+ 
 
 .contact-info .title {
   color: #1abc9c;
@@ -383,19 +386,7 @@ textarea.input {
   transform: scale(1.05);
 }
 
-.contact-info:before {
-  content: "";
-  position: absolute;
-  width: 110px;
-  height: 100px;
-  border: 22px solid #1abc9c;
-  border-radius: 50%;
-  bottom: -77px;
-  right: 50px;
-  opacity: 0.3;
-
-}
-
+ 
 .big-circle {
   position: absolute;
   width: 500px;
@@ -441,103 +432,9 @@ textarea.input {
 
 
 
-@media (max-width: 850px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
+ 
 
-  .contact-info:before {
-    bottom: initial;
-    top: -75px;
-    right: 65px;
-    transform: scale(0.95);
-  }
-
-  .contact-form:before {
-    top: -13px;
-    left: initial;
-    right: 70px;
-  }
-
-  .square {
-    transform: translate(140%, 43%);
-    height: 350px;
-  }
-
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%;
-  }
-
-  .text {
-    margin: 1rem 0 1.5rem 0;
-  }
-
-  .social-media {
-    padding: 1.5rem 0 0 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  .contact-info:before {
-    display: none;
-  }
-
-  .square,
-  .big-circle {
-    display: none;
-  }
-
-  form,
-  .contact-info {
-    padding: 1.7rem 1.6rem;
-  }
-
-  .text,
-  .information,
-  .social-media p {
-    font-size: 0.8rem;
-
-  }
-
-  .title {
-    font-size: 1.15rem;
-  }
-
-  .social-icons a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .icon {
-    width: 23px;
-  }
-
-  .input {
-    padding: 0.45rem 1.2rem;
-  }
-
-  .btn {
-    padding: 0.45rem 1.2rem;
-  }
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
+ 
 
 
 .molk {
@@ -546,18 +443,9 @@ textarea.input {
 
 
 
+ 
 
-.btn-loginn {
-  background-color: #0e1c36;
-  color: #fff;
-
-}
-
-.btn-loginn:hover {
-
-  background-color: #0e1c36;
-
-}
+ 
 
 .profile-image-pic {
   height: 200px;
@@ -1704,6 +1592,145 @@ body {
   }
 }
 
+
+
+.login-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-card .logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.login-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.login-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.login-card .form-control {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background: #f7f7f7;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .form-control:focus {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.login-card .btn-primary {
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.login-card .btn-primary:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card .forgot-link a {
+  color: #ff7e5f;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.login-card .forgot-link a:hover {
+  color: #feb47b;
+}
+
+
+
+.login-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-card .logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.login-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.login-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.login-card .form-control {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background: #f7f7f7;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .form-control:focus {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.login-card .btn-primary {
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.login-card .btn-primary:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card .forgot-link a {
+  color: #ff7e5f;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.login-card .forgot-link a:hover {
+  color: #feb47b;
+}
 
 .contact-header {
  background-color: #958855;

@@ -121,8 +121,8 @@ const Navbar = () => {
 
 
 
-            <div class="col-sm-12 col-12 col-lg-10 d-flex justify-content-end gap-5 align-items-center mt-lg-0 mt-4 ">
-              <ul class="d-flex justify-content-end list-unstyled  navbarItem">
+            <div class="col-sm-12 col-12 col-lg-10 d-flex justify-content-end gap-5 mt-lg-0 ">
+              <ul class="d-flex justify-content-end list-unstyled  navbarItem mt-3">
                 <li>
                   <Link to="/" class="  p-2 mx-1">
                     Home

@@ -15,95 +15,88 @@ const Listings = () => {
 
       <section class=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
 
-
-<<<<<<< HEAD
-        <div class="location-bar col-lg-7 col-12">
-          
-=======
-        <div class="location-bar col-lg-8 col-12">
-
->>>>>>> 5bbc760386cb4eed948853b6cf5273e77f001caa
-          <div class="location-options">
+          <div class="location-bar col-lg-8 col-12">
+            <div class="location-options">
 
 
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Sort-By
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Relevance</a></li>
-              <li><a class="dropdown-item" href="#">Rating</a></li>
-              <li><a class="dropdown-item" href="#">Popular</a></li>
-              <li><a class="dropdown-item" href="#">Distance</a></li>
-            </ul>
-            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <a class="text-light" href="">Top Rated</a>
-            </button>
-            
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Brand
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Toyota</a></li>
-              <li><a class="dropdown-item" href="#">Honda</a></li>
-              <li><a class="dropdown-item" href="#">Tata</a></li>
-              <li><a class="dropdown-item" href="#">Maruti Suzuki</a></li>
-              <li><a class="dropdown-item" href="#">Mahindra</a></li>
-              <li><a class="dropdown-item" href="#">Force</a></li>
-              <li><a class="dropdown-item" href="#">Hyundai</a></li>
-              <li><a class="dropdown-item" href="#">Ford</a></li>
-              <li><a class="dropdown-item" href="#">BMW</a></li>
-              <li><a class="dropdown-item" href="#">mercedes</a></li>
-              <li><a class="dropdown-item" href="#">Audi</a></li>
-              <li><a class="dropdown-item" href="#">Scoda</a></li>
-              <li><a class="dropdown-item" href="#">Nissan</a></li>
-              <li><a class="dropdown-item" href="#">Volkswogen</a></li>
-              <li><a class="dropdown-item" href="#">Jaguar</a></li>
-              <li><a class="dropdown-item" href="#">Range Rover</a></li>
-              <li><a class="dropdown-item" href="#">Porsche</a></li>
-            </ul>
-            <button class="btn btn-primary dropdown-toggle text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Segment
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Hatchback</a></li>
-              <li><a class="dropdown-item" href="#">Sedan</a></li>
-              <li><a class="dropdown-item" href="#">SUV</a></li>
-              <li><a class="dropdown-item" href="#">Compact SUV</a></li>
-              <li><a class="dropdown-item" href="#">MUV</a></li>
-              <li><a class="dropdown-item" href="#">Van</a></li>
-              <li><a class="dropdown-item" href="#">Tempo Traveller</a></li>
-               
-            </ul>
-            <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Seating Capacity
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">4seater</a></li>
-              <li><a class="dropdown-item" href="#">5seater</a></li>
-              <li><a class="dropdown-item" href="#">7seater</a></li>
-            </ul>
-            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Rental type
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Wedding</a></li>
-              <li><a class="dropdown-item" href="#">Vintage Car</a></li>
-              <li><a class="dropdown-item" href="#">Corporate</a></li>
-              <li><a class="dropdown-item" href="#">Luxury</a></li>
-              <li><a class="dropdown-item" href="#">Outstation</a></li>
-            </ul>
-            <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Rating
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Any</a></li>
-              <li><a class="dropdown-item" href="#">3.5+</a></li>
-              <li><a class="dropdown-item" href="#">4.0+</a></li>
-              <li><a class="dropdown-item" href="#">4.5+</a></li>
-              <li><a class="dropdown-item" href="#">5.0+</a></li>
-            </ul>
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort-By
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Relevance</a></li>
+                <li><a class="dropdown-item" href="#">Rating</a></li>
+                <li><a class="dropdown-item" href="#">Popular</a></li>
+                <li><a class="dropdown-item" href="#">Distance</a></li>
+              </ul>
+              <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="text-light" href="">Top Rated</a>
+              </button>
+
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Brand
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Toyota</a></li>
+                <li><a class="dropdown-item" href="#">Honda</a></li>
+                <li><a class="dropdown-item" href="#">Tata</a></li>
+                <li><a class="dropdown-item" href="#">Maruti Suzuki</a></li>
+                <li><a class="dropdown-item" href="#">Mahindra</a></li>
+                <li><a class="dropdown-item" href="#">Force</a></li>
+                <li><a class="dropdown-item" href="#">Hyundai</a></li>
+                <li><a class="dropdown-item" href="#">Ford</a></li>
+                <li><a class="dropdown-item" href="#">BMW</a></li>
+                <li><a class="dropdown-item" href="#">mercedes</a></li>
+                <li><a class="dropdown-item" href="#">Audi</a></li>
+                <li><a class="dropdown-item" href="#">Scoda</a></li>
+                <li><a class="dropdown-item" href="#">Nissan</a></li>
+                <li><a class="dropdown-item" href="#">Volkswogen</a></li>
+                <li><a class="dropdown-item" href="#">Jaguar</a></li>
+                <li><a class="dropdown-item" href="#">Range Rover</a></li>
+                <li><a class="dropdown-item" href="#">Porsche</a></li>
+              </ul>
+              <button class="btn btn-primary dropdown-toggle text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Segment
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Hatchback</a></li>
+                <li><a class="dropdown-item" href="#">Sedan</a></li>
+                <li><a class="dropdown-item" href="#">SUV</a></li>
+                <li><a class="dropdown-item" href="#">Compact SUV</a></li>
+                <li><a class="dropdown-item" href="#">MUV</a></li>
+                <li><a class="dropdown-item" href="#">Van</a></li>
+                <li><a class="dropdown-item" href="#">Tempo Traveller</a></li>
+
+              </ul>
+              <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Seating Capacity
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">4seater</a></li>
+                <li><a class="dropdown-item" href="#">5seater</a></li>
+                <li><a class="dropdown-item" href="#">7seater</a></li>
+              </ul>
+              <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Rental type
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Wedding</a></li>
+                <li><a class="dropdown-item" href="#">Vintage Car</a></li>
+                <li><a class="dropdown-item" href="#">Corporate</a></li>
+                <li><a class="dropdown-item" href="#">Luxury</a></li>
+                <li><a class="dropdown-item" href="#">Outstation</a></li>
+              </ul>
+              <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Rating
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Any</a></li>
+                <li><a class="dropdown-item" href="#">3.5+</a></li>
+                <li><a class="dropdown-item" href="#">4.0+</a></li>
+                <li><a class="dropdown-item" href="#">4.5+</a></li>
+                <li><a class="dropdown-item" href="#">5.0+</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
 
 
 

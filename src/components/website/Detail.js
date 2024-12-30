@@ -106,7 +106,7 @@ const Detail = () => {
             </div>
             <div className="highlights-container ">
                 <h2>Highlights from the business</h2>
-                <div className="icons-section">
+                <div className="icons-section d-flex">
                     <div className="icon-item">
                         <img src=".\assets\images\luxury-diamond.png" alt="Luxury" width={100} />
                         <p>Luxury</p>
@@ -143,38 +143,44 @@ const Detail = () => {
 
             </div>
 
-            <div class="insights-container container">
-                <div class="insights-header">Key Insights</div>
-                <div class="insights-grid">
+            <div class="container my-4">
+                <h2 class="mb-4">Key Insights</h2>
+                <div class="row g-4">
 
-                    <div class="insight-box">
-                        <h4 class="liked"><span class="icon">👍</span> What users liked</h4>
-                        <ul>
-                            <li>Drivers are polite, knowledgeable, and cooperative.</li>
-                            <li>Cars are clean, well-maintained, and safe to travel.</li>
-                            <li>The service is prompt and punctual.</li>
-                        </ul>
-                        <a href="#">More</a>
+                    <div class="col-md-6">
+                        <div class="card border-success h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-success"><i class="bi bi-hand-thumbs-up-fill"></i> What users liked</h5>
+                                <ul class="list-unstyled">
+                                    <li>🚗 Drivers are polite, knowledgeable, and cooperative.</li>
+                                    <li>🚙 Cars are clean, well-maintained, and safe to travel.</li>
+                                    <li>⏱️ The service is prompt and punctual.</li>
+                                </ul>
+                                <a href="#" class="text-primary">More</a>
+                            </div>
+                        </div>
                     </div>
 
-
-                    <div class="insight-box">
-                        <h4 class="improved"><span class="icon">📊</span> What can be improved</h4>
-                        <ul>
-                            <li>A few users mentioned that the pricing is on the higher side. However, many others felt that it was value for money.</li>
-                        </ul>
+                    <div class="col-md-6">
+                        <div class="card border-danger h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger"><i class="bi bi-bar-chart-fill"></i> What can be improved</h5>
+                                <ul class="list-unstyled">
+                                    <li>💰 A few users mentioned that the pricing is on the higher side. However, many others felt that it was value for money.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-
-        </div>
-
+            </div>
 
 
-    );
+
+            );
 };
-export default Detail
+            export default Detail
 
 // <div>
 

@@ -33,12 +33,12 @@ const Home = () => {
 
       <div class=" pt-3">
 
-        <div  class="col-lg-9 col-6  ps-3 w-100 pt-0 ">
-          <div class="search-bar   p-2 px-3 my-2">
+        <div class="col-lg-9 col-6  ps-3 w-100 pt-0 ">
+          <div class="search-bar   p-2 px-3 my-2 ">
 
-            <div className="search-input row justify-content-center ">
+            <div className="search-input d-flex justify-content-center">
 
-              <div class="search-city">
+              <div class="search-city px-1">
                 <select class="form-select form-control" onChange={(e) => setSelectedTalukas(e.target.value)}>
                   <option><b>Select City</b></option>
                   {
@@ -51,7 +51,7 @@ const Home = () => {
                   <option>Chocolates</option>
                 </select>
               </div>
-              <div class="input-search ">
+              <div class="input-search px-1">
                 <input
                   type="text"
                   class="form-control"
@@ -60,7 +60,7 @@ const Home = () => {
                 />
               </div>
               <div class="col-1 col-lg-1 col-md-1 pt-1 d-flex justify-content-center align-items-center">
-                <h4 className="mb-0 ">
+                <h4 className="mb-0 px=1">
                   <i className="fa fa-search" onClick={getSearch}></i>
                 </h4>
               </div>
@@ -80,7 +80,7 @@ const Home = () => {
 
         <div class="col-lg-12 col-12   ">
 
-        <img src="./assets/images/sliderimg.jpg" class="img-fluid w" alt="Responsive image"/>
+          <img src="./assets/images/sliderimg.jpg" class="img-fluid w" alt="Responsive image" />
         </div>
 
 
@@ -590,9 +590,9 @@ const Home = () => {
           </div>
         </section>
       }
-      
 
-      
+
+
       <div class="container mb-5 pt-2 pb-4">
         <div class="col-12 mt-3">
           <div class="row justify-content-center mb-5">
@@ -699,53 +699,67 @@ const Home = () => {
         </div>
 
         <div>
-              <h2 class="service-heading text-center pb-4 pt-4">TESTIMONIAL</h2>
-            </div>
+          <h2 class="service-heading text-center pb-4 pt-4">TESTIMONIAL</h2>
+        </div>
 
-        <section class="testimonial-slider pt-5">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner py-5 text-center">
-              <div class="carousel-item active">
-                <i class="review bi-chat-right-quote fs-1"></i>
-                <figure class="text-cent col-md-6 offset-md-3 mt-4">
-                  <blockquote class="blockquote">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption>
-                </figure>
+        <section class="testimonial-section">
+    <div class="container text-center">
+       
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <div class="testimonial-card">
+              <img src="https://via.placeholder.com/80" alt="User 1" class="testimonial-image mx-auto"/>
+              <h5 class="testimonial-name">John Doe</h5>
+              <div class="star-rating">
+                ★★★★☆
               </div>
-              <div class="carousel-item">
-                <i class="review bi-chat-right-quote fs-1"></i>
-                <figure class="col-md-6 offset-md-3 mt-4">
-                  <blockquote class="blockquote">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption>
-                </figure>
-              </div>
-              <div class="carousel-item">
-                <i class="review bi-chat-right-quote fs-1"></i>
-                <figure class="col-md-6 offset-md-3 mt-4">
-                  <blockquote class="blockquote">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer mt-2">Jonh Son</figcaption>
-                </figure>
-              </div>
+              <p class="testimonial-text">"This service exceeded my expectations! The team was prompt and professional."</p>
             </div>
           </div>
-        </section>
+          
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <img src="https://via.placeholder.com/80" alt="User 2" class="testimonial-image mx-auto"/>
+              <h5 class="testimonial-name">Jane Smith</h5>
+              <div class="star-rating">
+                ★★★★★
+              </div>
+              <p class="testimonial-text">"The cars were clean and well-maintained. I had a wonderful experience!"</p>
+            </div>
+          </div>
+        
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <img src="https://via.placeholder.com/80" alt="User 3" class="testimonial-image mx-auto"/>
+              <h5 class="testimonial-name">Michael Lee</h5>
+              <div class="star-rating">
+                ★★★★☆
+              </div>
+              <p class="testimonial-text">"Highly recommended! Great customer service and value for money."</p>
+            </div>
+          </div>
+        </div>
+         
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    
+    </div>
+  </section>
+
+      </div>
+
 
       <div>
-              <h2 class="service-heading text-center mb-3">FRIQUNTLY-ASK-QUESTIONS</h2>
-            </div>
+        <h2 class="service-heading text-center mb-3">FRIQUNTLY-ASK-QUESTIONS</h2>
+      </div>
 
       <div class="accordion container pt-3 mb-5" id="accordionExample">
         <div class="accordion-item content-center">

@@ -28,6 +28,7 @@ const Listings = () => {
               <li><a class="dropdown-item" href="#">Rating</a></li>
               <li><a class="dropdown-item" href="#">Popular</a></li>
               <li><a class="dropdown-item" href="#">Distance</a></li>
+              <li><a class="dropdown-item" href="#"> </a></li>
             </ul>
             <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               <a class="text-light" href=""> <i class="fa-solid fa-star"></i> Top Rated</a>

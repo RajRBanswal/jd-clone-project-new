@@ -120,7 +120,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
 
 
               </div>
@@ -141,7 +141,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1 text-dark"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4 " type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4 " type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3 " type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
 
 
               </div>
@@ -185,7 +185,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
 
 
               </div>
@@ -204,7 +204,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
 
 
               </div>

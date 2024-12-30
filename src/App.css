@@ -50,6 +50,8 @@
 .input-search {
   width: 25%;
 }
+ 
+ 
 
 @media(max-width:786px) {
   .search-city {
@@ -1243,7 +1245,8 @@ body {
   }
 
   .details-section {
-    flex-direction: column;
+    
+     text-align: center;
   }
 }
 .no-btn{

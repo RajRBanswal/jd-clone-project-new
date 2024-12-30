@@ -16,11 +16,17 @@ const Listings = () => {
       <section class=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
 
 
-        <div class="location-bar col-lg-10 col-12">
+        <div class="location-bar col-lg-8 col-12">
           
           <div class="location-options">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+          
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  Sort-By
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -28,7 +34,7 @@ const Listings = () => {
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+   Top Rated
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -36,23 +42,15 @@ const Listings = () => {
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+   Brand
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-  <button class="btn btn-primary dropdown-toggle text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+  <button class="btn btn-primary dropdown-toggle text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   Segment
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -60,15 +58,15 @@ const Listings = () => {
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
   <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+   Seating Capacity
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
-  <button class="btn   dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+  <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Rental type
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -76,13 +74,9 @@ const Listings = () => {
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
   <button class="btn  btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+  Rating
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
+  
              
           </div>
         </div>
@@ -107,7 +101,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>+918888888888</button>
 
 
               </div>
@@ -128,7 +122,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1 text-dark"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4 " type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4 " type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3 " type="button"><i class="fa-solid fa-phone mx-1"></i>+918888888888</button>
 
 
               </div>
@@ -172,7 +166,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>+918888888888</button>
 
 
               </div>
@@ -191,7 +185,7 @@ const Listings = () => {
                 <div class="mt-1 mb-2s spec-1"><span> <i class="fa-solid fa-money-bill-transfer px-1"></i> Price Available</span></div>
 
                         <button class="btn btn-primary btn-lg mt-4" type="button">Book Now</button>
-                        <button class="btn btn-primary btn-lg mt-4 mx-4" type="button"><i class="fa-solid fa-phone mx-1"></i>91+9656565654</button>
+                        <button class="btn btn-primary btn-lg mt-4 mx-3" type="button"><i class="fa-solid fa-phone mx-1"></i>+918888888888</button>
 
 
               </div>

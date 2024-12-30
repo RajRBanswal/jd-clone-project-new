@@ -16,7 +16,7 @@ const Listings = () => {
       <section class=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
 
 
-        <div class="location-bar col-lg-8 col-12">
+        <div class="location-bar col-lg-7 col-12">
           
           <div class="location-options">
           

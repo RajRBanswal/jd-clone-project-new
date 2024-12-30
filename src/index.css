@@ -13,7 +13,7 @@ code {
 }
 /* Full-width input fields */
 input[type=text], input[type=password], select {
-  border: 1px solid #0a0909 !important;
+  border: 2px solid #facc2b !important;
   border-radius: 5px !important;
 }
 

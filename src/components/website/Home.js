@@ -33,14 +33,14 @@ const Home = () => {
 
       <div class=" pt-3">
 
-        <div class="  col-lg-9 col-6  ps-3 w-100 pt-0">
+        <div  class="col-lg-9 col-6  ps-3 w-100 pt-0 ">
           <div class="search-bar   p-2 px-3 my-2">
 
-            <div className="row justify-content-center">
+            <div className="search-input row justify-content-center ">
 
               <div class="search-city">
                 <select class="form-select form-control" onChange={(e) => setSelectedTalukas(e.target.value)}>
-                  <option>Select City</option>
+                  <option><b>Select City</b></option>
                   {
                     talukas.map((item) => {
                       return <option value={item.taluka_name + '-' + item.district}>{item.taluka_name + ' (' + item.district + ')'}</option>
@@ -51,7 +51,7 @@ const Home = () => {
                   <option>Chocolates</option>
                 </select>
               </div>
-              <div class="input-search">
+              <div class="input-search ">
                 <input
                   type="text"
                   class="form-control"
@@ -60,7 +60,7 @@ const Home = () => {
                 />
               </div>
               <div class="col-1 col-lg-1 col-md-1 pt-1 d-flex justify-content-center align-items-center">
-                <h4 className="mb-0">
+                <h4 className="mb-0 ">
                   <i className="fa fa-search" onClick={getSearch}></i>
                 </h4>
               </div>
@@ -85,27 +85,7 @@ const Home = () => {
 
         <div class="col-lg-12 col-12   ">
 
-          <div id="carouselExampleControls" class="carousel slide pt-2" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./assets/img/slider1.jpeg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/img/slider2.jpeg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/img/slider3.jpeg" class="d-block w-100" alt="..." />
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+        <img src="./assets/images/sliderimg.jpg" class="img-fluid w" alt="Responsive image"/>
         </div>
 
      
@@ -125,78 +105,12 @@ const Home = () => {
             </div>
           </div>
           <div class="row mb-1  card-effects">
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 col-6 pt-1">
-              <div class="card card-effect ">
-                <div class="card-body position-relative ">
-                  <div >
-                    <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                    <div class="h4   text-center ">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Mumbai</a>
                     </div>
 
                   </div>
@@ -205,11 +119,38 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100 ">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Pune</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4  ">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Nagpur</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-6 pt-4 ">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Nashik</a>
                     </div>
 
                   </div>
@@ -218,11 +159,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100 ">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Thane</a>
                     </div>
 
                   </div>
@@ -231,11 +172,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Aurangabad</a>
                     </div>
 
                   </div>
@@ -244,11 +185,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Solapur</a>
                     </div>
 
                   </div>
@@ -257,11 +198,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Kolhapur</a>
                     </div>
 
                   </div>
@@ -270,11 +211,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Mumbai</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Amravati</a>
                     </div>
 
                   </div>
@@ -283,11 +224,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Jalgaon</a>
                     </div>
 
                   </div>
@@ -296,11 +237,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Akola</a>
                     </div>
 
                   </div>
@@ -309,11 +250,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Latur</a>
                     </div>
 
                   </div>
@@ -322,11 +263,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Ratnagiris</a>
                     </div>
 
                   </div>
@@ -335,11 +276,11 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Chandrapur</a>
                     </div>
 
                   </div>
@@ -348,11 +289,50 @@ const Home = () => {
               </div>
             </div>
             <div class="col-md-2 col-6 pt-4">
-              <div class="card card-effect ">
+              <div class="card card-effect w-100">
                 <div class="card-body position-relative ">
                   <div >
                     <div class="h4   text-center">
-                      <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Kolhapur</a>
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Sangli</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Ahmednagar</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder   text-tb-lines" href="#/">Dhule</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 pt-4">
+              <div class="card card-effect w-100">
+                <div class="card-body position-relative ">
+                  <div >
+                    <div class="h4   text-center">
+                      <a class="text-decoration-none fw-bolder  text-tb-lines" href="#/">Nanded</a>
                     </div>
 
                   </div>
@@ -379,7 +359,7 @@ const Home = () => {
               </div>
             </div>
             <div class="row mb-5  card-effects">
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -400,7 +380,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -419,7 +399,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-3">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -439,7 +419,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -458,7 +438,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -477,7 +457,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-1">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -496,7 +476,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 pt-5 col-6">
+              <div class="col-md-2 pt-4 col-6">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -515,7 +495,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -534,7 +514,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -553,7 +533,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -572,7 +552,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -591,7 +571,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-2 col-6 pt-5">
+              <div class="col-md-2 col-6 pt-4 AboutSection">
                 <div class="card card-effect p-0 h-100">
                   <div class="card-img rounded-0">
                     <div class="img-hover">
@@ -614,11 +594,12 @@ const Home = () => {
           </div>
         </section>
       }
-      
-
-      
       <div class="  mb-5 pt-2 pb-4">
         <div class="col-12 mt-5">
+
+      <div class="container mb-5 pt-2 pb-4">
+        <div class="col-12 mt-3">
+
           <div class="row justify-content-center mb-5">
             <div>
               <h2 class="service-heading text-center pb-1">RENTAL-TYPES</h2>
@@ -627,6 +608,7 @@ const Home = () => {
         </div>
     
         <div class="row mb-5 card-effects">
+
         <div class="col-md-1 pt-2">
             <div class="card card-effect p-0 h-100">
                
@@ -634,6 +616,7 @@ const Home = () => {
             </div>
           </div>
           <div class="col-md-2 pt-2">
+          <div class="col-md-3 mt-2">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -646,7 +629,7 @@ const Home = () => {
                   <div class="h4 mb-3 mt-2 text-center">
                     <a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">wedding</a>
                   </div>
-                  <p class="text-secondary text-center lh-base">
+                  <p class="text-dark text-center lh-base">
                     Customizable headers, footers, and interactive elements within cards empower you to create
                     engaging and modern web designs.</p>
                 </div>
@@ -660,7 +643,10 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <div class="col-md-2 pt-2">
+          <div class="col-md-3  mt-3">
+
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -670,29 +656,7 @@ const Home = () => {
               <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Vintage Car</a></div>
-                  <p class="text-secondary text-center ">Effortlessly stylish and responsive, Bootstrap 5 cards adapt beautifully to diverse screen sizes, enhancing user experience.</p>
-                </div>
-                <div class="text-center">
-                  <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
-                    <i class="fa fa-arrow-right icon-arrow before"></i>
-                    <span class="label fw-normal">Know More!</span>
-                    <i class="fa fa-arrow-right icon-arrow after"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 pt-2">
-            <div class="card card-effect p-0 h-100">
-              <div class="card-img rounded-0">
-                <div class="img-hover">
-                  <img class="rounded-top img-fluid" src="./assets/images/townimg.jpg" alt="..." />
-                </div>
-              </div>
-              <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div class="pt-6">
-                  <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Outstation</a></div>
-                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                  <p class="text-dark text-center ">Effortlessly stylish and responsive, Bootstrap 5 cards adapt beautifully to diverse screen sizes, enhancing user experience.</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
@@ -705,7 +669,34 @@ const Home = () => {
             </div>
           </div>
 
+          <div class="col-md-2 pt-2">
+          <div class="col-md-3 mt-3">
+
+            <div class="card card-effect p-0 h-100">
+              <div class="card-img rounded-0">
+                <div class="img-hover">
+                  <img class="rounded-top img-fluid" src="./assets/images/townimg.jpg" alt="..." />
+                </div>
+              </div>
+              <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+                <div class="pt-6">
+                  <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">Outstation</a></div>
+                  <p class="text-dark text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                </div>
+                <div class="text-center">
+                  <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+                    <i class="fa fa-arrow-right icon-arrow before"></i>
+                    <span class="label fw-normal">Know More!</span>
+                    <i class="fa fa-arrow-right icon-arrow after"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <div class="col-md-2 pt-2" >
+          <div class="col-md-3 mt-3" >
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -715,7 +706,7 @@ const Home = () => {
               <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">luxury cars</a></div>
-                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                  <p class="text-dark text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
@@ -798,10 +789,10 @@ const Home = () => {
     
 
       <div>
-              <h2 class="service-heading text-center pb-5">FRIQUNTLY-ASK-QUESTIONS</h2>
+              <h2 class="service-heading text-center mb-3">FRIQUNTLY-ASK-QUESTIONS</h2>
             </div>
 
-      <div class="accordion container pt-3" id="accordionExample">
+      <div class="accordion container pt-3 mb-5" id="accordionExample">
         <div class="accordion-item content-center">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

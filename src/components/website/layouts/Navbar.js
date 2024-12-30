@@ -109,20 +109,20 @@ const Navbar = () => {
 
 
       <header className="footer">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row py-1 border-bottom">
-            <div class="col-sm-3 col-6 col-lg-2  m-auto m-lg-start text-center text-sm-start">
-              <div class="main-logo pt-2 px-3">
-                <Link to="/">
-                  <img src={'/assets/images/logo.png'} alt="logo" class="web-logo" />
-                </Link>
+            <div class="col-sm-3 col-6 col-lg-2 text-center text-sm-start">
+              <div class="main-logo">
+                <div>
+                  <img src={'./assets/images/logo.png'} alt="logo" class="web-logo" />
+                </div>
               </div>
             </div>
 
 
 
-            <div class="col-sm-12 col-12 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-lg-0 mt-4 justify-content-center justify-content-sm-end">
-              <ul class="d-flex justify-content-end list-unstyled m-0 navbarItem">
+            <div class="col-sm-12 col-12 col-lg-10 d-flex justify-content-end gap-5 mt-lg-0 ">
+              <ul class="nav-links d-flex justify-content-end list-unstyled  navbarItem mt-3">
                 <li>
                   <Link to="/" class="  p-2 mx-1">
                     Home

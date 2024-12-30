@@ -3,40 +3,28 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-    <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-      
-        <div class="card my-5">
-
-          <form class="card-body cardbody-color py-lg-1 px-5">
-
-            <div class="text-center">
-            <h2 class="text-center text-dark mt-3 pb">Login Here</h2>
-                
-
-              <img src="./assets/images/sign-up.png " class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                width="20%" alt="profile"/>
-            </div>
-
-            <div class="mb-3">
-              <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
-                placeholder="User Name"/>
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" id="password" placeholder="password"/>
-            </div>
-            <div class="text-center"><button type="submit" class=" btn-loginn px-5 mb-5 w-100">Login</button></div>
-            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
-              Registered? <a href="signup" class="text-dark fw-bold"> Create an
-                Account</a>
-            </div>
-          </form>
+    <div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="login-card">
+      <img src="./assets/images/logo.png" alt="Car Logo" class="logo"/>
+      <h3>Login Here</h3>
+      <p>Access your account</p>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Email or Username" required/>
         </div>
-
-      </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" required/>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div class="forgot-link mt-3">
+          <a href="#">Forgot Password?</a> / <a href="/signup">Signup</a>
+        </div>
+      </form>
     </div>
   </div>
+    
   )
 }
 

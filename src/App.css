@@ -1251,6 +1251,22 @@ body {
   margin-left: 0.5rem
 }
 
+.dropdown-menu{
+  max-height: 40vh;
+  overflow-y: scroll;
+  text-align:center;
+}
+@media(max-width:786px){
+  .dropdown-menu{
+    max-height: 25vh;
+  overflow-y: scroll;
+  text-align:center;
+  
+} 
+}
+
+
+
 
 /* .wrapper {
   margin: 0 auto;

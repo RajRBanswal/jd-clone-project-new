@@ -69,7 +69,12 @@ const Home = () => {
         </div>
       </div>
 
-      <section
+
+      <div class="home-page-img ">
+      <img src="./assets/images/home-page.jpg" class="img-fluid w-100" alt="..."></img>
+
+      </div>
+      {/* <section
         class="d-flex "
         style={{
           background: `url('./assets/images/background-pattern.png')`,
@@ -83,11 +88,10 @@ const Home = () => {
           <img src="./assets/images/sliderimg.jpg" class="img-fluid w" alt="Responsive image" />
         </div>
 
+     
 
 
-
-      </section>
-
+      </section> */}
 
       {<section>
 
@@ -590,18 +594,28 @@ const Home = () => {
           </div>
         </section>
       }
+      
 
-
-
+      
       <div class="container mb-5 pt-2 pb-4">
         <div class="col-12 mt-3">
+
           <div class="row justify-content-center mb-5">
             <div>
               <h2 class="service-heading text-center pb-1">RENTAL-TYPES</h2>
             </div>
           </div>
         </div>
+    
         <div class="row mb-5 card-effects">
+
+        <div class="col-md-1 pt-2">
+            <div class="card card-effect p-0 h-100">
+               
+               
+            </div>
+          </div>
+          <div class="col-md-2 pt-2">
           <div class="col-md-3 mt-2">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
@@ -629,7 +643,10 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div class="col-md-2 pt-2">
           <div class="col-md-3  mt-3">
+
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -651,7 +668,10 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div class="col-md-2 pt-2">
           <div class="col-md-3 mt-3">
+
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -674,6 +694,8 @@ const Home = () => {
             </div>
           </div>
 
+
+          <div class="col-md-2 pt-2" >
           <div class="col-md-3 mt-3" >
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
@@ -685,6 +707,29 @@ const Home = () => {
                 <div class="pt-6">
                   <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">luxury cars</a></div>
                   <p class="text-dark text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
+                </div>
+                <div class="text-center">
+                  <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+                    <i class="fa fa-arrow-right icon-arrow before"></i>
+                    <span class="label fw-normal">Know More!</span>
+                    <i class="fa fa-arrow-right icon-arrow after"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 pt-2" >
+            <div class="card card-effect p-0 h-100">
+              <div class="card-img rounded-0">
+                <div class="img-hover">
+                  <img class="rounded-top img-fluid " src="./assets/images/corporate.jpg" alt="..." />
+                </div>
+              </div>
+              <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+                <div class="pt-6">
+                  <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">corporate</a></div>
+                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
                 </div>
                 <div class="text-center">
                   <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">

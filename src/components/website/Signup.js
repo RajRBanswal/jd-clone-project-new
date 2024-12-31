@@ -3,27 +3,46 @@ import { Link } from 'react-router-dom'
 
 const Signup = () => {
     return (
-        <div className='container py-5'>
-            <div className='row'>
-                <div className='col-lg-6 col-12 m-auto'>
-                    <img src='./assets/images/sign-up.png ' style={{ width: "90%" }} />
-                </div>
-                <div className='col-lg-6 col-12 text-center m-auto mt-lg-0 mt-5'>
-                    <h1 style={{ color: "#fd7e14" }}>Sign-Up</h1>
-
-                    <input type="text" placeholder="Enter Name" name="name" className='form-control form-control-lg mt-3' required />
-                    <input type="text" placeholder="Mobile Number" name="mobile number" className='form-control form-control-lg mt-3' required />
-                    <input type="text" placeholder="Enter Email" name="email" required className='form-control form-control-lg mt-3' />
-                    <input type="text" placeholder="Address" name="address" required className='form-control form-control-lg mt-3' />
-                    <input type="password" placeholder="Enter Password" name="password" required className='form-control form-control-lg mt-3' />
-                    <input type="password" placeholder="Repeat Password" name="repeat password" className='form-control form-control-lg mt-3' required />
-
-                    <button className='btn-logine btn-warning btn-sm mt-3'>Sign-Up</button>
-
-                    <p className='py-2'> If you already have a account? <Link to='/login' style={{ color: "#fd7e14" }}>Login Now</Link></p>
-                </div>
+        <div class="wrapper">
+        <div class="registration-container">
+          <div class="col-left">
+            <div class="info-box">
+              <h2>Welcome to Registration</h2>
+              <p>Join our platform to unlock exclusive benefits and opportunities for your business.</p>
+              <a class="btn" href="/vendor-login">Already a Member? Sign In</a>
             </div>
+          </div>
+          <div class="col-right">
+            <div class="form-box">
+              <h2>Create Your Account</h2>
+              <form>
+                <div class="form-group">
+                  <label>Name<span>*</span></label>
+                  <input type="text" placeholder="Enter your Name" required />
+                </div>
+                <div class="form-group">
+                  <label>Mobile.No<span>*</span></label>
+                  <input type="number" placeholder="Enter your Mobile.No" required />
+                </div>
+                <div class="form-group">
+                  <label>Email<span>*</span></label>
+                  <input type="email" placeholder="Enter your Email" required />
+                </div>
+                <div class="form-group">
+                  <label>Password<span>*</span></label>
+                  <input type="password" placeholder="Enter your password" required />
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password<span>*</span></label>
+                  <input type="password" placeholder="Re-enter your password" required />
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
+
     )
 }
 

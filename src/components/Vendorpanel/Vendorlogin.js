@@ -1,6 +1,48 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import {useEffect,useState} from 'react';
+ 
 
-const Vendorlogin = () => {
+const Vendorlogin = () => { 
+ const navigate = useNavigate()
+
+  const vendorName = localStorage.getItem('vendorUsername')
+  console.log(vendorName);
+
+  useEffect(() => {
+    if (vendorName !== null) {
+      navigate("/vendor")
+    }
+  }, []);
+
+  const [Email, setEmail] = useState("")
+  const [Password, setPassword] = useState("")
+  const getLogin = async () => {
+    const response = await fetch("http://localhost:8000/api/vendor/vendor-login", {
+      method: "POST",
+      body: JSON.stringify({
+        Email,
+        Password
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    const result = await response.json();
+    console.log(result);
+    
+    if (result.status === 200) {
+      localStorage.setItem("vendorId", result.vendor._id)
+      localStorage.setItem("vendorUsername", result.vendor.username)
+      alert(result.message);
+      navigate("/vendor")
+    } else {
+      alert(result.message);
+    }
+  }
+
+
+
   return (
     <div class="wrapper">
     <div class="registration-container">
@@ -17,16 +59,16 @@ const Vendorlogin = () => {
           <h2>Sign In Your Vendor Account</h2>
           <form>
             <div class="form-group">
-              <label>Email / mobile.No<span>*</span></label>
-              <input type="text" placeholder="Enter your Email / Mobile.No" required />
+              <label>Email<span>*</span></label>
+              <input type="text" placeholder="Enter your Email" onChange={(e) => setEmail(e.target.value)} required />
             </div>
             
             <div class="form-group">
               <label>Password<span>*</span></label>
-              <input type="password" placeholder="Enter your password" required />
+              <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} required />
             </div>
              
-            <button type="submit" class="submit-btn">Sign In</button>
+            <button type="button" onClick={getLogin} class="submit-btn">Sign In</button>
             <div class="form-footer">
             <a href="#">Forgot Password?</a> 
           </div>

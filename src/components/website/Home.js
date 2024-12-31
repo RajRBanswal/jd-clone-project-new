@@ -69,18 +69,14 @@ const Home = () => {
         </div>
       </div>
 
-
-      <div class="home-page-img ">
-      <img src="./assets/images/home-page.jpg" class="img-fluid w-100" alt="..."></img>
-
-      </div>
-      {/* <section
+      <section
         class="d-flex "
         style={{
-          background: `url('./assets/images/background-pattern.png')`,
+          backgroundImage: "url('./assets/images/background-pattern.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right bottom",
         }}
+        
       >
 
         <div class="col-lg-12 col-12   ">
@@ -88,10 +84,11 @@ const Home = () => {
           <img src="./assets/images/sliderimg.jpg" class="img-fluid w" alt="Responsive image" />
         </div>
 
-     
 
 
-      </section> */}
+
+      </section>
+
 
       {<section>
 
@@ -594,28 +591,18 @@ const Home = () => {
           </div>
         </section>
       }
-      
 
-      
+
+
       <div class="container mb-5 pt-2 pb-4">
         <div class="col-12 mt-3">
-
           <div class="row justify-content-center mb-5">
             <div>
               <h2 class="service-heading text-center pb-1">RENTAL-TYPES</h2>
             </div>
           </div>
         </div>
-    
         <div class="row mb-5 card-effects">
-
-        <div class="col-md-1 pt-2">
-            <div class="card card-effect p-0 h-100">
-               
-               
-            </div>
-          </div>
-          <div class="col-md-2 pt-2">
           <div class="col-md-3 mt-2">
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
@@ -643,10 +630,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div class="col-md-2 pt-2">
           <div class="col-md-3  mt-3">
-
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -668,10 +652,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div class="col-md-2 pt-2">
           <div class="col-md-3 mt-3">
-
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
                 <div class="img-hover">
@@ -694,8 +675,6 @@ const Home = () => {
             </div>
           </div>
 
-
-          <div class="col-md-2 pt-2" >
           <div class="col-md-3 mt-3" >
             <div class="card card-effect p-0 h-100">
               <div class="card-img rounded-0">
@@ -718,29 +697,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div class="col-md-2 pt-2" >
-            <div class="card card-effect p-0 h-100">
-              <div class="card-img rounded-0">
-                <div class="img-hover">
-                  <img class="rounded-top img-fluid " src="./assets/images/corporate.jpg" alt="..." />
-                </div>
-              </div>
-              <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div class="pt-6">
-                  <div class="h4 mb-3 mt-4 text-center"><a class="text-decoration-none fw-bolder text-uppercase text-tb-lines" href="#/">corporate</a></div>
-                  <p class="text-secondary text-center">Bootstrap 5 cards revolutionize content presentation, offering sleek containers for your information and visuals</p>
-                </div>
-                <div class="text-center">
-                  <a href="/#" class="btn d-block btn-primary py-3 fs-5 card-btn md">
-                    <i class="fa fa-arrow-right icon-arrow before"></i>
-                    <span class="label fw-normal">Know More!</span>
-                    <i class="fa fa-arrow-right icon-arrow after"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div>
@@ -748,56 +704,56 @@ const Home = () => {
         </div>
 
         <section class="testimonial-section">
-    <div class="container text-center">
-       
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          
-          <div class="carousel-item active">
-            <div class="testimonial-card">
-              <img src="https://via.placeholder.com/80" alt="User 1" class="testimonial-image mx-auto"/>
-              <h5 class="testimonial-name">John Doe</h5>
-              <div class="star-rating">
-                ★★★★☆
+          <div class="container text-center">
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80" alt="User 1" class="testimonial-image mx-auto" />
+                    <h5 class="testimonial-name">John Doe</h5>
+                    <div class="star-rating">
+                      ★★★★☆
+                    </div>
+                    <p class="testimonial-text">"This service exceeded my expectations! The team was prompt and professional."</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80" alt="User 2" class="testimonial-image mx-auto" />
+                    <h5 class="testimonial-name">Jane Smith</h5>
+                    <div class="star-rating">
+                      ★★★★★
+                    </div>
+                    <p class="testimonial-text">"The cars were clean and well-maintained. I had a wonderful experience!"</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80" alt="User 3" class="testimonial-image mx-auto" />
+                    <h5 class="testimonial-name">Michael Lee</h5>
+                    <div class="star-rating">
+                      ★★★★☆
+                    </div>
+                    <p class="testimonial-text">"Highly recommended! Great customer service and value for money."</p>
+                  </div>
+                </div>
               </div>
-              <p class="testimonial-text">"This service exceeded my expectations! The team was prompt and professional."</p>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
-          
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <img src="https://via.placeholder.com/80" alt="User 2" class="testimonial-image mx-auto"/>
-              <h5 class="testimonial-name">Jane Smith</h5>
-              <div class="star-rating">
-                ★★★★★
-              </div>
-              <p class="testimonial-text">"The cars were clean and well-maintained. I had a wonderful experience!"</p>
-            </div>
-          </div>
-        
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <img src="https://via.placeholder.com/80" alt="User 3" class="testimonial-image mx-auto"/>
-              <h5 class="testimonial-name">Michael Lee</h5>
-              <div class="star-rating">
-                ★★★★☆
-              </div>
-              <p class="testimonial-text">"Highly recommended! Great customer service and value for money."</p>
-            </div>
-          </div>
-        </div>
-         
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </section>
+        </section>
 
       </div>
 

@@ -1758,8 +1758,8 @@ body {
 }
 
 .contact-header {
- background-color: #958855;
-  color: white;
+ background-color: #fff;
+  color: rgb(195, 188, 57);
   text-align: center;
   padding: 50px 20px;
 }

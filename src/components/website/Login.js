@@ -55,7 +55,7 @@ const Login = () => {
           <button type="button" onClick={getLogin} class="btn btn-primary">Login</button>
         </div>
         <div class="forgot-link mt-3">
-          <a href="#">Forgot Password?</a> / <a href="/signup">Signup</a>
+          <a href="/forgot">Forgot Password?</a> / <a href="/signup">Signup</a>
         </div>
       </form>
     </div>

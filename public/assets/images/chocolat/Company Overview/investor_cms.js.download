@@ -150,9 +150,9 @@ function getFilingDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
-					fill_text +='<div class="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft"><span className="remnf">'+entry['title']+'</div>';
+					fill_text +='<div className="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -182,9 +182,9 @@ function getFilingDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
-					fill_text +='<div class="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft"><span className="remnf">'+entry['title']+'</div>';
+					fill_text +='<div className="reporig" tabIndex="0" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -214,9 +214,9 @@ function getPressReleasesDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -247,9 +247,9 @@ function getPressReleasesDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -283,9 +283,9 @@ function getEarningsPressReleasesDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -319,9 +319,9 @@ function getEarningsPressReleasesDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -355,9 +355,9 @@ function getEarningsPressReleasesQuater(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -443,21 +443,21 @@ function showMoreMedia(name) {
 					if(entry['pid'] == '25' ) {
 						redirection_client_url = CMSDOMAIN+'cms/'+search_url+'/'+art_articlename+'/id-'+entry['hid']+'?jdlite='+JDLITEQUERY;
 					}
-					fill_text += '<div class="dtbl mdbox_row"><div class="dcell_top crpcolum_img">';
+					fill_text += '<div className="dtbl mdbox_row"><div className="dcell_top crpcolum_img">';
 					if(entry['consumer_report_flag'] == 1 && entry['imageattached'] == '' && entry['pid'] == '11') { 
-						fill_text +='<div class="contentimg" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")">'; 
+						fill_text +='<div className="contentimg" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")">'; 
 					} else {
-						fill_text += '<div class="contentimg"><a href="'+redirection_client_url+'">';
+						fill_text += '<div className="contentimg"><a href="'+redirection_client_url+'">';
 					}
-					fill_text +='<img class="" src="'+img+'"><i class="'+className+'"></i></a></div></div><div class="dcell_top crpcolum_info mdcolum_info"><div class="crpcolum_1">'+created_date+'</div>';
+					fill_text +='<img className="" src="'+img+'"><i className="'+className+'"></i></a></div></div><div className="dcell_top crpcolum_info mdcolum_info"><div className="crpcolum_1">'+created_date+'</div>';
 					if(entry['consumer_report_flag'] == 1 && entry['imageattached'] == '' && entry['pid'] == '11') { 
-						fill_text +='<div class="crpcolum_2" onclick="downlaodCMSPDF("'+entry['pdfattached']+'");">'+articlename+'</div>';
+						fill_text +='<div className="crpcolum_2" onclick="downlaodCMSPDF("'+entry['pdfattached']+'");">'+articlename+'</div>';
 					} else { 
-						fill_text +='<div class="crpcolum_2"><a href="'+redirection_client_url+'">'+articlename+'</a></div>';
+						fill_text +='<div className="crpcolum_2"><a href="'+redirection_client_url+'">'+articlename+'</a></div>';
 					}
-					fill_text +='<div class="crpcolum_3 mbcolum">'+body+'</div>';
+					fill_text +='<div className="crpcolum_3 mbcolum">'+body+'</div>';
 					if(entry['pdfattached'] != '' && entry['pdfattached'] != null) { 
-						fill_text +='<div class="reporig" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")"> <span class="downlimgc"></span>Download</div>';
+						fill_text +='<div className="reporig" onClick="downlaodCMSPDF("'+entry['pdfattached']+'")"> <span className="downlimgc"></span>Download</div>';
 					} 
 					fill_text +='</div></div>';
 				});
@@ -512,7 +512,7 @@ function showMoreVideo() {
 					d = new Date(entry['created_date']);
 					mnth = d.toLocaleString('default', { month: 'long' });
 					created_date = d.getDate() + " " + mnth.slice(0, 3) + ' ' + d.getFullYear();
-					fill_text += '<div class="videosectionwrap" ><div class="videosection"><a class="videocontainer'+active+'" href="'+redirection_client_url+'" alt="'+articlename+'" id=\'vid_'+hid+'\'><img src="'+img+'"><span class="overlaywrap"></span><i class="playicon"></i></a><div class="videocontainer_text" >'+articlename+'</div><div class="crpcolum_1" style="font-size: 14px;color:#777">'+created_date+'</div></div></div>';
+					fill_text += '<div className="videosectionwrap" ><div className="videosection"><a className="videocontainer'+active+'" href="'+redirection_client_url+'" alt="'+articlename+'" id=\'vid_'+hid+'\'><img src="'+img+'"><span className="overlaywrap"></span><i className="playicon"></i></a><div className="videocontainer_text" >'+articlename+'</div><div className="crpcolum_1" style="font-size: 14px;color:#777">'+created_date+'</div></div></div>';
 				});
 				$('#video_data').append(fill_text);
 				if(response['result']['total_pages'] == vedio_page) {
@@ -557,15 +557,15 @@ function media_details(name, id, sel_tab='', restvalues ={}) {
 				$("#video_play").html('');
 				var videos_link = response['results']['videos_attached'].split('//');
 
-				$("#video_play").html('<div class="mgimgbox"><div class="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'?autoplay=1&mute=1" allow="autoplay"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div><div class="mgtext_1">'+response['results']['created_date']+'</div><div class="mgtext_2">'+response['results']['articlename']+'</div>');
+				$("#video_play").html('<div className="mgimgbox"><div className="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'?autoplay=1&mute=1" allow="autoplay"></iframe><div id="YTPlayer" className="yt-iframe"></div></div></div><div className="mgtext_1">'+response['results']['created_date']+'</div><div className="mgtext_2">'+response['results']['articlename']+'</div>');
 			} else { // This is for media all and press tab. vedio and press will open in popupbox
 				$('#media_details').removeClass('dn');
 				$(".tab").addClass('dn');
 				if(sel_tab == 'media_all' && name == 'video') {
 					var videos_link = response['results']['videos_attached'].split('//');
-					$("#media_details").html('<div class="mgimgbox" style="background-color:#fff"><div class="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span class="imageclose_icon" onclick="closetab(\''+name+'\');"></span></div><div class="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'" id="iframevideo"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div>');
+					$("#media_details").html('<div className="mgimgbox" style="background-color:#fff"><div className="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span className="imageclose_icon" onclick="closetab(\''+name+'\');"></span></div><div className="ytframe-wrap"><iframe title="video link" width="100%" height="100%" frameborder="0" allowfullscreen="" src="https://'+videos_link[1]+'" id="iframevideo"></iframe><div id="YTPlayer" className="yt-iframe"></div></div></div>');
 				} else {
-					$("#media_details").html('<div class="mdbox"><div class="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span class="imageclose_icon" onclick="closetab();"></span></div><img style="width:80%" src="'+response['results']['imagesattached']+'"><img></div></div>');
+					$("#media_details").html('<div className="mdbox"><div className="imageheading font18 fw500 mb-20">'+response['results']['articlename']+'<span className="imageclose_icon" onclick="closetab();"></span></div><img style="width:80%" src="'+response['results']['imagesattached']+'"><img></div></div>');
 				}
 			}
 		}
@@ -608,9 +608,9 @@ function getAnalystsDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -641,9 +641,9 @@ function getAnalystsDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -673,9 +673,9 @@ function getBoardMeetingDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -706,9 +706,9 @@ function getBoardMeetingDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -737,9 +737,9 @@ function getInformationUnderRegulationDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -769,9 +769,9 @@ function getInformationUnderRegulationDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -799,9 +799,9 @@ function getEarningsCallDetailsDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -831,9 +831,9 @@ function getEarningsCallDetailsDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -860,9 +860,9 @@ function getCompanyPresentationDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -892,9 +892,9 @@ function getCompanyPresentationDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -926,9 +926,9 @@ function getEarningCallRecordingsDataYear(val){
 					var result = entry['thumbnail_path'].split('//');
 					var title = entry['title'].replace("Transcript","Recording");
 					//console.log(result[0]);
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+title+'</div></div><div class="quwrapper"><div class="quhead" data-toggle="modal" data-target="#audioclip1'+index+'"><i class="quicon_box audio_icon"></i>  </div><div class="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div class="modal-dialog" role="document"><div class="modal-content dtable"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="earningcallT"><p class="text-center frp tcon">Earnings Call Recording For <span class="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div class="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls" ></audio></div>	<p class="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
-					//fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"></div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+title+'</div></div><div className="quwrapper"><div className="quhead" data-toggle="modal" data-target="#audioclip1'+index+'"><i className="quicon_box audio_icon"></i>  </div><div className="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div className="modal-dialog" role="document"><div className="modal-content dtable"><div className="modal-header"><button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div className="modal-body"><div className="earningcallT"><p className="text-center frp tcon">Earnings Call Recording For <span className="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div className="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls" ></audio></div>	<p className="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
+					//fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"></div>';
 					fill_text +='</div>';
 				});
 			}
@@ -960,9 +960,9 @@ function getEarningCallRecordingsDataMonth(val){
 				$.each(response['results']['data'], function (index, entry) {
 					var result = entry['thumbnail_path'].split('//');
 					var title = entry['title'].replace("Transcript","Recording");
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+title+'</div></div><div class="quwrapper"><div class="quhead" data-toggle="modal" data-target="#audioclip1'+index+'" ><i class="quicon_box audio_icon"></i>  </div><div class="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div class="modal-dialog" role="document"><div class="modal-content dtable"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="earningcallT"><p class="text-center frp tcon">Earnings Call Recording For <span class="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div class="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls"></audio></div>	<p class="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"> </div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+title+'</div></div><div className="quwrapper"><div className="quhead" data-toggle="modal" data-target="#audioclip1'+index+'" ><i className="quicon_box audio_icon"></i>  </div><div className="modal fade earning_audio" id="audioclip1'+index+'" tabindex="-1" role="dialog" ><div className="modal-dialog" role="document"><div className="modal-content dtable"><div className="modal-header"><button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();"><span aria-hidden="true">&times;</span></button></div><div className="modal-body"><div className="earningcallT"><p className="text-center frp tcon">Earnings Call Recording For <span className="orange">Q'+entry['quarter']+' FY '+entry['display_date']+'</span></p><div className="eartsec" id="audioplayer"><audio id="player2" src="https://'+result[1]+'" type="audio/mp3" controls="controls"></audio></div>	<p className="text-center secp tcon">Click the button to stop audio playback</p></div></div></div></div></div></div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['thumbnail_path']+'\');\"> </div>';
 					fill_text +='</div>';
 				});
 			}
@@ -992,9 +992,9 @@ function getEarningCallTranscriptsDataYear(val){
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
 					if(entry['reportfiling_pdf'] != '') {
-						fill_text +='<div class="reportblck">';
-						fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-						fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+						fill_text +='<div className="reportblck">';
+						fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+						fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 						fill_text +='</div>';
 					}
 				});
@@ -1024,9 +1024,9 @@ function getSubsidiariesDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1055,9 +1055,9 @@ function getSecretarialDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1087,9 +1087,9 @@ function getStatementsOfDeviationDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1119,9 +1119,9 @@ function getStatementsOfDeviationDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1150,9 +1150,9 @@ function getAnnualReportDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1180,9 +1180,9 @@ function getFinancialsResultDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title'] + ' Q'+entry['quarter']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title'] + ' Q'+entry['quarter']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -1212,9 +1212,9 @@ function getFinancialsResultDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> </div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> </div>';
 					fill_text +='</div>';
 				});
 			}

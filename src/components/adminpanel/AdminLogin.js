@@ -1,68 +1,82 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { api_url } from "../helpers/api_helper";
 
 const AdminLogin = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const adminName = localStorage.getItem('adminUsername')
-  console.log(adminName);
+  const adminName = sessionStorage.getItem("adminName");
 
   useEffect(() => {
     if (adminName !== null) {
-      navigate("/admins")
+      navigate("/admins");
     }
   }, []);
 
-  const [Email, setEmail] = useState("")
-  const [Password, setPassword] = useState("")
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
   const getLogin = async () => {
-    const response = await fetch("http://localhost:8000/api/admin/admin-login", {
+    const response = await fetch(`${api_url}/api/admin/admin-login`, {
       method: "POST",
       body: JSON.stringify({
-        Email,
-        Password
+        username: Email,
+        password: Password,
       }),
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
     const result = await response.json();
-    console.log(result);
-    
-    if (result.status === 200) {
-      localStorage.setItem("adminId", result.admin._id)
-      localStorage.setItem("adminUsername", result.admin.username)
+    if (result.status === 201) {
+      sessionStorage.setItem("adminId", result.data._id);
+      sessionStorage.setItem("adminName", result.data.name);
       alert(result.message);
-      navigate("/admins")
+      navigate("/admins");
     } else {
       alert(result.message);
     }
-
-  }
+  };
   return (
-    <div class="container d-flex align-items-center justify-content-center vh-100">
-      <div class="login-card">
-        <img src="./assets/images/logo.png" alt="Car Logo" class="logo" />
+    <div className="container d-flex align-items-center justify-content-center vh-100">
+      <div className="login-card">
+        <img src="./assets/images/logo.png" alt="Car Logo" className="logo" />
         <h3>Admin</h3>
         <p>Access your account</p>
         <form>
-          <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
+          <div className="mb-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
-          <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+          <div className="mb-3">
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
-          <div class="d-grid">
-            <button type="button" onClick={getLogin} class="btn btn-primary">Login</button>
+          <div className="d-grid">
+            <button
+              type="button"
+              onClick={getLogin}
+              className="btn btn-primary"
+            >
+              Login
+            </button>
           </div>
-          <div class="forgot-link mt-3">
+          <div className="forgot-link mt-3">
             <a href="#">Forgot Password?</a>
           </div>
         </form>
       </div>
     </div>
-
   );
 };
 
-export default AdminLogin
+export default AdminLogin;

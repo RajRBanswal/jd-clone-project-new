@@ -4,31 +4,31 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer class="footer py-5 ">
-        <div class="container">
-          <div class="row g-3">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="footer-menu">
-                <img src="./assets/images/logo.png" width={200} alt="logo" />
-                <div class="social-links mt-5 text-center">
-                  <ul class="d-flex list-unstyled gap-2 m-auto">
+      <footer className="footer py-5 ">
+        <div className="container">
+          <div className="row g-3">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-menu">
+                <img src={"./assets/images/logo.png"} width={200} alt="logo" />
+                <div className="social-links mt-5 text-center">
+                  <ul className="d-flex list-unstyled gap-2 m-auto">
                     <li>
-                      <a href="#" class="btn btn-outline-dark">
+                      <a href="#" className="btn btn-outline-dark">
                         <i className="fab fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="btn btn-outline-dark">
+                      <a href="#" className="btn btn-outline-dark">
                         <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="btn btn-outline-dark">
+                      <a href="#" className="btn btn-outline-dark">
                         <i className="fab fa-youtube"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="btn btn-outline-dark">
+                      <a href="#" className="btn btn-outline-dark">
                         <i className="fab fa-instagram"></i>
                       </a>
                     </li>
@@ -37,76 +37,76 @@ const Footer = () => {
               </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
-              <div class="footer-menu">
-                <h5 class="widget-title">Useful Links</h5>
-                <ul class="menu-list list-unstyled">
-                  <li class="menu-item">
-                    <Link to="/" class="nav-link">
+            <div className="col-md-3 col-sm-6">
+              <div className="footer-menu">
+                <h5 className="widget-title">Useful Links</h5>
+                <ul className="menu-list list-unstyled">
+                  <li className="menu-item">
+                    <Link to="/" className="nav-link">
                       Home
                     </Link>
                   </li>
-                  <li class="menu-item">
-                    <Link to="/about" class="nav-link">
+                  <li className="menu-item">
+                    <Link to="/about" className="nav-link">
                       About us
                     </Link>
                   </li>
-                  <li class="menu-item">
-                    <Link to="/contact" class="nav-link">
+                  <li className="menu-item">
+                    <Link to="/contact" className="nav-link">
                       Contact
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="footer-menu">
-                <h5 class="widget-title">Customer Service</h5>
-                <ul class="menu-list list-unstyled">
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+            <div className="col-md-3 col-sm-6">
+              <div className="footer-menu">
+                <h5 className="widget-title">Customer Service</h5>
+                <ul className="menu-list list-unstyled">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       FAQ
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Privacy Policy
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Returns & Refunds
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Delivery Information
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="footer-menu">
-                <h5 class="widget-title">Customer Service</h5>
-                <ul class="menu-list list-unstyled">
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+            <div className="col-md-3 col-sm-6">
+              <div className="footer-menu">
+                <h5 className="widget-title">Customer Service</h5>
+                <ul className="menu-list list-unstyled">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Privacy Policy
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Returns & Refunds
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Cookie Guidelines
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="#" class="nav-link">
+                  <li className="menu-item">
+                    <a href="#" className="nav-link">
                       Delivery Information
                     </a>
                   </li>
@@ -117,14 +117,14 @@ const Footer = () => {
         </div>
       </footer>
       <div id="footer-bottom" className="bg-dark py-3">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 copyright">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 copyright">
               <p className="mb-0 text-white">
                 © 2024 JD Clone. All rights reserved.
               </p>
             </div>
-            <div class="col-md-6 credit-link text-start text-md-end">
+            <div className="col-md-6 credit-link text-start text-md-end">
               <p className="mb-0 text-white">
                 Designed By
                 <a href="https://ewebdigital.com/" className="text-danger">

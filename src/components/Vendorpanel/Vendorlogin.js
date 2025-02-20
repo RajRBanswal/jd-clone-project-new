@@ -1,88 +1,102 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import {useEffect,useState} from 'react';
- 
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { api_url } from "../helpers/api_helper";
 
-const Vendorlogin = () => { 
- const navigate = useNavigate()
+const Vendorlogin = () => {
+  const navigate = useNavigate();
 
-  const vendorName = localStorage.getItem('vendorUsername')
-  console.log(vendorName);
+  const vendorName = sessionStorage.getItem("vendorName");
 
   useEffect(() => {
     if (vendorName !== null) {
-      navigate("/vendor")
+      navigate("/vendor");
     }
   }, []);
 
-  const [Email, setEmail] = useState("")
-  const [Password, setPassword] = useState("")
+  const [username, setUsername] = useState("");
+  const [Password, setPassword] = useState("");
   const getLogin = async () => {
-    const response = await fetch("http://localhost:8000/api/vendor/vendor-login", {
+    const response = await fetch(`${api_url}/api/vendor/vendor-login`, {
       method: "POST",
       body: JSON.stringify({
-        Email,
-        Password
+        username: username,
+        password: Password,
       }),
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
     const result = await response.json();
-    console.log(result);
-    
-    if (result.status === 200) {
-      localStorage.setItem("vendorId", result.vendor._id)
-      localStorage.setItem("vendorUsername", result.vendor.username)
+    if (result.status === 201) {
+      sessionStorage.setItem("vendorId", result.data._id);
+      sessionStorage.setItem("vendorName", result.data.name);
       alert(result.message);
-      navigate("/vendor")
+      navigate("/vendor");
     } else {
       alert(result.message);
     }
-  }
-
-
+  };
 
   return (
-    <div class="wrapper">
-    <div class="registration-container">
-      <div class="col-left">
-        <div class="info-box">
-          <h2>Welcome Back</h2>
-          <p>Join our platform to unlock exclusive benefits and opportunities for your business.</p>
-          <a class="btn" href="/vender-signup">Create An acoout? Sign up</a>
-          
-        </div>
-      </div>
-      <div class="col-right">
-        <div class="form-box">
-          <h2>Sign In Your Vendor Account</h2>
-          <form>
-            <div class="form-group">
-              <label>Email<span>*</span></label>
-              <input type="text" placeholder="Enter your Email" onChange={(e) => setEmail(e.target.value)} required />
+    <div className="wrapper bg-info">
+      <div className="row">
+        <div className="col-lg-10 m-auto">
+          <div className="registration-container">
+            <div className="col-left">
+              <div className="info-box">
+                <h2>Welcome Back</h2>
+                <p>
+                  Join our platform to unlock exclusive benefits and
+                  opportunities for your business.
+                </p>
+                <Link className="btn" to={"/vender-signup"}>
+                  Create An acoout? Sign up
+                </Link>
+              </div>
             </div>
-            
-            <div class="form-group">
-              <label>Password<span>*</span></label>
-              <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} required />
+            <div className="col-right">
+              <div className="form-box">
+                <h2>Sign In Your Vendor Account</h2>
+                <form>
+                  <div className="form-group">
+                    <label>
+                      Email<span>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your Email / Mobile No."
+                      onChange={(e) => setUsername(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>
+                      Password<span>*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Enter your password"
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <button type="button" onClick={getLogin} className="submit-btn">
+                    Sign In
+                  </button>
+                  <div className="form-footer">
+                    <a href="#">Forgot Password?</a>
+                  </div>
+                </form>
+              </div>
             </div>
-             
-            <button type="button" onClick={getLogin} class="submit-btn">Sign In</button>
-            <div class="form-footer">
-            <a href="#">Forgot Password?</a> 
           </div>
-          </form>
-          
         </div>
       </div>
     </div>
-  </div>
-  
+  );
+};
 
-
-
-  )
-}
-
-export default Vendorlogin
+export default Vendorlogin;

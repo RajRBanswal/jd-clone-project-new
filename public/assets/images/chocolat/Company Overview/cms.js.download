@@ -371,7 +371,7 @@ $(document).ready(function() {
 	}
 
 	$(document).on('click','.custom-dp .dropdown-menu li a',function(){
-		$(this).parents(".dropdown").find('.btn').html('<span class="cdr cdrcolor">'+$(this).text()+'</span><span class="caretd cms_sprt2"></span>');
+		$(this).parents(".dropdown").find('.btn').html('<span className="cdr cdrcolor">'+$(this).text()+'</span><span className="caretd cms_sprt2"></span>');
 		if(typeof $(this).attr("data-stdcode") != "undefined" && $.trim($(this).attr("data-stdcode")) != ""){
 			var stdcode = $(this).attr("data-stdcode");
 			$("#basic-addon2").text(stdcode);
@@ -428,96 +428,96 @@ $(".fyearId").click(function(){
 			}else{
 				var shortText = "Quarterly Financials";
 			}
-			var yearText = '<span class="cdr tcon" id="cdr_year_Id">'+year_val+'</span>';
+			var yearText = '<span className="cdr tcon" id="cdr_year_Id">'+year_val+'</span>';
             var findata_text = "<div id='finDtaId'>";
 			$.each(response, function (index, entry) {
 				if(index == "2012-13"){
-					findata_text += '<div class="qu-report">'+
-										'<ul class="af12">'+
-											'<li class="col-sm-3 af_fr">'+
-												'<span class="qf tcon">Annual Financials <br>(FY '+index+')</span>'+
+					findata_text += '<div className="qu-report">'+
+										'<ul className="af12">'+
+											'<li className="col-sm-3 af_fr">'+
+												'<span className="qf tcon">Annual Financials <br>(FY '+index+')</span>'+
 											'</li>'+
-											'<li class="col-sm-2 af_sec">';
+											'<li className="col-sm-2 af_sec">';
 											if(entry[1] != undefined){
-								findata_text +=	'<span class="pdfP">'+
-													'<a class="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+								findata_text +=	'<span className="pdfP">'+
+													'<a className="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												if(entry[1].audio_flag == 1){
-									findata_text += '<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+									findata_text += '<a className="pdfP_in tcon" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
 												}
 								findata_text += '</span>';
 											}else{
-								findata_text += '<span class="pdfP">----</span>';
+								findata_text += '<span className="pdfP">----</span>';
 											}
 							findata_text += '</li>'+
-											'<li class="col-sm-2 af_thr">';
+											'<li className="col-sm-2 af_thr">';
 											if(entry[2] != undefined){
-								findata_text +='<span class="pdfP">'+
-													'<a class="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+								findata_text +='<span className="pdfP">'+
+													'<a className="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												if(entry[2].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+									findata_text +='<a className="pdfP_in tcon" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
 												}
 								findata_text +='</span>';
 											}else{
-								findata_text +='<span class="pdfP">----</span>';
+								findata_text +='<span className="pdfP">----</span>';
 											}
 							findata_text +='</li>'+
-											'<li class="col-sm-2 af_four">';
+											'<li className="col-sm-2 af_four">';
 											if(entry[3] != undefined){
-								findata_text +='<span class="pdfP">'+
-													'<a class="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+								findata_text +='<span className="pdfP">'+
+													'<a className="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												if(entry[3].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+									findata_text +='<a className="pdfP_in tcon" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
 												}
 								findata_text +='</span>';
 											}else{
-								findata_text += '<span class="pdfP">----</span>';
+								findata_text += '<span className="pdfP">----</span>';
 											}
 							findata_text +='</li>'+
-											'<li class="col-sm-3 qu12">';
+											'<li className="col-sm-3 qu12">';
 											if(entry[4] != undefined){
-								findata_text +='<span class="pdfP">'+
-													'<a class="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+								findata_text +='<span className="pdfP">'+
+													'<a className="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												if(entry[4].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
+									findata_text +='<a className="pdfP_in tcon" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>';
 												}
 								findata_text +='</span>';
 											}else{
-								findata_text += '<span class="pdfP">----</span>';
+								findata_text += '<span className="pdfP">----</span>';
 											}
 							findata_text +='</li>'+
 									'</ul>'+
 								'</div>';
 				}else{
-					findata_text += '<div class="qu-report">'+
+					findata_text += '<div className="qu-report">'+
 										'<ul>'+
-											'<li class="col-sm-3">'+
-												'<span class="qf tcon">'+shortText+' <br>(FY '+index+')</span>'+
+											'<li className="col-sm-3">'+
+												'<span className="qf tcon">'+shortText+' <br>(FY '+index+')</span>'+
 											'</li>'+
-											'<li class="col-sm-2">';
+											'<li className="col-sm-2">';
 											if(entry[1] != undefined){
-								findata_text +=	'<span class="q1">Q1</span>'+
-												'<span class="pdfP">';
+								findata_text +=	'<span className="q1">Q1</span>'+
+												'<span className="pdfP">';
 												if(entry[1].reportfiling_pdf != '') {
-													findata_text +=	'<a class="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+													findata_text +=	'<a className="pdfP_in tcon" href="'+entry[1].reportfiling_pdf+'" title="'+entry[1].pdf_name+'" alt="'+entry[1].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												}
 												if(entry[1].audio_flag==1){
-									findata_text += '<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip1'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+									findata_text += '<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip1'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div class="modal fade" id="audioclip1'+entry[1].mp3finyear+'" tabindex="-1" role="dialog" >'+
-													  '<div class="modal-dialog" role="document">'+
-														'<div class="modal-content dtable">'+
-															'<div class="modal-header">'+
-																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+													'<div className="modal fade" id="audioclip1'+entry[1].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div className="modal-dialog" role="document">'+
+														'<div className="modal-content dtable">'+
+															'<div className="modal-header">'+
+																'<button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
 																	'<span aria-hidden="true">&times;</span>'+
 																'</button>'+
 															'</div>'+
-															'<div class="modal-body">'+
-																'<div class="earningcallT">'+
-																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[1].mp3quarter+' FY '+entry[1].mp3finyear+'</span></p>'+
-																	'<div class="eartsec" id="audioplayer">'+
+															'<div className="modal-body">'+
+																'<div className="earningcallT">'+
+																	'<p className="text-center frp">Earnings Call Transcript For <span className="orange">Q'+entry[1].mp3quarter+' FY '+entry[1].mp3finyear+'</span></p>'+
+																	'<div className="eartsec" id="audioplayer">'+
 																		'<audio id="player2" src="'+entry[1].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
 																	'</div>'+
-																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																	'<p className="text-center secp tcon">Click the button to stop audio playback</p>'+
 																'</div>'+
 															'</div>'+
 														'</div>'+
@@ -526,34 +526,34 @@ $(".fyearId").click(function(){
 												}
 								findata_text += '</span>';
 											}else{
-								findata_text +=	'<span class="q1 q1_gray">Q1</span>';
+								findata_text +=	'<span className="q1 q1_gray">Q1</span>';
 											}
 							findata_text += '</li>'+
-											'<li class="col-sm-2">';
+											'<li className="col-sm-2">';
 											if(entry[2] != undefined){
-								findata_text +='<span class="q1">Q2</span>'+
-												'<span class="pdfP">';
+								findata_text +='<span className="q1">Q2</span>'+
+												'<span className="pdfP">';
 												if(entry[2].reportfiling_pdf != '') {
-													findata_text +='<a class="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+													findata_text +='<a className="pdfP_in tcon" href="'+entry[2].reportfiling_pdf+'" title="'+entry[2].pdf_name+'" alt="'+entry[2].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												}
 												if(entry[2].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip2'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip2'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div class="modal fade" id="audioclip2'+entry[2].mp3finyear+'" tabindex="-1" role="dialog" >'+
-													  '<div class="modal-dialog" role="document">'+
-														'<div class="modal-content dtable">'+
-															'<div class="modal-header">'+
-																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+													'<div className="modal fade" id="audioclip2'+entry[2].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div className="modal-dialog" role="document">'+
+														'<div className="modal-content dtable">'+
+															'<div className="modal-header">'+
+																'<button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
 																	'<span aria-hidden="true">&times;</span>'+
 																'</button>'+
 															'</div>'+
-															'<div class="modal-body">'+
-																'<div class="earningcallT">'+
-																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[2].mp3quarter+' FY '+entry[2].mp3finyear+'</span></p>'+
-																	'<div class="eartsec" id="audioplayer">'+
+															'<div className="modal-body">'+
+																'<div className="earningcallT">'+
+																	'<p className="text-center frp">Earnings Call Transcript For <span className="orange">Q'+entry[2].mp3quarter+' FY '+entry[2].mp3finyear+'</span></p>'+
+																	'<div className="eartsec" id="audioplayer">'+
 																		'<audio id="player2" src="'+entry[2].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
 																	'</div>'+
-																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																	'<p className="text-center secp tcon">Click the button to stop audio playback</p>'+
 																'</div>'+
 															'</div>'+
 														'</div>'+
@@ -562,34 +562,34 @@ $(".fyearId").click(function(){
 												}
 								findata_text +='</span>';
 											}else{
-								findata_text +='<span class="q1 q1_gray">Q2</span>';
+								findata_text +='<span className="q1 q1_gray">Q2</span>';
 											}
 							findata_text +='</li>'+
-											'<li class="col-sm-2">';
+											'<li className="col-sm-2">';
 										if(entry[3] != undefined){
-								findata_text +='<span class="q1">Q3</span>'+
-												'<span class="pdfP">';
+								findata_text +='<span className="q1">Q3</span>'+
+												'<span className="pdfP">';
 												if(entry[3].reportfiling_pdf != '') {
-													findata_text +='<a class="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+													findata_text +='<a className="pdfP_in tcon" href="'+entry[3].reportfiling_pdf+'" title="'+entry[3].pdf_name+'" alt="'+entry[3].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												}
 											if(entry[3].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip3'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip3'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div class="modal fade" id="audioclip3'+entry[3].mp3finyear+'" tabindex="-1" role="dialog" >'+
-													  '<div class="modal-dialog" role="document">'+
-														'<div class="modal-content dtable">'+
-															'<div class="modal-header">'+
-																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+													'<div className="modal fade" id="audioclip3'+entry[3].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div className="modal-dialog" role="document">'+
+														'<div className="modal-content dtable">'+
+															'<div className="modal-header">'+
+																'<button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
 																	'<span aria-hidden="true">&times;</span>'+
 																'</button>'+
 															'</div>'+
-															'<div class="modal-body">'+
-																'<div class="earningcallT">'+
-																	'<p class="text-center frp">Earnings Call Transcript For <span class="orange">Q'+entry[3].mp3quarter+' FY '+entry[3].mp3finyear+'</span></p>'+
-																	'<div class="eartsec" id="audioplayer">'+
+															'<div className="modal-body">'+
+																'<div className="earningcallT">'+
+																	'<p className="text-center frp">Earnings Call Transcript For <span className="orange">Q'+entry[3].mp3quarter+' FY '+entry[3].mp3finyear+'</span></p>'+
+																	'<div className="eartsec" id="audioplayer">'+
 																		'<audio id="player2" src="'+entry[3].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
 																	'</div>'+
-																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																	'<p className="text-center secp tcon">Click the button to stop audio playback</p>'+
 																'</div>'+
 															'</div>'+
 														'</div>'+
@@ -598,34 +598,34 @@ $(".fyearId").click(function(){
 											}
 								findata_text +='</span>';
 										}else{
-								findata_text +='<span class="q1 q1_gray">Q3</span>';
+								findata_text +='<span className="q1 q1_gray">Q3</span>';
 										}
 							findata_text +='</li>'+
-											'<li class="col-sm-3">';
+											'<li className="col-sm-3">';
 										if(entry[4] != undefined){
-								findata_text +='<span class="q1">Q4 & <span class="tcon">Annual</span></span>'+
-												'<span class="pdfP">';
+								findata_text +='<span className="q1">Q4 & <span className="tcon">Annual</span></span>'+
+												'<span className="pdfP">';
 												if(entry[4].reportfiling_pdf != '') {
-													findata_text +='<a class="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>';
+													findata_text +='<a className="pdfP_in tcon" href="'+entry[4].reportfiling_pdf+'" title="'+entry[4].pdf_name+'" alt="'+entry[4].pdf_name+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>';
 												}
 											if(entry[4].audio_flag==1){
-									findata_text +='<a class="pdfP_in tcon" data-toggle="modal" data-target="#audioclip4'+index+'" href="javascript:void(0);"><i class="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
+									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip4'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div class="modal fade" id="audioclip4'+entry[4].mp3finyear+'" tabindex="-1" role="dialog" >'+
-													  '<div class="modal-dialog" role="document">'+
-														'<div class="modal-content dtable">'+
-															'<div class="modal-header">'+
-																'<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
+													'<div className="modal fade" id="audioclip4'+entry[4].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													  '<div className="modal-dialog" role="document">'+
+														'<div className="modal-content dtable">'+
+															'<div className="modal-header">'+
+																'<button type="button" className="close" data-dismiss="modal" aria-label="Close" onclick="audioclose();">'+
 																	'<span aria-hidden="true">&times;</span>'+
 																'</button>'+
 															'</div>'+
-															'<div class="modal-body">'+
-																'<div class="earningcallT">'+
-																	'<p class="text-center frp tcon">Earnings Call Transcript For <span class="orange">Q'+entry[4].mp3quarter+' FY '+entry[4].mp3finyear+'</span></p>'+
-																	'<div class="eartsec" id="audioplayer">'+
+															'<div className="modal-body">'+
+																'<div className="earningcallT">'+
+																	'<p className="text-center frp tcon">Earnings Call Transcript For <span className="orange">Q'+entry[4].mp3quarter+' FY '+entry[4].mp3finyear+'</span></p>'+
+																	'<div className="eartsec" id="audioplayer">'+
 																		'<audio id="player2" src="'+entry[4].mp3+'" type="audio/mp3" controls="controls"  autoplay="autoplay"></audio>'+
 																	'</div>'+
-																	'<p class="text-center secp tcon">Click the button to stop audio playback</p>'+
+																	'<p className="text-center secp tcon">Click the button to stop audio playback</p>'+
 																'</div>'+
 															'</div>'+
 														'</div>'+
@@ -634,7 +634,7 @@ $(".fyearId").click(function(){
 											}
 								findata_text +='</span>';
 										}else{
-								findata_text +='<span class="q1 q1_gray">Q4 &<span class="tcon"> Annual</span></span>';
+								findata_text +='<span className="q1 q1_gray">Q4 &<span className="tcon"> Annual</span></span>';
 										}
 							findata_text +='</li>'+
 									'</ul>'+
@@ -799,18 +799,18 @@ $(".f_year").click(function(){
 					if(hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details') {
 						display_date = entry['display_date'];
 					}
-					fill_text +='<div class="copRw">'+
-									'<div class="col-sm-12 padding0">'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
-											'<span class="copdate tcon">'+display_date;
+					fill_text +='<div className="copRw">'+
+									'<div className="col-sm-12 padding0">'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span className="copdate tcon">'+display_date;
 										if(entry['city'] != null && hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details'){
 								fill_text +=' | '+entry['city'];
 										}
 								fill_text +='</span>'+
-											'<span class="co-info tcon">'+entry['title']+'</span>'+
+											'<span className="co-info tcon">'+entry['title']+'</span>'+
 										'</div>'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
-											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a className="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
 										'</div>'+
 									'</div>'+
 								'</div>';
@@ -819,10 +819,10 @@ $(".f_year").click(function(){
 
 			$('#fillDta').html(fill_text);
 			var monthText = "";
-			monthText += '<li><a href="javascript:void(0);" class="f_month tcon" id="f_month_all" data-value="" onclick="getDataMonth(this.id);">Show All</a></li>';
+			monthText += '<li><a href="javascript:void(0);" className="f_month tcon" id="f_month_all" data-value="" onclick="getDataMonth(this.id);">Show All</a></li>';
 			if(!$.isEmptyObject(response['results']['months'][0])){
 				$.each(response['results']['months'], function (key, val) {
-					monthText += '<li><a href="javascript:void(0);" class="f_month tcon" id="f_month_'+val['month']+'" data-value="'+val['month']+'" onclick="getDataMonth(this.id);">'+val['month']+'</a></li>';
+					monthText += '<li><a href="javascript:void(0);" className="f_month tcon" id="f_month_'+val['month']+'" data-value="'+val['month']+'" onclick="getDataMonth(this.id);">'+val['month']+'</a></li>';
 				});
 			}
 			$('#finmonthId').html(monthText);
@@ -855,7 +855,7 @@ $(".anlyearId").click(function(){
         success: function (response) {
 			if(year == ""){ year = "Show All" }
 			response = JSON.parse(response);
-			var anlText = '<ul class="anulr">';
+			var anlText = '<ul className="anulr">';
 			$.each(response['results']['data'], function (index, entry) {
 				var fdate			= entry['display_date'];
 				fdate				= fdate.split(' ');
@@ -866,18 +866,18 @@ $(".anlyearId").click(function(){
 				Date.prototype.getMonthName = function() { return dt.monthNames[dt.getMonth()];};
 				var display_date	= dt.monthNames[dt.getMonth()]+' '+dt.getDate()+', '+dt.getFullYear();
 
-				anlText	+= '<li class="anrp col-sm-4">'+
-								'<span class="anfr">'+
-									'<span class="imgb">'+
+				anlText	+= '<li className="anrp col-sm-4">'+
+								'<span className="anfr">'+
+									'<span className="imgb">'+
 										'<img src="'+entry['thumbnail_path']+'" title="'+entry['pdf_name']+'-'+edate+'"/>'+
 									'</span>'+
-									'<span class="anpara">'+
-										'<span class="fr tcon">'+entry['title']+'</span>'+
-										'<span class="sec tcon">'+display_date+'</span>'+
-										'<span class="thr">'+entry['pdf_file_size']+'</span>'+
+									'<span className="anpara">'+
+										'<span className="fr tcon">'+entry['title']+'</span>'+
+										'<span className="sec tcon">'+display_date+'</span>'+
+										'<span className="thr">'+entry['pdf_file_size']+'</span>'+
 									'</span>'+
-									'<span class="last">'+
-										'<a class="fr tcon" href="'+entry['reportfiling_pdf']+'" title="'+entry['pdf_name']+'" alt="'+entry['pdf_name']+'" target="_blank"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+									'<span className="last">'+
+										'<a className="fr tcon" href="'+entry['reportfiling_pdf']+'" title="'+entry['pdf_name']+'" alt="'+entry['pdf_name']+'" target="_blank"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
 									'</span>'+
 								'</span>'+
 							'</li>';
@@ -885,7 +885,7 @@ $(".anlyearId").click(function(){
 			});
 			anlText += '</ul>';
 			$('.anulr').replaceWith(anlText);
-			$('#cdr_year_Id').replaceWith('<span class="cdr tcon" id="cdr_year_Id">'+year+'</span>');
+			$('#cdr_year_Id').replaceWith('<span className="cdr tcon" id="cdr_year_Id">'+year+'</span>');
 			if(ETRBO==0){
 				cmslanguage.init(web_lang,web_langs);
 			}
@@ -1014,18 +1014,18 @@ var randNum=parseInt(Math.random()*1000);
 					if(hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details') {
 						display_date = entry['display_date'];
 					}
-					fill_text +='<div class="copRw">'+
-									'<div class="col-sm-12 padding0">'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
-											'<span class="copdate tcon">'+display_date;
+					fill_text +='<div className="copRw">'+
+									'<div className="col-sm-12 padding0">'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span className="copdate tcon">'+display_date;
 										if(entry['city'] != null && hname == 'Press Releases' || hname == 'Company Presentation' || hname == 'Share Buyback' || hname == 'Earnings Call Details'){
 								fill_text +=' | '+entry['city'];
 										}
 								fill_text +='</span>'+
-											'<span class="co-info tcon">'+entry['title']+'</span>'+
+											'<span className="co-info tcon">'+entry['title']+'</span>'+
 										'</div>'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
-											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a className="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
 										'</div>'+
 									'</div>'+
 								'</div>';
@@ -1247,17 +1247,17 @@ var randNum=parseInt(Math.random()*1000);
 			response = JSON.parse(response);
             var spanStr = '';
 
-			spanStr += '<div id="ctGrpId" class="custom_select form-group">'+
-							'<div class="csfr" id="csfrId">'+
-								'<span class="dpspn" id="dpspnId">'+
-									'<a href="javascript:void(0);" id="shcity" value="" class="tcon" onclick="opendata();">Select City *</a>'+
+			spanStr += '<div id="ctGrpId" className="custom_select form-group">'+
+							'<div className="csfr" id="csfrId">'+
+								'<span className="dpspn" id="dpspnId">'+
+									'<a href="javascript:void(0);" id="shcity" value="" className="tcon" onclick="opendata();">Select City *</a>'+
 								'</span>'+
-								'<span class="downArrow cms_sprt2"></span>'+
-								'<span id="shcityErr" class="error"></span>'+
+								'<span className="downArrow cms_sprt2"></span>'+
+								'<span id="shcityErr" className="error"></span>'+
 							'</div>'+
-							'<ul class="drul" id="drulId">';
+							'<ul className="drul" id="drulId">';
 					$.each(response['results'], function (index, entry) {
-			spanStr += 			"<li><a href=\"javascript:void(0);\" onclick=\"selTestCity('"+entry['ct_name']+"');\" class=\"tcon\">"+entry['ct_name']+"</a></li>";
+			spanStr += 			"<li><a href=\"javascript:void(0);\" onclick=\"selTestCity('"+entry['ct_name']+"');\" className=\"tcon\">"+entry['ct_name']+"</a></li>";
 					});
 			spanStr += 	'</ul></div>';
 			$('#ctGrpId').replaceWith(spanStr);
@@ -1411,7 +1411,7 @@ function success_videos(video_id,city,cname,compname){
 		}else{
 			var vWidth = 400;
 		}
-		var video_details = '<video class="successVideo" autoplay="autoplay" controls="controls" width="'+vWidth+'" height="285"><source src="'+strVideoFile1+'" type="video/mp4"/><source src="'+strVideoFile2+'" type="video/ogg"/><source src="'+strVideoFile3+'" type="video/3gp"/><source src="'+strVideoFile4+'" type="video/wmv"/><source src="'+strVideoFile5+'" type="video/flv"/></video>';
+		var video_details = '<video className="successVideo" autoplay="autoplay" controls="controls" width="'+vWidth+'" height="285"><source src="'+strVideoFile1+'" type="video/mp4"/><source src="'+strVideoFile2+'" type="video/ogg"/><source src="'+strVideoFile3+'" type="video/3gp"/><source src="'+strVideoFile4+'" type="video/wmv"/><source src="'+strVideoFile5+'" type="video/flv"/></video>';
 		$('#imagespaces').hide();
 		$("#mediaspaces").html(video_details);
 	}
@@ -1451,34 +1451,34 @@ function source_press_video(page_source,sby){
 			  },
 		success: function(result){
 			response = JSON.parse(result);
-			var cmntText = '<div role="tabpanel" class="tab-pane fade active in" id="comment" aria-labelledby="comment-tab">';
+			var cmntText = '<div role="tabpanel" className="tab-pane fade active in" id="comment" aria-labelledby="comment-tab">';
 			$.each(response['results'], function (index, entry) {
-				cmntText += '<div class="ratuserdiv">'+
-								'<div class="allratL">'+
-									'<div class="fr">'+
+				cmntText += '<div className="ratuserdiv">'+
+								'<div className="allratL">'+
+									'<div className="fr">'+
 										'<img width="50px" height="50px" src="'+entry['img']+'" alt="" id="rwimg0">'+
 									'</div>'+
 								'</div>'+
-								'<div class="allratR">'+
-									'<span class="fr">'+
-										'<span class="rName trat" id="rwname0">'+entry['name']+'</span>'+
-										'<span id="rwstars0" class="star_m">';
+								'<div className="allratR">'+
+									'<span className="fr">'+
+										'<span className="rName trat" id="rwname0">'+entry['name']+'</span>'+
+										'<span id="rwstars0" className="star_m">';
 											if(entry['rating'] != 0){
 												for(var i=0;i<5;i++){
 													if(i < entry['rating']){
-										cmntText += "<span class=\"ms10\"></span>";
+										cmntText += "<span className=\"ms10\"></span>";
 													}else{
-										cmntText += "<span class=\"ms0\"></span>";
+										cmntText += "<span className=\"ms0\"></span>";
 													}
 												}
 											}
 							cmntText +='</span>'+
 									'</span>'+
-									'<p class="sec">'+
-										'<span class="sec1">'+entry['mob_email']+'</span>'+
-										'<span class="dtyr ratx pull-right">'+entry['date']+'</span>'+
+									'<p className="sec">'+
+										'<span className="sec1">'+entry['mob_email']+'</span>'+
+										'<span className="dtyr ratx pull-right">'+entry['date']+'</span>'+
 									'</p>'+
-									'<p id="rwopinion0" class="thr tcon">'+entry['comment']+'</p>'+
+									'<p id="rwopinion0" className="thr tcon">'+entry['comment']+'</p>'+
 								'</div>'+
 							'</div>';
 			});
@@ -1492,7 +1492,7 @@ function source_press_video(page_source,sby){
 			for(var pg_ap = 1 ; pg_ap <= response['totalpages']; pg_ap++){
 				if(response['page']==pg_ap){
 					if(response['totalpages']>1){
-						paging_ap = paging_ap+"<li class='active'><a>"+pg_ap+"<span class='sr-only'>(current)</span></a></li>";
+						paging_ap = paging_ap+"<li className='active'><a>"+pg_ap+"<span className='sr-only'>(current)</span></a></li>";
 					}
 					else{
 						paging_ap = paging_ap+"<li><span>&nbsp;</span></li>";
@@ -1500,20 +1500,20 @@ function source_press_video(page_source,sby){
 					if(response['page']>1)
 					{
 						pgs_ap = response['page']-1;
-						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_video("+pgs_ap+","+sby+")'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_video("+pgs_ap+","+sby+")'><span aria-hidden='true' className='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
 					}
 					else
 					{
-						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' className='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
 					}
 					if(response['page']!=response['totalpages'])
 					{
 						pgs2_ap = response['page']+1;
-						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_video("+pgs2_ap+","+sby+")'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_video("+pgs2_ap+","+sby+")'><span className='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
 					}
 					else
 					{
-						 next_ap = "<li><a href='#comment' aria-label='Next'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+						 next_ap = "<li><a href='#comment' aria-label='Next'><span className='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
 					}
 				}
 				else if((pg_ap>(response['page']-5))&&(pg_ap<(response['page']+5)))
@@ -1523,8 +1523,8 @@ function source_press_video(page_source,sby){
 				cnts_ap++;
 			}
 
-			pgnText += "<nav id='videopg' class=\"new_pagination\">" +
-							"<ul class=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
+			pgnText += "<nav id='videopg' className=\"new_pagination\">" +
+							"<ul className=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
 					   "</nav>";
 			cmntText += pgnText+'</div>';
 			$("#comment").replaceWith(cmntText);
@@ -1550,32 +1550,32 @@ function source_press_comment(page_source,sby){
 			var cmntText = "";
 
 			$.each(response['results'], function (index, entry) {
-				cmntText += '<div class="ratuserdiv">'+
-								'<div class="allratL">'+
-									'<div class="fr">'+
+				cmntText += '<div className="ratuserdiv">'+
+								'<div className="allratL">'+
+									'<div className="fr">'+
 										'<img width="50px" height="50px" src="'+entry['img']+'" alt="" id="rwimg0">'+
 									'</div>'+
 								'</div>'+
-								'<div class="allratR">'+
-									'<span class="fr">'+
-										'<span class="rName trat" id="rwname0">'+entry['name']+'</span>'+
-										'<span id="rwstars0" class="star_m">';
+								'<div className="allratR">'+
+									'<span className="fr">'+
+										'<span className="rName trat" id="rwname0">'+entry['name']+'</span>'+
+										'<span id="rwstars0" className="star_m">';
 											if(entry['rating'] != 0){
 												for(var i=0;i<5;i++){
 													if(i < entry['rating']){
-										cmntText += "<span class=\"ms10\"></span>";
+										cmntText += "<span className=\"ms10\"></span>";
 													}else{
-										cmntText += "<span class=\"ms0\"></span>";
+										cmntText += "<span className=\"ms0\"></span>";
 													}
 												}
 											}
 							cmntText +='</span>'+
 									'</span>'+
-									'<p class="sec">'+
-										'<span class="sec1">'+entry['mob_email']+'</span>'+
-										'<span class="dtyr ratx pull-right">'+entry['date']+'</span>'+
+									'<p className="sec">'+
+										'<span className="sec1">'+entry['mob_email']+'</span>'+
+										'<span className="dtyr ratx pull-right">'+entry['date']+'</span>'+
 									'</p>'+
-									'<p id="rwopinion0" class="thr tcon">'+entry['comment']+'</p>'+
+									'<p id="rwopinion0" className="thr tcon">'+entry['comment']+'</p>'+
 								'</div>'+
 							'</div>';
 			});
@@ -1589,7 +1589,7 @@ function source_press_comment(page_source,sby){
 			for(var pg_ap = 1 ; pg_ap <= response['totalpages']; pg_ap++){
 				if(response['page']==pg_ap){
 					if(response['totalpages']>1){
-						paging_ap = paging_ap+"<li class='active'><a>"+pg_ap+"<span class='sr-only'>(current)</span></a></li>";
+						paging_ap = paging_ap+"<li className='active'><a>"+pg_ap+"<span className='sr-only'>(current)</span></a></li>";
 					}
 					else{
 						paging_ap = paging_ap+"<li><span>&nbsp;</span></li>";
@@ -1597,20 +1597,20 @@ function source_press_comment(page_source,sby){
 					if(response['page']>1)
 					{
 						pgs_ap = response['page']-1;
-						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_comment("+pgs_ap+","+sby+")'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+						previous_ap= "<li><a href='#comment' aria-label='Previous' onclick='javascript:source_press_comment("+pgs_ap+","+sby+")'><span aria-hidden='true' className='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
 					}
 					else
 					{
-						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' class='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
+						previous_ap= "<li><a href='#comment' aria-label='Previous'><span aria-hidden='true' className='pagi_lft cms_sprt2 cms_sprt2'></span></a></li>";
 					}
 					if(response['page']!=response['totalpages'])
 					{
 						pgs2_ap = response['page']+1;
-						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_comment("+pgs2_ap+","+sby+")'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+						next_ap = "<li><a href='#comment' aria-label='Next' onclick='javascript:source_press_comment("+pgs2_ap+","+sby+")'><span className='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
 					}
 					else
 					{
-						 next_ap = "<li><a href='#comment' aria-label='Next'><span class='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
+						 next_ap = "<li><a href='#comment' aria-label='Next'><span className='pagi_rgt cms_sprt2 cms_sprt2' aria-hidden='true'></span></a></li>";
 					}
 				}
 				else if((pg_ap>(response['page']-5))&&(pg_ap<(response['page']+5)))
@@ -1620,8 +1620,8 @@ function source_press_comment(page_source,sby){
 				cnts_ap++;
 			}
 
-			pgnText += "<nav id=\"presspg\" class=\"new_pagination\">" +
-							"<ul class=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
+			pgnText += "<nav id=\"presspg\" className=\"new_pagination\">" +
+							"<ul className=\"pagination\">"+previous_ap+paging_ap+next_ap+"</ul>" +
 					   "</nav>";
 			cmntText += pgnText+'</div>';
 			$("#comment").html(cmntText);
@@ -2791,7 +2791,7 @@ function openPopup(divname,name){
 }
 
 /* Popup JS */
-(function(a){a.fn.bPopup=function(D,B){function x(){a.isFunction(P.onOpen)&&P.onOpen.call(O);G=(M.data("bPopup")||0)+1;N="__bPopup"+G;F="auto"!==P.position[1];E="auto"!==P.position[0];I="fixed"===P.positionStyle;H=z(O,P.amsl);L=F?P.position[1]:H[1];K=E?P.position[0]:H[0];A=y();var d=v()+"px";var c=b()+"px";P.modal&&a('<div class="bModal '+N+'"></div>').css({"background-color":P.modalColor,height:d,left:0,opacity:0,position:"absolute",top:0,width:c,"z-index":P.zIndex+G}).each(function(){P.appending&&a(this).appendTo(P.appendTo)}).animate({opacity:P.opacity},P.fadeSpeed);O.data("bPopup",P).data("id",N).css({left:!P.follow[0]&&E||I?K:J.scrollLeft()+K,position:P.positionStyle||"absolute",top:!P.follow[1]&&F||I?L:J.scrollTop()+L,"z-index":P.zIndex+G+1}).each(function(){P.appending&&a(this).appendTo(P.appendTo);if(null!=P.loadUrl){switch(P.contentContainer=a(P.contentContainer||O),P.content){case"iframe":a('<iframe scrolling="no" frameborder="0"></iframe>').attr("src",P.loadUrl).appendTo(P.contentContainer);break;default:P.contentContainer.load(P.loadUrl)}}}).fadeIn(P.fadeSpeed,function(){a.isFunction(B)&&B.call(O);w()})}function C(){P.modal&&a(".bModal."+O.data("id")).fadeOut(P.fadeSpeed,function(){a(this).remove()});O.stop().fadeOut(P.fadeSpeed,function(){null!=P.loadUrl&&P.contentContainer.empty()});M.data("bPopup",0<M.data("bPopup")-1?M.data("bPopup")-1:null);P.scrollBar||a("html").css("overflow","auto");a("."+P.closeClass).on("click."+N);a(".bModal."+N).on("click");J.unbind("keydown."+N);M.unbind("."+N);O.data("bPopup",null);a.isFunction(P.onClose)&&setTimeout(function(){P.onClose.call(O)},P.fadeSpeed);return !1}function v(){var c=document;return Math.max(Math.max(c.body.scrollHeight,c.documentElement.scrollHeight),Math.max(c.body.clientHeight,c.documentElement.clientHeight))}function b(){var c=document;return Math.max(Math.max(c.body.scrollWidth,c.documentElement.scrollWidth),Math.max(c.body.clientWidth,c.documentElement.clientWidth))}function w(){M.data("bPopup",G);a("."+P.closeClass).on("click."+N,C);P.modalClose&&a(".bModal."+N).on("click",C).css("cursor","default");(P.follow[0]||P.follow[1])&&M.bind("scroll."+N,function(){A&&O.stop().animate({left:P.follow[0]&&!I?J.scrollLeft()+K:K,top:P.follow[1]&&!I?J.scrollTop()+L:L},P.followSpeed)}).bind("resize."+N,function(){if(A=y()){H=z(O,P.amsl),P.follow[0]&&(K=E?K:H[0]),P.follow[1]&&(L=F?L:H[1]),O.stop().each(function(){I?a(this).css({left:K,top:L},P.followSpeed):a(this).animate({left:E?K:K+J.scrollLeft(),top:F?L:L+J.scrollTop()},P.followSpeed)})}});P.escClose&&J.bind("keydown."+N,function(c){27==c.which&&C()})}function z(f,e){var h=(M.width()-f.outerWidth(!0))/2,g=(M.height()-f.outerHeight(!0))/2-e;return[h,20>g?20:g]}function y(){return M.height()>O.outerHeight(!0)+20&&M.width()>O.outerWidth(!0)+20}a.isFunction(D)&&(B=D,D=null);var P=a.extend({},a.fn.bPopup.defaults,D);P.scrollBar||a("html").css("overflow","hidden");var O=this,J=a(document),M=a(window),G,N,A,F,E,I,H,L,K;this.close=function(){P=O.data("bPopup");C()};return this.each(function(){O.data("bPopup")||x()})};a.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",closeClass:"jcl",content:"ajax",contentContainer:null,escClose:!0,fadeSpeed:250,follow:[!0,!0],followSpeed:500,loadUrl:null,modal:!0,modalClose:!0,modalColor:"#fff",onClose:null,onOpen:null,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,zIndex:9997}})(jQuery);
+(function(a){a.fn.bPopup=function(D,B){function x(){a.isFunction(P.onOpen)&&P.onOpen.call(O);G=(M.data("bPopup")||0)+1;N="__bPopup"+G;F="auto"!==P.position[1];E="auto"!==P.position[0];I="fixed"===P.positionStyle;H=z(O,P.amsl);L=F?P.position[1]:H[1];K=E?P.position[0]:H[0];A=y();var d=v()+"px";var c=b()+"px";P.modal&&a('<div className="bModal '+N+'"></div>').css({"background-color":P.modalColor,height:d,left:0,opacity:0,position:"absolute",top:0,width:c,"z-index":P.zIndex+G}).each(function(){P.appending&&a(this).appendTo(P.appendTo)}).animate({opacity:P.opacity},P.fadeSpeed);O.data("bPopup",P).data("id",N).css({left:!P.follow[0]&&E||I?K:J.scrollLeft()+K,position:P.positionStyle||"absolute",top:!P.follow[1]&&F||I?L:J.scrollTop()+L,"z-index":P.zIndex+G+1}).each(function(){P.appending&&a(this).appendTo(P.appendTo);if(null!=P.loadUrl){switch(P.contentContainer=a(P.contentContainer||O),P.content){case"iframe":a('<iframe scrolling="no" frameborder="0"></iframe>').attr("src",P.loadUrl).appendTo(P.contentContainer);break;default:P.contentContainer.load(P.loadUrl)}}}).fadeIn(P.fadeSpeed,function(){a.isFunction(B)&&B.call(O);w()})}function C(){P.modal&&a(".bModal."+O.data("id")).fadeOut(P.fadeSpeed,function(){a(this).remove()});O.stop().fadeOut(P.fadeSpeed,function(){null!=P.loadUrl&&P.contentContainer.empty()});M.data("bPopup",0<M.data("bPopup")-1?M.data("bPopup")-1:null);P.scrollBar||a("html").css("overflow","auto");a("."+P.closeClass).on("click."+N);a(".bModal."+N).on("click");J.unbind("keydown."+N);M.unbind("."+N);O.data("bPopup",null);a.isFunction(P.onClose)&&setTimeout(function(){P.onClose.call(O)},P.fadeSpeed);return !1}function v(){var c=document;return Math.max(Math.max(c.body.scrollHeight,c.documentElement.scrollHeight),Math.max(c.body.clientHeight,c.documentElement.clientHeight))}function b(){var c=document;return Math.max(Math.max(c.body.scrollWidth,c.documentElement.scrollWidth),Math.max(c.body.clientWidth,c.documentElement.clientWidth))}function w(){M.data("bPopup",G);a("."+P.closeClass).on("click."+N,C);P.modalClose&&a(".bModal."+N).on("click",C).css("cursor","default");(P.follow[0]||P.follow[1])&&M.bind("scroll."+N,function(){A&&O.stop().animate({left:P.follow[0]&&!I?J.scrollLeft()+K:K,top:P.follow[1]&&!I?J.scrollTop()+L:L},P.followSpeed)}).bind("resize."+N,function(){if(A=y()){H=z(O,P.amsl),P.follow[0]&&(K=E?K:H[0]),P.follow[1]&&(L=F?L:H[1]),O.stop().each(function(){I?a(this).css({left:K,top:L},P.followSpeed):a(this).animate({left:E?K:K+J.scrollLeft(),top:F?L:L+J.scrollTop()},P.followSpeed)})}});P.escClose&&J.bind("keydown."+N,function(c){27==c.which&&C()})}function z(f,e){var h=(M.width()-f.outerWidth(!0))/2,g=(M.height()-f.outerHeight(!0))/2-e;return[h,20>g?20:g]}function y(){return M.height()>O.outerHeight(!0)+20&&M.width()>O.outerWidth(!0)+20}a.isFunction(D)&&(B=D,D=null);var P=a.extend({},a.fn.bPopup.defaults,D);P.scrollBar||a("html").css("overflow","hidden");var O=this,J=a(document),M=a(window),G,N,A,F,E,I,H,L,K;this.close=function(){P=O.data("bPopup");C()};return this.each(function(){O.data("bPopup")||x()})};a.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",closeClass:"jcl",content:"ajax",contentContainer:null,escClose:!0,fadeSpeed:250,follow:[!0,!0],followSpeed:500,loadUrl:null,modal:!0,modalClose:!0,modalColor:"#fff",onClose:null,onOpen:null,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,zIndex:9997}})(jQuery);
 
 function setCareersCity(city) {
 	$("#searchcity").hide();
@@ -2855,7 +2855,7 @@ function selectdata(id,title,spnid,idset,idtxtbx, deptid=''){
 				success: function (response) {
 					var citylist = 	"";
 					$.each(response['results'], function (index, entry) {
-						citylist += "<li id=\"li_"+entry['city']+"\" onclick=\"selectdata('"+entry['city']+"','"+entry['city']+"','cityoptions','hdncity','txtcity')\" ><a data-value=\""+entry['city']+"\" data-stdcode=\""+entry['stdcode']+"\" class=\"langClass tcon\" href=\"javascript:void(0);\" >"+entry['city']+"</a></li>";
+						citylist += "<li id=\"li_"+entry['city']+"\" onclick=\"selectdata('"+entry['city']+"','"+entry['city']+"','cityoptions','hdncity','txtcity')\" ><a data-value=\""+entry['city']+"\" data-stdcode=\""+entry['stdcode']+"\" className=\"langClass tcon\" href=\"javascript:void(0);\" >"+entry['city']+"</a></li>";
 					});
 					$("#citylistId").html(citylist);
 					if(ETRBO==0){
@@ -2926,7 +2926,7 @@ function saveData(){
 				$("#dropdownMenu2").find(".cdr").text("Preferred Location*");
 				$("#dropdownMenuNew").find(".cdr").text("Highest Completed Qualification*");
 				$("#dropdownMenuNew2").find(".cdr").text("Years of Experience*");
-				$(".textjobthnks").html('Congratulation, <span class="subspn">you have successfully Uploaded Resume.</span>');
+				$(".textjobthnks").html('Congratulation, <span className="subspn">you have successfully Uploaded Resume.</span>');
 				jQuery("#submitModaljob").modal("show");
 				$("#txtposteddate").val(data['results']);
 			}
@@ -2974,21 +2974,21 @@ function validatejobdetails(){
 
 	if(txtfname == "" || txtfname == "First Name"){
 		$("#txtfname").addClass("err_msg");
-		$("#errfname").html('<span id="adCompErr">Please enter details to proceed</span><span class="adsprite arw"></span>');
+		$("#errfname").html('<span id="adCompErr">Please enter details to proceed</span><span className="adsprite arw"></span>');
 		$("#errfname").show();
 		$("#txtfname").focus();
 		return false;
 	}
 	else if(!isNaN(txtfname)){
 		$("#txtfname").addClass("err_msg");
-		$("#errfname").html('<span id="adCompErr">Please enter valid first name</span><span class="adsprite arw"></span>');
+		$("#errfname").html('<span id="adCompErr">Please enter valid first name</span><span className="adsprite arw"></span>');
 		$("#errfname").show();
 		$("#txtfname").focus();
 		return false;
 	}
 	if(txtfname.length > 50) {
 		$("#txtfname").addClass("err_msg");
-		$("#errfname").html('<span id="adCompErr">Full name should not be more than 50 characters</span><span class="adsprite arw"></span>');
+		$("#errfname").html('<span id="adCompErr">Full name should not be more than 50 characters</span><span className="adsprite arw"></span>');
 		$("#errfname").show();
 		$("#txtfname").focus();
 		return false;
@@ -2996,7 +2996,7 @@ function validatejobdetails(){
 	var regexfn = new RegExp("^[a-zA-Z ]+$");
 	if(!regexfn.test($("#txtfname").val())) {
 		$("#txtfname").addClass("err_msg");
-		$("#errfname").html('<span id="adCompErr">Please enter valid full name</span><span class="adsprite arw"></span>');
+		$("#errfname").html('<span id="adCompErr">Please enter valid full name</span><span className="adsprite arw"></span>');
 		$("#errfname").show();
 		$("#txtfname").focus();
 		return false;
@@ -3004,28 +3004,28 @@ function validatejobdetails(){
 
 	if(txtmob == ""){
 		$("#txtmob").addClass("err_msg");
-		$("#errmob").html('<span id="adCompErr">Please enter details to proceed</span><span class="adsprite arw"></span>');
+		$("#errmob").html('<span id="adCompErr">Please enter details to proceed</span><span className="adsprite arw"></span>');
 		$("#errmob").show();
 		$("#txtmob").focus();
 		return false;
 	}
 	else if($.inArray(txtmob[0],mobArr) == -1 || txtmob.length != 10){
 		$("#txtmob").addClass("err_msg");
-		$("#errmob").html('<span id="adCompErr">Please enter valid mobile number</span><span class="adsprite arw"></span>');
+		$("#errmob").html('<span id="adCompErr">Please enter valid mobile number</span><span className="adsprite arw"></span>');
 		$("#errmob").show();
 		$("#txtmob").focus();
 		return false;
 	}
 	if(txtemail == "" ){
 		$("#txtemail").addClass("err_msg");
-		$("#erremail").html('<span id="adCompErr">Please enter emailid to proceed</span><span class="adsprite arw"></span>');
+		$("#erremail").html('<span id="adCompErr">Please enter emailid to proceed</span><span className="adsprite arw"></span>');
 		$("#erremail").show();
 		$("#txtemail").focus();
 		return false;
 	}
 	if(!regex.test(txtemail) && txtemail != "" && txtemail != "Email ID"){
 		$("#txtemail").addClass("err_msg");
-		$("#erremail").html('<span id="adCompErr">Please enter valid Email Id</span><span class="adsprite arw"></span>');
+		$("#erremail").html('<span id="adCompErr">Please enter valid Email Id</span><span className="adsprite arw"></span>');
 		$("#erremail").show();
 		$("#txtemail").focus();
 		return false;
@@ -3286,18 +3286,18 @@ var randNum=parseInt(Math.random()*1000);
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="copRw">'+
-									'<div class="col-sm-12 padding0">'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copl">'+
-											'<span class="copdate tcon">'+entry['display_date'];
+					fill_text +='<div className="copRw">'+
+									'<div className="col-sm-12 padding0">'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copl">'+
+											'<span className="copdate tcon">'+entry['display_date'];
 										if(entry['city'] != null){
 								fill_text +=' | '+entry['city'];
 										}
 								fill_text +='</span>'+
-											'<span class="co-info tcon">'+entry['title']+'</span>'+
+											'<span className="co-info tcon">'+entry['title']+'</span>'+
 										'</div>'+
-										'<div class="col-sm-6 col-sm-6 col-xs-6 copR">'+
-											'<a class="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i class="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
+										'<div className="col-sm-6 col-sm-6 col-xs-6 copR">'+
+											'<a className="pdfP tcon" target="_blank" title="'+entry['pdf_name']+'" href="'+entry['reportfiling_pdf']+'"><i className="pdf-icon cms_sprt2"></i>Download in PDF</a>'+
 										'</div>'+
 									'</div>'+
 								'</div>';
@@ -3567,9 +3567,9 @@ function getFilingDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft"><span className="remnf">'+entry['title']+'</div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -3599,9 +3599,9 @@ function getFilingDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft"><span class="remnf">'+entry['title']+'</div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft"><span className="remnf">'+entry['title']+'</div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -3631,9 +3631,9 @@ function getPressReleasesDataYear(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -3664,9 +3664,9 @@ function getPressReleasesDataMonth(val){
 			var fill_text = "";
 			if(response['results']['data'] != null){
 				$.each(response['results']['data'], function (index, entry) {
-					fill_text +='<div class="reportblck">';
-					fill_text +='<div class="repolft repolft_col"><div class="remnfspan">'+entry['display_date']+'</div><div class="remnf">'+entry['title']+'</div></div>';
-					fill_text +='<div class="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span class="downlimgc"></span>Download</div>';
+					fill_text +='<div className="reportblck">';
+					fill_text +='<div className="repolft repolft_col"><div className="remnfspan">'+entry['display_date']+'</div><div className="remnf">'+entry['title']+'</div></div>';
+					fill_text +='<div className="reporig" onclick=\"downlaodCMSPDF(\''+entry['reportfiling_pdf']+'\');\"> <span className="downlimgc"></span>Download</div>';
 					fill_text +='</div>';
 				});
 			}
@@ -3788,7 +3788,7 @@ function success_videos_new(video_id,city,cname,compname, clientid){
 			$("#flv_play_div").hide();
 			$(".mgimgbox").removeClass('flv');
 			$("#video_play").show();
-			var video_details = '<div class="mgimgbox"><div class="ytframe-wrap"><iframe title="video details" width="100%" height="100%" frameborder="0" allowfullscreen="" src="'+video_id+'" allow="autoplay" id="svideo"></iframe><div id="YTPlayer" class="yt-iframe"></div></div></div><div class="mgtext_2">'+compname+'</div><div class="mgtext_1">'+cname+' | '+city+'</div>';
+			var video_details = '<div className="mgimgbox"><div className="ytframe-wrap"><iframe title="video details" width="100%" height="100%" frameborder="0" allowfullscreen="" src="'+video_id+'" allow="autoplay" id="svideo"></iframe><div id="YTPlayer" className="yt-iframe"></div></div></div><div className="mgtext_2">'+compname+'</div><div className="mgtext_1">'+cname+' | '+city+'</div>';
 			$("#video_play").html(video_details);
 		}
 }

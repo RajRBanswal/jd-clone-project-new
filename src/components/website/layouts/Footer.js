@@ -86,7 +86,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6"> 
               <div class="footer-menu">
                 <h5 class="widget-title">Customer Service</h5>
                 <ul class="menu-list list-unstyled">

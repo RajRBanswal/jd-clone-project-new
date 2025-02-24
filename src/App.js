@@ -20,7 +20,6 @@ import Detail from "./components/website/Detail";
 import AddListing from "./components/Vendorpanel/layout/AddListing";
 import Forgotpass from "./components/website/Forgotpass";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -33,25 +32,19 @@ function App() {
           <Route path="signup" Component={Signup} />
           <Route path="login" Component={Login} />
           <Route path="/keyword" Component={Detail} />
-          <Route path="/forgot" Component={Forgotpass}/>
-
+          <Route path="/forgot" Component={Forgotpass} />
         </Route>
-
-
+ 
         <Route path="/admin-login" Component={AdminLogin} />
         <Route path="/admins" Component={AdminLayout}>
           <Route index Component={AdminDashboard} />
-
         </Route>
         <Route path="/vendor-login" Component={Vendorlogin} />
         <Route path="/vender-signup" Component={VRegister} />
         <Route path="/vendor" Component={VendorLayout}>
-
           <Route index Component={VendorDashboard} />
           <Route path="addlist" Component={AddListing} />
-          
         </Route>
-
       </Routes>
     </BrowserRouter>
   );

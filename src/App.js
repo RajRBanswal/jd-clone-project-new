@@ -21,6 +21,8 @@ import AddListing from "./components/Vendorpanel/AddListing";
 import Listings from "./components/website/Listings";
 import AllCategory from "./components/adminpanel/AllCategory";
 import AllKeywords from "./components/adminpanel/AllKeywords";
+import UserLayouts from "./components/userPanel/layout/UserLayouts";
+import UserDashboard from "./components/userPanel/UserDashboard";
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
           <Route path="contact" Component={Contact} />
           <Route path="signup" Component={Signup} />
           <Route path="login" Component={Login} />
-          <Route path="/keyword" Component={Detail} />
+          <Route
+            path="/details/:talukas/:service/:serviceId"
+            Component={Detail}
+          />
           <Route path="/forgot" Component={Forgotpass} />
         </Route>
 
@@ -48,6 +53,9 @@ function App() {
         <Route path="/vendor" Component={VendorLayout}>
           <Route index Component={VendorDashboard} />
           <Route path="all-listing" Component={AddListing} />
+        </Route>
+        <Route path="/users" Component={UserLayouts}>
+          <Route index Component={UserDashboard} />
         </Route>
       </Routes>
     </BrowserRouter>

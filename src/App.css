@@ -93,7 +93,7 @@ table {
 }
 
 .footer {
-  background-color: #fff;
+  background-color: #009cff;
 }
 
 .web-logo {
@@ -487,13 +487,13 @@ a {
 .card-effects .card-effect {
   border: none;
   background: #dee2e6;
+  box-shadow: 0 0 10px;
 }
 
 .card-effects .card-effect .card-body {
   box-shadow: 0px 5px 24.25px 0.75px rgba(0, 0, 0, 0.1);
   background: #fff;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
 
 
 }
@@ -510,6 +510,7 @@ a {
 
 .card-effects .card-effect .card-img img {
   width: 100%;
+  height: 100px;
   transition: .6s
 }
 
@@ -1124,7 +1125,7 @@ body {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .location-bar .icon {
@@ -1149,12 +1150,13 @@ body {
 .location-options button {
   border: 1px solid #ddd;
   background-color: #fff;
-  border-radius: 20px;
-  padding: 8px 16px;
+  border-radius: 5px;
+  padding: 10px 16px;
   margin-right: 10px;
   cursor: pointer;
   white-space: nowrap;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
@@ -1263,14 +1265,14 @@ body {
 .dropdown-menu {
   max-height: 40vh;
   overflow-y: scroll;
-  text-align: center;
+  /* text-align: center; */
 }
 
 @media(max-width:786px) {
   .dropdown-menu {
     max-height: 25vh;
     overflow-y: scroll;
-    text-align: center;
+    /* text-align: center; */
 
   }
 }
@@ -1746,6 +1748,20 @@ body {
 
 }
 
+.web_navbar {
+  box-shadow: 0 0 10px #00000045;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+.web_navbar .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
 .login-card .btn-primary {
   border-radius: 50px;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
@@ -1968,4 +1984,145 @@ body {
 .p-dropdown-items-wrapper ul {
   padding: 0 !important;
   margin: 0;
+}
+
+.listing-details li {
+  display: inline;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #000;
+  /* font-style: italic; */
+  position: relative;
+
+}
+
+.listing-details {
+  position: relative;
+}
+
+.listing-details li:not(:last-child)::before {
+  position: absolute;
+  content: "\f105";
+  /* Font Awesome icon */
+  font-family: "Font Awesome 5 Free";
+  /* Use Free version */
+  font-weight: 900;
+  /* Required for solid icons */
+  top: -3px;
+  bottom: 0;
+  right: -6px;
+  color: #000;
+  font-size: 15px;
+}
+
+.details_page .nav-pills .nav-item .nav-link {
+  color: #000;
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+.details_page .tab-content {
+  display: block;
+  border: 1px solid #dbdbdb;
+  padding: 15px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: transparent !important;
+  color: #0d6efd !important;
+  border-bottom: 4px solid #0d6efd !important;
+  padding: 0.25rem 1rem;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.rating-average {
+  background-color: rgb(0, 122, 12);
+  color: #fff !important;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating-box p {
+  color: #000;
+  font-weight: bold;
+}
+
+.rating-average .star {
+  margin-left: 5px;
+}
+
+.rating-count, .trusted, .verified, .claimed {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.claimed {
+  font-weight: 500;
+}
+
+.details_page p {
+  color: #000;
+  font-weight: 500;
+}
+
+.address_hour li {
+  list-style: none;
+  display: inline;
+  padding: 10px 20px 10px 0px;
+  font-weight: 500;
+  color: #000;
+}
+
+.rate {
+  /* float: right; */
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked)>label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+  content: '★ ';
+}
+
+.rate>input:checked~label {
+  color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+  color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+  color: #c59b08;
 }

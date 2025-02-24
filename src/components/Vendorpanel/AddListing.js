@@ -25,11 +25,14 @@ const AddListing = () => {
   const [openingHour, setOpeningHour] = useState("");
   const [yearOfExperience, setYearOfExperience] = useState("");
   const [uplodImages, setUploadImages] = useState("");
+  const [uplodVideo, setUplodVideo] = useState("");
+
   const [segment, setSegment] = useState("");
   const [packagesOffered, setPackageOffered] = useState("");
   const [seatingCapacity, setSeatingCapacity] = useState("");
   const [services, setServices] = useState("");
   const [rentalType, setRentalType] = useState("");
+  const [cabSeaterCapacity, setCabSeaterCapacity] = useState("");
   const [brands, setBrands] = useState("");
   let vendorId = sessionStorage.getItem("vendorId");
   let vendorName = sessionStorage.getItem("vendorName");
@@ -102,8 +105,14 @@ const AddListing = () => {
       Object.values(uplodImages).forEach((file) => {
         formData.append("uplodImages", file);
       });
+      Object.values(uplodVideo).forEach((file) => {
+        formData.append("uplodVideo", file);
+      });
       Object.values(fields).forEach((item) => {
-        formData.append("priceList", JSON.stringify(item));
+        if (item.title === "" || item.price === "") {
+        } else {
+          formData.append("priceList", JSON.stringify(item));
+        }
       });
       // Append checkbox selections as comma-separated strings or as arrays
       formData.append("segment", segment.join(",")); // Convert array to comma-separated string
@@ -111,6 +120,7 @@ const AddListing = () => {
       formData.append("seatingCapacity", seatingCapacity.join(","));
       formData.append("services", services.join(","));
       formData.append("rentalType", rentalType.join(","));
+      formData.append("cabSeaterCapacity", cabSeaterCapacity.join(","));
       formData.append("brands", brands.join(","));
 
       const response = await fetch(`${api_url}/api/vendor/add-listing`, {
@@ -130,7 +140,19 @@ const AddListing = () => {
     }
   };
 
-  const [fields, setFields] = useState([]);
+  const [fields, setFields] = useState([
+    {
+      id: Date.now(),
+      priceTitle: "",
+      price: "",
+      pricePer: "",
+      priceDescription: "",
+      vehicleType: "",
+      ageRequired: "",
+      other: "",
+    },
+  ]);
+  console.log(fields);
 
   const handleInputChange = (id, key, value) => {
     setFields((prevFields) =>
@@ -271,6 +293,16 @@ const AddListing = () => {
           : prevSegment.filter((item) => item !== value) // Remove if unchecked
     );
   };
+  const handleSeaterCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+
+    setCabSeaterCapacity(
+      (prevSegment) =>
+        checked
+          ? [...prevSegment, value] // Add to array if checked
+          : prevSegment.filter((item) => item !== value) // Remove if unchecked
+    );
+  };
   const handleBrandsCheckboxChange = (event) => {
     const { value, checked } = event.target;
 
@@ -396,7 +428,7 @@ const AddListing = () => {
             </select>
           </div>
 
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <label className="form-label">Title</label>
             <input
               type="text"
@@ -406,6 +438,38 @@ const AddListing = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
+          <div className="col-lg-2">
+            <label className="form-label">Mobile Number</label>
+            <input
+              type="tel"
+              name="mobile"
+              className="form-control form-control-sm"
+              placeholder="Mobile Number"
+              onChange={(e) => setMobile(e.target.value)}
+            />
+          </div>
+          <div className="col-lg-2">
+            <small className="form-label">WhatsApp Number</small>
+            <input
+              type="tel"
+              name="whatsapp"
+              className="form-control mt-2 form-control-sm"
+              placeholder="Whatsapp Number"
+              onChange={(e) => setWhatsappMobile(e.target.value)}
+            />
+          </div>
+          <div className=" col-lg-2">
+            <label className="form-label">Opening Hour</label>
+            <input
+              type="time"
+              name="openingHour"
+              className="form-control form-control-sm"
+              placeholder="Opening Hour"
+              onChange={(e) => setOpeningHour(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="row g-2 mt-1">
           <div className="col-lg-2">
             <label className="form-label">District</label>
             <select
@@ -430,7 +494,7 @@ const AddListing = () => {
                 ))}
             </select>
           </div>
-          <div className=" col-lg-3">
+          <div className=" col-lg-5">
             <label className="form-label">Location</label>
             <input
               type="text"
@@ -440,38 +504,7 @@ const AddListing = () => {
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
-        </div>
-        <div className="row g-2 mt-1">
-          <div className=" col-lg-2">
-            <label className="form-label">Opening Hour</label>
-            <input
-              type="time"
-              name="openingHour"
-              className="form-control form-control-sm"
-              placeholder="Opening Hour"
-              onChange={(e) => setOpeningHour(e.target.value)}
-            />
-          </div>
-          <div className="col-lg-2">
-            <label className="form-label">Mobile Number</label>
-            <input
-              type="tel"
-              name="mobile"
-              className="form-control form-control-sm"
-              placeholder="Mobile Number"
-              onChange={(e) => setMobile(e.target.value)}
-            />
-          </div>
-          <div className="col-lg-2">
-            <small className="form-label">WhatsApp Number</small>
-            <input
-              type="tel"
-              name="whatsapp"
-              className="form-control mt-2 form-control-sm"
-              placeholder="Whatsapp Number"
-              onChange={(e) => setWhatsappMobile(e.target.value)}
-            />
-          </div>
+
           <div className="col-lg-3">
             <label className="form-label">Years of Experience</label>
             <input
@@ -492,51 +525,76 @@ const AddListing = () => {
               onChange={(e) => setUploadImages(e.target.files)}
             />
           </div>
+          <div className="col-lg-3">
+            <label className="form-label">Upload Videos</label>
+            <input
+              type="file"
+              name="videos"
+              className="form-control form-control-sm"
+              accept="video/*"
+              multiple
+              onChange={(e) => {
+                const files = Array.from(e.target.files);
+                const maxSize = 1 * 1024 * 1024; // 1MB in bytes
+
+                const validFiles = files.filter((file) => file.size <= maxSize);
+
+                if (validFiles.length !== files.length) {
+                  alert(
+                    "Some files exceed the 1MB limit and have been removed."
+                  );
+                  e.target.value = ""; // Reset input field
+                } else {
+                  setUplodVideo(validFiles);
+                }
+              }}
+            />
+          </div>
         </div>
         {/* Price Listing */}
         <div className="row mt-3">
           <div className="col-lg-12">
-            <label className="form-label">Price listing </label>
+            <label className="form-label">Price Listing</label>
           </div>
           <div>
-            <div className="fixed-first-row">
-              <div className="mb-2">
+            {fields.map((field) => (
+              <div key={field.id} className="mb-3">
                 <div className="input-group">
                   <input
                     type="text"
+                    value={field.priceTitle}
                     className="form-control form-control-sm"
-                    placeholder="Price Title"
+                    placeholder="Title"
                     onChange={(e) =>
-                      handleInputChange(
-                        Date.now(),
-                        "priceTitle",
-                        e.target.value
-                      )
+                      handleInputChange(field.id, "priceTitle", e.target.value)
                     }
                   />
                   <input
                     type="text"
+                    value={field.price}
                     className="form-control form-control-sm ms-3"
-                    placeholder="Enter Price"
+                    placeholder="Price"
                     onChange={(e) =>
-                      handleInputChange(Date.now(), "price", e.target.value)
+                      handleInputChange(field.id, "price", e.target.value)
                     }
                   />
                   <input
                     type="text"
+                    value={field.pricePer}
                     className="form-control form-control-sm ms-3"
                     placeholder="Price / Per"
                     onChange={(e) =>
-                      handleInputChange(Date.now(), "pricePer", e.target.value)
+                      handleInputChange(field.id, "pricePer", e.target.value)
                     }
                   />
                   <input
                     type="text"
+                    value={field.priceDescription}
                     className="form-control form-control-sm ms-3"
                     placeholder="Description"
                     onChange={(e) =>
                       handleInputChange(
-                        Date.now(),
+                        field.id,
                         "priceDescription",
                         e.target.value
                       )
@@ -544,131 +602,32 @@ const AddListing = () => {
                   />
                   <input
                     type="text"
+                    value={field.vehicleType}
                     className="form-control form-control-sm ms-3"
                     placeholder="Vehicle Type"
                     onChange={(e) =>
-                      handleInputChange(
-                        Date.now(),
-                        "vehicleType",
-                        e.target.value
-                      )
+                      handleInputChange(field.id, "vehicleType", e.target.value)
                     }
                   />
                   <input
                     type="text"
+                    value={field.ageRequired}
                     className="form-control form-control-sm ms-3"
                     placeholder="Age Required"
                     onChange={(e) =>
-                      handleInputChange(
-                        Date.now(),
-                        "ageRequired",
-                        e.target.value
-                      )
+                      handleInputChange(field.id, "ageRequired", e.target.value)
                     }
                   />
                   <input
                     type="text"
+                    value={field.other}
                     className="form-control form-control-sm ms-3"
                     placeholder="Other"
                     onChange={(e) =>
-                      handleInputChange(Date.now(), "other", e.target.value)
+                      handleInputChange(field.id, "other", e.target.value)
                     }
                   />
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-sm text-white ms-3"
-                    onClick={addField}
-                  >
-                    Add
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Dynamically Added Fields */}
-            {fields.length > 0 &&
-              fields.map((field) => (
-                <div key={field.id} className="mb-3">
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      value={field.priceTitle}
-                      className="form-control form-control-sm"
-                      placeholder="Title"
-                      onChange={(e) =>
-                        handleInputChange(
-                          field.id,
-                          "priceTitle",
-                          e.target.value
-                        )
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.price}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Price"
-                      onChange={(e) =>
-                        handleInputChange(field.id, "price", e.target.value)
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.pricePer}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Price / Per"
-                      onChange={(e) =>
-                        handleInputChange(field.id, "pricePer", e.target.value)
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.priceDescription}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Description"
-                      onChange={(e) =>
-                        handleInputChange(
-                          field.id,
-                          "priceDescription",
-                          e.target.value
-                        )
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.vehicleType}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Vehicle Type"
-                      onChange={(e) =>
-                        handleInputChange(
-                          field.id,
-                          "vehicleType",
-                          e.target.value
-                        )
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.ageRequired}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Age Required"
-                      onChange={(e) =>
-                        handleInputChange(
-                          field.id,
-                          "ageRequired",
-                          e.target.value
-                        )
-                      }
-                    />
-                    <input
-                      type="text"
-                      value={field.other}
-                      className="form-control form-control-sm ms-3"
-                      placeholder="Other"
-                      onChange={(e) =>
-                        handleInputChange(field.id, "other", e.target.value)
-                      }
-                    />
+                  {fields.length > 1 && (
                     <button
                       type="button"
                       className="btn btn-danger ms-3 btn-sm"
@@ -676,9 +635,17 @@ const AddListing = () => {
                     >
                       Remove
                     </button>
-                  </div>
+                  )}
                 </div>
-              ))}
+              </div>
+            ))}
+            <button
+              type="button"
+              className="btn btn-primary btn-sm text-white mt-1"
+              onClick={addField}
+            >
+              Add New Row
+            </button>
           </div>
         </div>
         {/* {highlites} */}
@@ -690,7 +657,7 @@ const AddListing = () => {
             <h5 className="text-primary">
               <b>Segment</b>
             </h5>
-            <div className="row g-3">
+            <div className="row row gy-1 gx-3">
               {["Compact SUV", "Sedan", "SUV", "Hatchback", "Van", "MUV"].map(
                 (item) => (
                   <div key={item} className="col-lg-12">
@@ -716,8 +683,14 @@ const AddListing = () => {
             <h5 className="text-primary">
               <b>Rental Type</b>
             </h5>
-            <div className="row g-3">
-              {["Luxury", "Wedding", "Corporate"].map((item) => (
+            <div className="row row gy-1 gx-3">
+              {[
+                "Wedding",
+                "Vintage Car",
+                "Corporate",
+                "Luxury",
+                "Outstation",
+              ].map((item) => (
                 <div key={item} className="col-lg-12">
                   <div className="form-check">
                     <input
@@ -735,12 +708,42 @@ const AddListing = () => {
                 </div>
               ))}
             </div>
+
+            <p className="text-primary mt-3 mb-0">
+              <b>Seating Capacity</b>
+            </p>
+            <div className="row gy-1 gx-3">
+              {[
+                "5 Seater",
+                "7 Seater",
+                "9 Seater",
+                "10 Seater",
+                "12 Seater",
+                "15 Seater",
+              ].map((item) => (
+                <div key={item} className="col-lg-12">
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value={item}
+                      id={item}
+                      checked={cabSeaterCapacity.includes(item)}
+                      onChange={handleSeaterCheckboxChange}
+                    />
+                    <label className="form-check-label" htmlFor={item}>
+                      {item}
+                    </label>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="col-lg-4">
             <h5 className="text-primary text-center">
               <b>Brands</b>{" "}
             </h5>
-            <div className="row g-3">
+            <div className="row row gy-1 gx-3">
               {carBrands.map((brand) => (
                 <div key={brand} className="col-lg-6">
                   <div className="form-check">

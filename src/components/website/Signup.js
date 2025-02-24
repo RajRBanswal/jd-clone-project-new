@@ -1,124 +1,176 @@
-import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { api_url } from "../helpers/api_helper";
 
 const Signup = () => {
   const navigate = useNavigate();
 
-  const [name, setname] = useState("");
-  const [mobile, setmobile] = useState("");
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let newErrors = {};
+    if (!name || name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters long";
+    }
+    if (!mobile || !/^[0-9]{10}$/.test(mobile)) {
+      newErrors.mobile = "Enter a valid 10-digit mobile number";
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+    if (!password || password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters long";
+    }
+    if (confirmPassword !== password) {
+      newErrors.confirmPassword = "Passwords do not match";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const getRegister = async () => {
-    const response = await fetch(
-      "http://localhost:8000/api/user-registration",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          email,
-          name,
-          password,
-          mobile,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
+    if (validate()) {
+      const response = await fetch(
+        `${api_url}/api/users/user-registration`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email,
+            name,
+            password,
+            mobile,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const result = await response.json();
+      console.log(result);
+
+      if (result.status === 201) {
+        alert(result.message);
+        navigate("/login");
+      } else {
+        alert(result.message);
       }
-    );
-
-    const result = await response.json();
-
-    if (result.status === 200) {
-      alert(result.message);
-      navigate("/login");
-    } else {
-      alert(result.message);
     }
   };
 
   return (
-    <div className="wrapper py-5">
-      <div className="registration-container">
-        <div className="col-left">
-          <div className="info-box">
-            <h2>Welcome to Registration</h2>
-            <p>
-              Join our platform to unlock exclusive benefits and opportunities
-              for your business.
-            </p>
-            <a className="btn" href="/login">
-              Already a Member? Sign In
-            </a>
-          </div>
-        </div>
-        <div className="col-right">
-          <div className="form-box">
-            <h2>Create Your Account</h2>
-            <form>
-              <div className="form-group">
-                <label>
-                  Name<span>*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your Name"
-                  onChange={(e) => setname(e.target.value)}
-                  required
-                />
+    <div className="wrapper bg-info">
+      <div className="row">
+        <div className="col-lg-10 m-auto">
+          <div className="registration-container">
+            <div className="col-left">
+              <div className="info-box">
+                <h2>Welcome to User Registration</h2>
+                <p>
+                  Join our platform to unlock exclusive benefits and
+                  opportunities for your business.
+                </p>
+                <Link className="btn" to={"/login"}>
+                  Already a Member? Sign In
+                </Link>
               </div>
-              <div className="form-group">
-                <label>
-                  Mobile.No<span>*</span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="Enter your Mobile.No"
-                  onChange={(e) => setmobile(e.target.value)}
-                  required
-                />
+            </div>
+            <div className="col-right">
+              <div className="form-box">
+                <h2>Create Your User Account</h2>
+                <form>
+                  <div className="form-group">
+                    <label>
+                      Name<span>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                    {errors.name && (
+                      <p className="text-danger error">{errors.name}</p>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Mobile.No<span>*</span>
+                    </label>
+                    <input
+                      type="number"
+                      placeholder="Enter your Mobile.No"
+                      value={mobile}
+                      onChange={(e) => setMobile(e.target.value)}
+                      required
+                    />
+                    {errors.mobile && (
+                      <p className="text-danger error">{errors.mobile}</p>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Email<span>*</span>
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter your Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    {errors.email && (
+                      <p className="text-danger error">{errors.email}</p>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Password<span>*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Enter your password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                    {errors.password && (
+                      <p className="text-danger error">{errors.password}</p>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <label>
+                      Confirm Password<span>*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Re-enter your password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      required
+                    />
+                    {errors.confirmPassword && (
+                      <p className="text-danger error">
+                        {errors.confirmPassword}
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={getRegister}
+                    className="submit-btn"
+                  >
+                    Register
+                  </button>
+                </form>
               </div>
-              <div className="form-group">
-                <label>
-                  Email<span>*</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter your Email"
-                  onChange={(e) => setemail(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>
-                  Password<span>*</span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="Enter your password"
-                  onChange={(e) => setpassword(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>
-                  Confirm Password<span>*</span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="Re-enter your password"
-                  onChange={(e) => setpassword(e.target.value)}
-                  required
-                />
-              </div>
-              <button
-                type="button"
-                onClick={getRegister}
-                className="submit-btn mt-4"
-              >
-                Register
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

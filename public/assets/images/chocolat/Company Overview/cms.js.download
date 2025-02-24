@@ -503,7 +503,7 @@ $(".fyearId").click(function(){
 												if(entry[1].audio_flag==1){
 									findata_text += '<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip1'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div className="modal fade" id="audioclip1'+entry[1].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													'<div className="modal fade" id="audioclip1'+entry[1].mp3finyear+'" tabIndex="-1" role="dialog" >'+
 													  '<div className="modal-dialog" role="document">'+
 														'<div className="modal-content dtable">'+
 															'<div className="modal-header">'+
@@ -539,7 +539,7 @@ $(".fyearId").click(function(){
 												if(entry[2].audio_flag==1){
 									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip2'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div className="modal fade" id="audioclip2'+entry[2].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													'<div className="modal fade" id="audioclip2'+entry[2].mp3finyear+'" tabIndex="-1" role="dialog" >'+
 													  '<div className="modal-dialog" role="document">'+
 														'<div className="modal-content dtable">'+
 															'<div className="modal-header">'+
@@ -575,7 +575,7 @@ $(".fyearId").click(function(){
 											if(entry[3].audio_flag==1){
 									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip3'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div className="modal fade" id="audioclip3'+entry[3].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													'<div className="modal fade" id="audioclip3'+entry[3].mp3finyear+'" tabIndex="-1" role="dialog" >'+
 													  '<div className="modal-dialog" role="document">'+
 														'<div className="modal-content dtable">'+
 															'<div className="modal-header">'+
@@ -611,7 +611,7 @@ $(".fyearId").click(function(){
 											if(entry[4].audio_flag==1){
 									findata_text +='<a className="pdfP_in tcon" data-toggle="modal" data-target="#audioclip4'+index+'" href="javascript:void(0);"><i className="audio-icon cms_sprt2"></i>Listen to the audio clip</a>'+
 													'<!--Audioclip Modal -->'+
-													'<div className="modal fade" id="audioclip4'+entry[4].mp3finyear+'" tabindex="-1" role="dialog" >'+
+													'<div className="modal fade" id="audioclip4'+entry[4].mp3finyear+'" tabIndex="-1" role="dialog" >'+
 													  '<div className="modal-dialog" role="document">'+
 														'<div className="modal-content dtable">'+
 															'<div className="modal-header">'+

@@ -1645,7 +1645,7 @@ var TempusDominusBootstrap4 = function ($) {
             if (this._isEnabled('h')) {
                 topRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.incrementHour
                 }).addClass('btn').attr('data-action', 'incrementHours').append($('<span>').addClass(this._options.icons.up))));
                 middleRow.append($('<td>').append($('<span>').addClass('timepicker-hour').attr({
@@ -1654,7 +1654,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }).attr('data-action', 'showHours')));
                 bottomRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.decrementHour
                 }).addClass('btn').attr('data-action', 'decrementHours').append($('<span>').addClass(this._options.icons.down))));
             }
@@ -1666,7 +1666,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }
                 topRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.incrementMinute
                 }).addClass('btn').attr('data-action', 'incrementMinutes').append($('<span>').addClass(this._options.icons.up))));
                 middleRow.append($('<td>').append($('<span>').addClass('timepicker-minute').attr({
@@ -1675,7 +1675,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }).attr('data-action', 'showMinutes')));
                 bottomRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.decrementMinute
                 }).addClass('btn').attr('data-action', 'decrementMinutes').append($('<span>').addClass(this._options.icons.down))));
             }
@@ -1687,7 +1687,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }
                 topRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.incrementSecond
                 }).addClass('btn').attr('data-action', 'incrementSeconds').append($('<span>').addClass(this._options.icons.up))));
                 middleRow.append($('<td>').append($('<span>').addClass('timepicker-second').attr({
@@ -1696,7 +1696,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }).attr('data-action', 'showSeconds')));
                 bottomRow.append($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.decrementSecond
                 }).addClass('btn').attr('data-action', 'decrementSeconds').append($('<span>').addClass(this._options.icons.down))));
             }
@@ -1705,7 +1705,7 @@ var TempusDominusBootstrap4 = function ($) {
                 topRow.append($('<td>').addClass('separator'));
                 middleRow.append($('<td>').append($('<button>').addClass('btn btn-primary').attr({
                     'data-action': 'togglePeriod',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'title': this._options.tooltips.togglePeriod
                 })));
                 bottomRow.append($('<td>').addClass('separator'));
@@ -1738,7 +1738,7 @@ var TempusDominusBootstrap4 = function ($) {
             if (this._options.buttons.showToday) {
                 row.push($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'data-action': 'today',
                     'title': this._options.tooltips.today
                 }).append($('<span>').addClass(this._options.icons.today))));
@@ -1755,7 +1755,7 @@ var TempusDominusBootstrap4 = function ($) {
                 }
                 row.push($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'data-action': 'togglePicker',
                     'title': title
                 }).append($('<span>').addClass(icon))));
@@ -1763,7 +1763,7 @@ var TempusDominusBootstrap4 = function ($) {
             if (this._options.buttons.showClear) {
                 row.push($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'data-action': 'clear',
                     'title': this._options.tooltips.clear
                 }).append($('<span>').addClass(this._options.icons.clear))));
@@ -1771,7 +1771,7 @@ var TempusDominusBootstrap4 = function ($) {
             if (this._options.buttons.showClose) {
                 row.push($('<td>').append($('<a>').attr({
                     href: '#',
-                    tabindex: '-1',
+                    tabIndex: '-1',
                     'data-action': 'close',
                     'title': this._options.tooltips.close
                 }).append($('<span>').addClass(this._options.icons.close))));

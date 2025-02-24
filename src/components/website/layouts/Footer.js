@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { api_url, web_url } from "../../helpers/api_helper";
 
 const Footer = () => {
   return (
@@ -9,7 +10,11 @@ const Footer = () => {
           <div className="row g-3">
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="footer-menu">
-                <img src={"./assets/images/logo.png"} width={200} alt="logo" />
+                <img
+                  src={`${web_url}/assets/images/logo.png`}
+                  width={200}
+                  alt="logo"
+                />
                 <div className="social-links mt-5 text-center">
                   <ul className="d-flex list-unstyled gap-2 m-auto">
                     <li>

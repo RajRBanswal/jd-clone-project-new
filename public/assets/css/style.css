@@ -677,7 +677,15 @@ header {
 footer .footer-menu .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #000000;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+footer .footer-menu h5 {
+  color: #fff;
+  font-weight: bold;
+}
+footer .footer-menu i {
+  color: #fff;
+  font-weight: bold;
 }

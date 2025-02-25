@@ -73,12 +73,6 @@ const Home = () => {
                   </select>
                 </div>
                 <div className="col-lg-6 col-6 ">
-                  {/* <input
-                    type="text"
-                    className="form-control form-control-lg"
-                    placeholder="Search for more than 20,000 products"
-                    onChange={(e) => setKeyword(e.target.value)}
-                  /> */}
                   <Dropdown
                     value={keyword}
                     options={categoryOptions}
@@ -90,8 +84,8 @@ const Home = () => {
                   />
                 </div>
                 <div className="col-lg-2 col-2 ">
-                  <button className="btn btn-danger rounded-5 w-100 btn-lg">
-                    <i className="fa fa-search" onClick={getSearch}></i>{" "}
+                  <button className="btn btn-danger rounded-5 w-100 btn-lg" onClick={() => getSearch()}>
+                    <i className="fa fa-search" ></i>
                   </button>
                 </div>
               </div>
@@ -132,7 +126,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center ">
+                      <div className="text-center ">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -148,7 +142,7 @@ const Home = () => {
                 <div className="card card-effect w-100 ">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -164,7 +158,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -181,7 +175,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -197,7 +191,7 @@ const Home = () => {
                 <div className="card card-effect w-100 ">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -213,7 +207,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -229,7 +223,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -245,7 +239,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -261,7 +255,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -277,7 +271,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -293,7 +287,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -309,7 +303,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -325,7 +319,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -341,7 +335,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -357,7 +351,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -373,7 +367,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -389,7 +383,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder   text-tb-lines"
                           href="#/"
@@ -405,7 +399,7 @@ const Home = () => {
                 <div className="card card-effect w-100">
                   <div className="card-body position-relative ">
                     <div>
-                      <div className="h4   text-center">
+                      <div className=" text-center">
                         <a
                           className="text-decoration-none fw-bolder  text-tb-lines"
                           href="#/"
@@ -445,8 +439,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -471,7 +465,7 @@ const Home = () => {
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
                     <div className="pt-3">
-                      <div className="h4 mb-3 mt-4 text-center">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -495,8 +489,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -521,8 +515,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center pt-3">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -546,8 +540,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -571,8 +565,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center pt-4">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -596,8 +590,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center pt-3">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -621,8 +615,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -646,8 +640,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center pt-4">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -671,8 +665,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -696,8 +690,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -721,8 +715,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                    <div className="pt-6">
-                      <div className="h4 mb-3 mt-4 text-center">
+                    <div className="pt-3">
+                      <div className="text-center">
                         <a
                           className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                           href="#/"
@@ -760,8 +754,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div className="pt-6">
-                  <div className="h4 mb-3 mt-2 text-center">
+                <div className="pt-3">
+                  <div className="text-center">
                     <a
                       className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                       href="#/"
@@ -800,8 +794,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div className="pt-6">
-                  <div className="h4 mb-3 mt-4 text-center">
+                <div className="pt-3">
+                  <div className="text-center">
                     <a
                       className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                       href="#/"
@@ -840,8 +834,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div className="pt-6">
-                  <div className="h4 mb-3 mt-4 text-center">
+                <div className="pt-3">
+                  <div className="text-center">
                     <a
                       className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                       href="#/"
@@ -880,8 +874,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-body position-relative pt-0 px-1-9 pb-1-9">
-                <div className="pt-6">
-                  <div className="h4 mb-3 mt-4 text-center">
+                <div className="pt-3">
+                  <div className="text-center">
                     <a
                       className="text-decoration-none fw-bolder text-uppercase text-tb-lines"
                       href="#/"

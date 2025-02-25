@@ -5942,7 +5942,8 @@ fieldset:disabled .btn {
 
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto
+  overflow-y: auto;
+  z-index: 9999999;
 }
 
 .modal {
@@ -6079,7 +6080,7 @@ fieldset:disabled .btn {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto
+    margin: 5rem auto
   }
 
   .modal-dialog-scrollable {

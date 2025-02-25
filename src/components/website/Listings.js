@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { api_url } from "../helpers/api_helper";
 
 const Listings = () => {
+  const navigate = useNavigate();
   const { talukas, keyword } = useParams();
   const [allListing, setAllListing] = useState([]);
   const [filterListing, setFilterListing] = useState([]);
+  const [originalData, setOriginalData] = useState([]); // Store the full list
   const getListing = async () => {
     const response = await fetch(`${api_url}/api/admin/all-listing`);
     const result = await response.json();
@@ -25,6 +27,7 @@ const Listings = () => {
       );
 
       setAllListing(allListing);
+      setOriginalData(allListing);
       setFilterListing(result.data);
     } else {
       alert(result.message);
@@ -34,299 +37,324 @@ const Listings = () => {
     getListing();
   }, []);
 
+  const [sortByFilter, setSortByFilter] = useState("Relevance");
+
+  // Function to filter data
+  const handleSortByFilter = (filter) => {
+    setSortByFilter(filter); // Update selected filter
+
+    let filteredData = [...allListing]; // Copy original data
+
+    switch (filter) {
+      case "Rating":
+        filteredData.sort((a, b) => b.rating - a.rating);
+        break;
+      case "Popular":
+        filteredData.sort((a, b) => b.popularity - a.popularity);
+        break;
+      case "Distance":
+        filteredData.sort((a, b) => a.distance - b.distance);
+        break;
+      default:
+        break;
+    }
+
+    setAllListing(filteredData);
+  };
+  const [selectedBrand, setSelectedBrand] = useState("All");
+  const handleBrandFilter = (selectedBrands) => {
+    setSelectedBrand(selectedBrands);
+
+    if (selectedBrands.length === 0 || selectedBrands.includes("All")) {
+      setAllListing(originalData);
+    } else {
+      const filteredDatas = originalData.filter((item) => {
+        let string = JSON.stringify(item.brands);
+        return string.includes(selectedBrands);
+      });
+      setAllListing(filteredDatas);
+    }
+  };
+  const [selectedSegment, setSelectedSegment] = useState("All");
+  const handleSegmentFilter = (segment) => {
+    setSelectedSegment(segment);
+
+    if (segment === "All") {
+      setAllListing(originalData);
+    } else {
+      const filteredDatas = originalData.filter((item) => {
+        let string = JSON.stringify(item.segment);
+        return string.includes(segment);
+      });
+      setAllListing(filteredDatas);
+    }
+  };
+
+  const seatingOptions = [
+    "5 Seater",
+    "7 Seater",
+    "9 Seater",
+    "10 Seater",
+    "12 Seater",
+    "15 Seater",
+  ];
+  const [selectedCapacity, setSelectedCapacity] = useState("All");
+
+  const handleSeatingFilter = (capacity) => {
+    setSelectedCapacity(capacity);
+    if (capacity === "All") {
+      setAllListing(originalData);
+    } else {
+      const filteredDatas = originalData.filter((item) => {
+        let string = JSON.stringify(item.cabSeaterCapacity);
+        return string.includes(capacity);
+      });
+      setAllListing(filteredDatas);
+    }
+  };
+
+  const [selectedRental, setSelectedRental] = useState("All");
+
+  const handleRentalFilter = (rentalType) => {
+    setSelectedRental(rentalType);
+    if (rentalType === "All") {
+      setAllListing(originalData);
+    } else {
+      const filteredDatas = originalData.filter((item) => {
+        let string = JSON.stringify(item.rentalType);
+        return string.includes(rentalType);
+      });
+      setAllListing(filteredDatas);
+    }
+  };
+
+  const [selectedRating, setSelectedRating] = useState("Any");
+
+  const handleRatingFilter = (rating) => {
+    setSelectedRating(rating);
+
+    if (rating === "Any") {
+      setAllListing(originalData);
+    } else {
+      const minRating = parseFloat(rating); // Convert "4.5+" to 4.5
+      const filteredDatas = originalData.filter((item) => {
+        return item.rating >= minRating; // Check if any rating meets the condition
+      });
+
+      setAllListing(filteredDatas);
+    }
+  };
+
   return (
     <div>
-      <section className=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
-        <div className="location-bar col-lg-7 col-12">
+      <section className="container-fluid">
+        <div className="location-bar col-lg-12 col-12">
           <div className="location-options">
             <button
-              className="btn btn-primary dropdown-toggle"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Sort-By
+              Sort By: {sortByFilter}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Relevance
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Rating
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Popular
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Distance
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  {" "}
-                </a>
-              </li>
+              {["Relevance", "Rating", "Popular", "Distance"].map((filter) => (
+                <li key={filter}>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => handleSortByFilter(filter)}
+                  >
+                    {filter}
+                  </button>
+                </li>
+              ))}
             </ul>
-            <button
-              className="btn btn-primary  dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <a className="text-light" href="">
-                {" "}
-                <i className="fa-solid fa-star"></i> Top Rated
-              </a>
+            <button className="btn btn-outline-primary">
+              <i className="fa-solid fa-star"></i> Top Rated
             </button>
 
             <button
-              className="btn btn-primary dropdown-toggle"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Brand
+              Brand: {selectedBrand}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a className="dropdown-item" href="#">
-                  Toyota
-                </a>
+                <button
+                  className="dropdown-item"
+                  onClick={() => handleBrandFilter("All")}
+                >
+                  All Brands
+                </button>
               </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Honda
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Tata
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Maruti Suzuki
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Mahindra
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Force
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Hyundai
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Ford
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  BMW
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  mercedes
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Audi
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Scoda
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Nissan
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Volkswogen
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Jaguar
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Range Rover
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Porsche
-                </a>
-              </li>
+              {[
+                "Nissan",
+                "Force",
+                "Ford",
+                "Skoda",
+                "Honda",
+                "Hyundai",
+                "Audi",
+                "Mercedes",
+                "Maruti Suzuki",
+                "Volkswagen",
+                "Tata",
+                "BMW",
+                "Toyota",
+                "Limousine",
+                "Mahindra",
+                "Chevrolet",
+              ].map((brand) => (
+                <li key={brand}>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => handleBrandFilter(brand)}
+                  >
+                    {brand}
+                  </button>
+                </li>
+              ))}
             </ul>
             <button
-              className="btn btn-primary dropdown-toggle text-light"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Segment
+              Segment : {selectedSegment}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a className="dropdown-item" href="#">
-                  Hatchback
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleSegmentFilter("All")}
+                >
+                  All
                 </a>
               </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Sedan
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  SUV
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Compact SUV
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  MUV
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Van
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Tempo Traveller
-                </a>
-              </li>
+              {[
+                "Hatchback",
+                "Sedan",
+                "SUV",
+                "Compact SUV",
+                "MUV",
+                "Van",
+                "Tempo Traveller",
+              ].map((segment, index) => (
+                <li key={index}>
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    onClick={() => handleSegmentFilter(segment)}
+                  >
+                    {segment}
+                  </a>
+                </li>
+              ))}
             </ul>
             <button
-              className="btn  btn-primary dropdown-toggle"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
-              id="dropdownMenuButton1"
+              id="dropdownMenuButton"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Seating Capacity
+              Seating Capacity: {selectedCapacity}
             </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <li>
-                <a className="dropdown-item" href="#">
-                  4seater
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleSeatingFilter("All")}
+                >
+                  All
                 </a>
               </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  5seater
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  7seater
-                </a>
-              </li>
+              {seatingOptions.map((capacity, index) => (
+                <li key={index}>
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    onClick={() => handleSeatingFilter(capacity)}
+                  >
+                    {capacity}+
+                  </a>
+                </li>
+              ))}
             </ul>
             <button
-              className="btn btn-primary  dropdown-toggle"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Rental type
+              Rental Type: {selectedRental}
             </button>
+
+            {/* Dropdown Menu */}
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a className="dropdown-item" href="#">
-                  Wedding
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleRentalFilter("All")}
+                >
+                  All
                 </a>
               </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Vintage Car
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Corporate
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Luxury
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Outstation
-                </a>
-              </li>
+              {[
+                "Wedding",
+                "Vintage Car",
+                "Corporate",
+                "Luxury",
+                "Outstation",
+              ].map((type, index) => (
+                <li key={index}>
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    onClick={() => handleRentalFilter(type)}
+                  >
+                    {type}
+                  </a>
+                </li>
+              ))}
             </ul>
             <button
-              className="btn  btn-primary dropdown-toggle"
+              className="btn btn-outline-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Rating
+              Rating: {selectedRating}
             </button>
+
+            {/* Dropdown Menu */}
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Any
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  3.5+
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  4.0+
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  4.5+
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  5.0+
-                </a>
-              </li>
+              {["Any", "3.0+", "3.5+", "4.0+", "4.5+", "5.0+"].map(
+                (rate, index) => (
+                  <li key={index}>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleRatingFilter(rate)}
+                    >
+                      {rate}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>
@@ -337,7 +365,19 @@ const Listings = () => {
           <div className="col-md-10 w-100">
             {allListing &&
               allListing.map((items) => (
-                <div>
+                <div
+                  className="cursor-pointer"
+                  onClick={() =>
+                    navigate(
+                      `/details/${talukas}/${items.title}/${items._id}`,
+                      {
+                        state: {
+                          data: { keyword: keyword, address: items.location },
+                        },
+                      }
+                    )
+                  }
+                >
                   <div className="row p-2 bg-white border rounded mt-3 pb-5">
                     <div className="col-md-3 mt-1">
                       <img
@@ -415,7 +455,7 @@ const Listings = () => {
                 </div>
               ))}
 
-            <section className=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
+            {/* <section className=" d-flex pt-1 flex-wrap overflow-scroll flex-nowrap justify-content-center">
               <div className="location-bar col-lg-10 col-12">
                 <div className="icon">📍</div>
                 <h4 className="col-4">Find Results near you</h4>
@@ -548,7 +588,7 @@ const Listings = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

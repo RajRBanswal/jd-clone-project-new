@@ -1,7 +1,6 @@
- 
 import React from 'react'
 
-const Register = () => {
+const UserDashboard = () => {
   return (
     <div>
       
@@ -9,4 +8,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default UserDashboard

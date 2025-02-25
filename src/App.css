@@ -50,8 +50,8 @@
 .input-search {
   width: 25%;
 }
- 
- 
+
+
 
 @media(max-width:786px) {
   .search-city {
@@ -100,15 +100,14 @@ table {
   width: 50%;
 
 }
-@media(max-width:786px){
-  .web-logo{
+
+@media(max-width:786px) {
+  .web-logo {
     margin-left: 9rem;
   }
 }
-.col
 
-
-.review {
+.col .review {
   color: #000;
 }
 
@@ -241,7 +240,7 @@ textarea.input {
   transform: translateY(0);
 }
 
- /* .btn-login {
+/* .btn-login {
   padding: 0.6rem 1.3rem;
   color: #fff;
   background-color: #080905;
@@ -328,7 +327,7 @@ textarea.input {
   opacity: 1;
 }
 
- 
+
 
 .contact-info .title {
   color: #1abc9c;
@@ -388,7 +387,7 @@ textarea.input {
   transform: scale(1.05);
 }
 
- 
+
 .big-circle {
   position: absolute;
   width: 500px;
@@ -434,9 +433,9 @@ textarea.input {
 
 
 
- 
 
- 
+
+
 
 
 .molk {
@@ -445,9 +444,9 @@ textarea.input {
 
 
 
- 
 
- 
+
+
 
 .profile-image-pic {
   height: 200px;
@@ -779,7 +778,7 @@ a {
 .accordion-item {
   background-color: #373534;
   width: 100%;
-  
+
 
 }
 
@@ -968,7 +967,7 @@ body {
   flex: 1;
   min-width: 300px;
   margin: 10px;
-  
+
 }
 
 .photoss {
@@ -1055,7 +1054,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-   
+
 }
 
 .cards h4 {
@@ -1100,6 +1099,7 @@ body {
     width: 80px;
     height: 80px;
   }
+
   .cards {
     width: 100%;
   }
@@ -1126,15 +1126,18 @@ body {
   border-radius: 8px;
   margin: 20px;
 }
+
 .location-bar .icon {
   margin-right: 10px;
   color: #007bff;
 }
+
 .location-bar h4 {
   margin: 0;
   font-size: 16px;
   color: #333;
 }
+
 .location-options {
   display: flex;
   flex-wrap: nowrap;
@@ -1142,6 +1145,7 @@ body {
   padding: 10px 0;
   margin-left: 20px;
 }
+
 .location-options button {
   border: 1px solid #ddd;
   background-color: #fff;
@@ -1153,17 +1157,19 @@ body {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
+
 .location-options button:hover {
   background-color: #f0f0f0;
 }
+
 .location-options .highlight {
   color: #007bff;
   border-color: #007bff;
 }
 
- 
 
- 
+
+
 .highlights-container {
   padding: 20px;
   background-color: #fff;
@@ -1240,31 +1246,33 @@ body {
 
 @media (max-width: 768px) {
   .icons-section {
-     
+
     align-items: center;
   }
 
   .details-section {
-    
-     text-align: center;
+
+    text-align: center;
   }
 }
-.no-btn{
+
+.no-btn {
   margin-left: 0.5rem
 }
 
-.dropdown-menu{
+.dropdown-menu {
   max-height: 40vh;
   overflow-y: scroll;
-  text-align:center;
+  text-align: center;
 }
-@media(max-width:786px){
-  .dropdown-menu{
+
+@media(max-width:786px) {
+  .dropdown-menu {
     max-height: 25vh;
-  overflow-y: scroll;
-  text-align:center;
-  
-} 
+    overflow-y: scroll;
+    text-align: center;
+
+  }
 }
 
 
@@ -1477,7 +1485,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-   
+
   padding: 20px;
 }
 
@@ -1495,7 +1503,7 @@ body {
 /* Left Column */
 .col-left {
   flex: 1;
-  background: linear-gradient(135deg, #ffc43f, #212529);
+  background: linear-gradient(180deg, #f5d022, #373435);
   color: #fff;
   padding: 40px;
   display: flex;
@@ -1552,7 +1560,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .form-group label {
@@ -1564,10 +1572,10 @@ body {
 
 .form-group input {
   width: 100%;
-  padding: 12px;
+  padding: 7px 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .form-group input:focus {
@@ -1644,7 +1652,7 @@ body {
   border: none;
   border-radius: 50px;
   padding: 10px 20px;
-  background: #f7f7f7;
+  background: #fff;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -1672,7 +1680,7 @@ body {
 
 .login-card .forgot-link a {
   color: #ff7e5f;
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -1723,15 +1731,16 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-@media(max-width:786px){
-  .nav-links{
 
-     margin-right: 4rem;
+@media(max-width:786px) {
+  .nav-links {
+
+    margin-right: 4rem;
 
   }
 }
 
-.nav-item:active{
+.nav-item:active {
   color: #00c6ff;
 
 
@@ -1764,7 +1773,7 @@ body {
 }
 
 .contact-header {
- background-color: #fff;
+  background-color: #fff;
   color: rgb(195, 188, 57);
   text-align: center;
   padding: 50px 20px;
@@ -1886,59 +1895,77 @@ body {
 .container-lg,
 .container-xl,
 .container-xxl {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto
 }
 
 @media (min-width: 576px) {
 
-    .container,
-    .container-sm {
-        max-width: 540px
-    }
+  .container,
+  .container-sm {
+    max-width: 540px
+  }
 }
 
 @media (min-width: 768px) {
 
-    .container,
-    .container-sm,
-    .container-md {
-        max-width: 720px
-    }
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: 720px
+  }
 }
 
 @media (min-width: 992px) {
 
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg {
-        max-width: 960px
-    }
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 960px
+  }
 }
 
 @media (min-width: 1200px) {
 
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl {
-        max-width: 1140px
-    }
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1140px
+  }
 }
 
 @media (min-width: 1400px) {
 
 
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl,
-    .container-xxl {
-        max-width: 1320px
-    }
-} 
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px
+  }
+}
+
+.main-searchbar {
+  position: absolute;
+  width: 100%;
+  bottom: 20%;
+}
+
+.search-bar {
+  background-color: #000000c2;
+  padding: 30px 20px !important;
+  border-radius: 20px;
+  /* border: 1px solid blue; */
+}
+
+.p-dropdown-items-wrapper ul {
+  padding: 0 !important;
+  margin: 0;
+}

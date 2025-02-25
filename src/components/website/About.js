@@ -8,10 +8,10 @@ const About = () => {
       <div>
         <img src="./assets/images/aboutt.jpg" width={"100%"} height={500} />
       </div>
-      <div class="container AboutSection py-5">
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <div class="aboutp">
+      <div className="container AboutSection py-5">
+        <div className="row">
+          <div className="col-lg-6 col-sm-12">
+            <div className="aboutp">
               <h1>About Us</h1>
               <p>
                 At Sainath cabs, we are the most recognized for the excellent
@@ -33,8 +33,8 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div class="col-lg-6 col-sm-12">
-            <div class="aboutp">
+          <div className="col-lg-6 col-sm-12">
+            <div className="aboutp">
               <img src="./assets/images/about.png" width={"100%"} />
             </div>
           </div>

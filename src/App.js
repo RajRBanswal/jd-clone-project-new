@@ -13,12 +13,14 @@ import AdminLayout from "./components/adminpanel/layouts/AdminLayout";
 import AdminDashboard from "./components/adminpanel/AdminDashboard";
 import Vendorlogin from "./components/Vendorpanel/Vendorlogin";
 import VendorLayout from "./components/Vendorpanel/layout/VendorLayout";
-import VendorDashboard from "./components/Vendorpanel/layout/VendorDashboard";
-import VRegister from "./components/Vendorpanel/layout/VRegister";
-import Listings from "./components/website/Listings";
 import Detail from "./components/website/Detail";
-import AddListing from "./components/Vendorpanel/layout/AddListing";
 import Forgotpass from "./components/website/Forgotpass";
+import VRegister from "./components/Vendorpanel/VRegister";
+import VendorDashboard from "./components/Vendorpanel/VendorDashboard";
+import AddListing from "./components/Vendorpanel/AddListing";
+import Listings from "./components/website/Listings";
+import AllCategory from "./components/adminpanel/AllCategory";
+import AllKeywords from "./components/adminpanel/AllKeywords";
 
 function App() {
   return (
@@ -34,16 +36,18 @@ function App() {
           <Route path="/keyword" Component={Detail} />
           <Route path="/forgot" Component={Forgotpass} />
         </Route>
- 
+
         <Route path="/admin-login" Component={AdminLogin} />
         <Route path="/admins" Component={AdminLayout}>
           <Route index Component={AdminDashboard} />
+          <Route path="all-category" Component={AllCategory} />
+          <Route path="all-keywords" Component={AllKeywords} />
         </Route>
         <Route path="/vendor-login" Component={Vendorlogin} />
         <Route path="/vender-signup" Component={VRegister} />
         <Route path="/vendor" Component={VendorLayout}>
           <Route index Component={VendorDashboard} />
-          <Route path="addlist" Component={AddListing} />
+          <Route path="all-listing" Component={AddListing} />
         </Route>
       </Routes>
     </BrowserRouter>
